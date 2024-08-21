@@ -1,4 +1,11 @@
+:root {
+  --black: #000000;
+  --gold: #d7a129;
+  --white: #ffffff;
+  --emerald: #00505f;
+}
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }

@@ -1,9 +1,13 @@
-import "./index.css";
+import Nominasi from "./component/Nominasi";
+import Panduan from "./component/Panduan";
+import Rangkaian from "./component/Rangkaian";
 
 function App() {
   return (
     <div className="App">
-      <h1>hai</h1>
+      <Rangkaian />
+      <Panduan />
+      <Nominasi />
     </div>
   );
 }
