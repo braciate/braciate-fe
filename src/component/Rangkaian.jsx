@@ -1,3 +1,5 @@
+import "../style/rangakaian.css"
+
 const Rangkaian = () => {
   return (
     <section id="rangkaian">

@@ -1,3 +1,5 @@
+import "../style/nominasi.css";
+
 const Nominasi = () => {
   return (
     <section id="nominasi">

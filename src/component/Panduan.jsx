@@ -1,3 +1,5 @@
+import "../style/panduan.css"
+
 const Panduan = ()=>{
     return(
         <section id="panduan">
