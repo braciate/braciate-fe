@@ -1,0 +1,32 @@
+.hero-section {
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    background-image: url(../assets/img/glitter.png), url(../assets/img/herobackground.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    
+}
+
+.hero-title {
+    position: relative;
+}
+
+#piala-img {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    width: 30%;
+    filter: brightness(50%);
+    -webkit-filter: brightness(50%);
+}
+
+#title-hero {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
