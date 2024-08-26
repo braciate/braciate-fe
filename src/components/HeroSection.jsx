@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import heroTitle from '../assets/img/herotitlenotrophy.svg';
 import pialaImg from '../assets/img/piala.png';
 import './HeroSection.css';

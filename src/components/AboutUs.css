@@ -1,0 +1,34 @@
+.about-us {
+    width: auto;
+    height: auto;
+    background-position: cover;
+    object-fit: cover;
+    background-image: url(../assets/img/blackuppershadow.png), url(../assets/img/goldenpatternbg.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    background-position: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: relative;
+    padding-bottom: 140px;
+}
+
+#about-us-info {
+    margin-left: 25vh;
+    margin-right: 25vh;
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Poppins';
+}
+
+.triangle-icons {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
