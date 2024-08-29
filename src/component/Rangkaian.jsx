@@ -48,7 +48,9 @@ const Rangkaian = () => {
             <div className="text">
               <img src={bazarText} alt="bazarText" />
               <p>
-              Bazar yang melibatkan UMKM dari berbagai sektor, menampilkan produk lokal seperti makanan, minuman, kerajinan tangan, dan produk kreatif lainnya. 
+                Bazar yang melibatkan UMKM dari berbagai sektor, menampilkan
+                produk lokal seperti makanan, minuman, kerajinan tangan, dan
+                produk kreatif lainnya.
               </p>
             </div>
             <div className="text">

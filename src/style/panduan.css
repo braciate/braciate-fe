@@ -36,10 +36,11 @@
   padding-right: 25%;
 }
 .text-content {
-  width: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 56px;
 }
 
 .title {

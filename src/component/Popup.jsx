@@ -7,8 +7,8 @@ const Popup = (props) => {
         <button className="close-btn" onClick={() => props.setTrigger(false)}>
           <img src={Closebtn} alt="X" />
         </button>
+        {props.children}
       </div>
-      {props.children}
     </div>
   ) : (
     ""

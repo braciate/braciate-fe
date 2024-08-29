@@ -47,7 +47,10 @@
 }
 
 .text{
+    display: flex;
     width: 300px;
+    flex-wrap: wrap;
+    justify-content: center;
     height: max-content;
     gap: 10px;
 }
