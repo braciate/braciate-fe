@@ -7,23 +7,29 @@ import logo2 from '../assets/img/filosofilogo-2.svg';
 import logo3 from '../assets/img/filosofilogo-3.svg';
 import logo4 from '../assets/img/filosofilogo-4.svg';
 import logo5 from '../assets/img/filosofilogo-5.svg';
+import panahIcon from '../assets/img/panahdot.svg';
+import preview1 from '../assets/img/previewlogo-1.png';
 import './FilosofiLogo.css';
 
 const FilosofiLogo = () => {
     const slides = [
-        <div className='slide-1'>
+        <div className='slide'>
             <img src={logo1} alt="" />
+            <div className='logo-info'>
+                <h1>KILAU EMAS KEJAYAAN</h1>
+                <p>Warna emas melambangkan prestasi, kemakmuran, dan keberhasilan yang diraih oleh seluruh Simpul Brawijaya, mencerminkan kekuatan dan pencapaian yang terus bersinar.</p>
+            </div>
         </div>,
-        <div className='slide-2'>
+        <div className='slide'>
             <img src={logo2} alt="" />
         </div>,
-        <div className='slide-3'>
+        <div className='slide'>
 
         </div>,
-        <div className='slide-4'>
+        <div className='slide'>
 
         </div>,
-        <div className='slide-5'>
+        <div className='slide'>
 
         </div>
     ];
@@ -48,27 +54,32 @@ const FilosofiLogo = () => {
                 <img src={GlitterLeft} alt="" />
             </div>
             <img src={FilosofiLogoImg} alt="" id='filosofi-logo-img'/>
-            <div className='carousel'>
-                <div className='carousel-inner' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-                    {slides.map((slide, index) => (
-                        <div key={index} className='carousel-slide'>
-                            {slide}
+            <div className='carousel-and-preview'>
+                <img src={preview1} alt="" />
+                <div className='carousel-and-indicators'>
+                    <div className='carousel'>
+                        <div className='carousel-inner' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+                            {slides.map((slide, index) => (
+                                <div key={index} className='carousel-slide'>
+                                    {slide}
+                                </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+                    <div className='carousel-controls'>
+                        <img src={panahIcon} onClick={goToPrevious} id='panah-kiri' alt="" />
+                        <div className='carousel-indicators'>
+                            {slides.map((_, index) => (
+                                <div
+                                    key={index}
+                                    className={`carousel-indicator ${index === currentIndex ? 'active' : ''}`}
+                                    onClick={() => setCurrentIndex(index)}
+                                />
+                            ))}
+                        </div>
+                        <img src={panahIcon} onClick={goToNext} id='panah-kanan' alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className='carousel-controls'>
-                <button onClick={goToPrevious}>Previous</button>
-                <div className='carousel-indicators'>
-                    {slides.map((_, index) => (
-                        <div
-                            key={index}
-                            className={`carousel-indicator ${index === currentIndex ? 'active' : ''}`}
-                            onClick={() => setCurrentIndex(index)}
-                        />
-                    ))}
-                </div>
-                <button onClick={goToNext}>Next</button>
             </div>
         </main>
     );
