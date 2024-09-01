@@ -36,6 +36,7 @@
     width: 100%; 
     overflow: hidden;
     justify-content: center;
+    margin-bottom: 60px;
 }
 
 .carousel-and-indicators {
@@ -93,6 +94,7 @@
 
 #panah-kanan {
     margin-left: 15px;
+    z-index: 2;
 }
   
 .carousel-indicator.active {

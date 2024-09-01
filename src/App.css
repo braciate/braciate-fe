@@ -9,6 +9,8 @@ html, body {
 }
 
 .about-filosofi {
-  background-image: url(./assets/img/blackuppershadow.png), url(./assets/img/goldenpatternbg.png);
-  background-repeat: no-repeat, repeat;
+  background-image: url(./assets/img/blackshadow-underneath.svg), url(./assets/img/blackuppershadow.png), url(./assets/img/goldenpatternbg.png);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: bottom, top, center;
+
 }
