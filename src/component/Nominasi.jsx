@@ -21,24 +21,16 @@ const Nominasi = () => {
         <div className="button-nominasi">
           <ul className="list">
             <li onClick={() => setButtonPopupDpm(true)}>
-              <span className="button-list" href="#nominasi">
-                Dewan Perwakilan Mahasiswa
-              </span>
+              <span className="button-list">Dewan Perwakilan Mahasiswa</span>
             </li>
             <li onClick={() => setButtonPopupBem(true)}>
-              <span className="button-list" href="/">
-                Badan Eksekutif Mahasiswa
-              </span>
+              <span className="button-list">Badan Eksekutif Mahasiswa</span>
             </li>
             <li onClick={() => setButtonPopupHima(true)}>
-              <span className="button-list" href="/">
-                Himpunan Mahasiswa
-              </span>
+              <span className="button-list">Himpunan Mahasiswa</span>
             </li>
             <li onClick={() => setButtonPopupUkm(true)}>
-              <span className="button-list" href="#">
-                Unit Kegiatan Mahasiswa
-              </span>
+              <span className="button-list">Unit Kegiatan Mahasiswa</span>
             </li>
           </ul>
         </div>
