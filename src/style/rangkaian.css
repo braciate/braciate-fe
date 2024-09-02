@@ -1,60 +1,59 @@
-#rangkaian{
-    height: 100vh;
-    background: var(--black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#rangkaian {
+  height: 100vh;
+  background: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.title-rangkaian{
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.vector-atas{
-    width: 321px;
-    height: 35px;
+.title-rangkaian {
+  display: flex;
+  flex-direction: column;
 }
 
-.atas{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.content-rangkaian{
-    display: flex;
-    flex-direction: column;
-    margin-top: 55px;
-    gap: 30px;
+.vector-atas {
+  width: 321px;
+  height: 35px;
 }
 
-.acara{
-    display: flex;
-    gap: 240px;
-    justify-content: center;
+.atas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.content-rangkaian {
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
+  gap: 30px;
 }
 
-.list-acara{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 37px;
-    text-align: center;
-    color: var(--white);
-    font-family: 'Poppins';
-    font-size: 12px;
+.acara {
+  display: flex;
+  gap: 240px;
+  justify-content: center;
 }
 
-.text{
-    display: flex;
-    width: 300px;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: max-content;
-    gap: 10px;
+.list-acara {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 37px;
+  text-align: center;
+  color: var(--white);
+  font-family: "Poppins";
+  font-size: 12px;
 }
 
-.text > p{
-    margin-top: 10px;
+.text {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: max-content;
+  gap: 10px;
+}
+
+.text > p {
+  margin-top: 10px;
 }

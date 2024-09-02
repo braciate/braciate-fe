@@ -6,7 +6,7 @@ import './AboutUs.css';
 
 const AboutUs = () => {
     return (
-        <main className='about-us'>
+        <main className='about-us' id="about-us">
             <div className='triangle-icons'>
                 <img src={TriangleLeft} alt="" />
                 <img src={TriangleRight} alt="" id='triangle-right' />
