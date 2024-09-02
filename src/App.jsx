@@ -10,6 +10,8 @@ import Rangkaian from './components/Rangkaian';
 import Panduan from './components/Panduan';
 import Nominasi from './components/Nominasi';
 import Faq from './components/Faq';
+import Sponsorship from './components/Sponsorship/Sponsorship';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -26,6 +28,14 @@ function App() {
       <Panduan />
       <Nominasi />
       <Faq/>
+      <div className="flex flex-col min-h-screen">
+      <main className="flex-grow">
+      </main>
+      <Sponsorship />
+      <br></br>
+      <br></br>
+      <Footer />
+    </div>
     </div>
   );
 }
