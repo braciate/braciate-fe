@@ -6,6 +6,10 @@ import AboutUs from './components/AboutUs';
 import FilosofiLogo from './components/FilosofiLogo';
 import VisionMission from './components/VisionMission';
 import EventTheme from './components/EventTheme';
+import Rangkaian from './components/Rangkaian';
+import Panduan from './components/Panduan';
+import Nominasi from './components/Nominasi';
+import Faq from './components/Faq';
 
 function App() {
   return (
@@ -18,6 +22,10 @@ function App() {
       </div>
       <VisionMission />
       <EventTheme />
+      <Rangkaian />
+      <Panduan />
+      <Nominasi />
+      <Faq/>
     </div>
   );
 }
