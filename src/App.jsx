@@ -5,6 +5,7 @@ import HeroSection from './components/HeroSection';
 import AboutUs from './components/AboutUs';
 import FilosofiLogo from './components/FilosofiLogo';
 import VisionMission from './components/VisionMission';
+import EventTheme from './components/EventTheme';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <FilosofiLogo />
       </div>
       <VisionMission />
+      <EventTheme />
     </div>
   );
 }
