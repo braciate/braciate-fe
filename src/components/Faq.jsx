@@ -42,9 +42,9 @@ const Faq = () => {
 
   return (
     <section id="faq" className="w-screen h-screen">
-      <img src={bgFaq} className="brightness-50 absolute z-1" />
-      <div className="faq-container w-full h-full flex flex-wrap items-center justify-evenly">
-        <div className="title-faq z-10">
+      <img src={bgFaq} className="absolute brightness-50 z-1" />
+      <div className="flex flex-wrap items-center w-full h-full faq-container justify-evenly">
+        <div className="z-10 title-faq">
           <img src={titleFaq} alt="title" className="bg-transparent" />
         </div>
         <div className="faq-content">
