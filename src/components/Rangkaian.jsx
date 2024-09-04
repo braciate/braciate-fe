@@ -17,7 +17,7 @@ const Rangkaian = () => {
       <div className="title-rangkaian">
         <div className="atas">
           <img src={elemenAtas} alt="elemen" className="vector-atas" />
-          <div className="main-title">
+          <div className="ml-5  main-title">
             <img
               src={titleRangkaian}
               alt="title"
