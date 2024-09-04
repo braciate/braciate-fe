@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Jaorent';
+    src: url('../assets/fonts/Jaoren.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.navbar {
+    background-color: black;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.navbar-logo {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 100%;
+}
+
+.navbar-links {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    list-style: none;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 19px;
+    font-size: 25px;
+    background-image: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: background-image 0.3s ease;
+    -webkit-transition: background-image 0.3s ease;
+    -moz-transition: background-image 0.3s ease;
+    -ms-transition: background-image 0.3s ease;
+    -o-transition: background-image 0.3s ease;
+    font-family: 'Jaorent';
+}
+
+.navbar-links a:hover {
+    background-image: url('../assets/img/goldpic.png');
+    color: transparent;
+}
+
+#votenow {
+    border: 1px solid white;
+    border-radius: 50px;
+    margin-left: 15px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+#votenow:hover {
+    background-image: url('../assets/img/goldpic.png');
+    border: none;
+    padding: 1px;
+}
+
+#votenow a:hover {
+    color: white;
+}

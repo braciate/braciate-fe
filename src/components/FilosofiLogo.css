@@ -1,0 +1,123 @@
+.filosofi-logo {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: cover;
+    object-fit: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#filosofi-logo-img {
+    margin-left: 7vw;
+}
+
+.filosofi-glitter {
+    width: 100%;
+    position: absolute;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+}
+
+.filosofi-glitter img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-and-preview {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    width: 100%; 
+    overflow: hidden;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.carousel-and-indicators {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+  
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; 
+}
+  
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+  
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    width: 50px;
+}
+  
+.carousel-indicators {
+    display: flex;
+    gap: 10px;
+}
+  
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#panah-kiri {
+    rotate: 180deg;
+    margin-right: 15px;
+}
+
+#panah-kanan {
+    margin-left: 15px;
+    z-index: 2;
+}
+  
+.carousel-indicator.active {
+    background-color: rgb(233, 188, 134);
+}
+
+.slide {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+}
+
+.slide h1 {
+    font-family: 'Jaorent';
+}
+
+.slide p {
+    font-family: 'Poppins';
+}
+
+.logo-info h1 {
+    font-family: 'Jaorent';
+    font-size: 2em;
+    margin-bottom: 20px;
+}
