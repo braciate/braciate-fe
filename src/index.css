@@ -4,11 +4,19 @@
 @tailwind utilities;
 
 :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   --black: #000000;
   --gold: #d7a129;
   --white: #ffffff;
   --emerald: #00505f;
-  --gold-texture: url("./assets/gold-texture.svg") ;
+  --gold-texture: url("./assets/gold-texture.svg");
   --gold-textureBg: url("./assets/gold-texture.png");
   --bg-fav: rgba(255, 255, 255, 0.5);
   --bg-etc: rgba(0, 0, 0, 0.5);
@@ -16,6 +24,9 @@
   --bg-faq: url("./assets/faq assets/bg-faq.svg");
   --up: url("./assets/faq assets/up.svg");
   --down: url("./assets/faq assets/down.svg");
+  --width: 100px;
+  --height: 50px;
+  --quantity: 10;
 }
 
 * {
@@ -24,7 +35,7 @@
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -35,4 +46,25 @@
   100% {
     opacity: 1;
   }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
