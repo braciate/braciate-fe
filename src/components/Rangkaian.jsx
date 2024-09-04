@@ -1,6 +1,6 @@
 import "../style/rangkaian.css";
 import elemenAtas from "../assets/rangkaian-atas.svg";
-import titleRangkaian from "../assets/title-rangkaian.svg";
+import titleRangkaian from "../assets/rangkaian assets/rangkaian-title.svg";
 import parade from "../assets/rangkaian assets/1.svg";
 import bazar from "../assets/rangkaian assets/2.svg";
 import seminar from "../assets/rangkaian assets/3.svg";
@@ -17,11 +17,12 @@ const Rangkaian = () => {
       <div className="title-rangkaian">
         <div className="atas">
           <img src={elemenAtas} alt="elemen" className="vector-atas" />
-          <img
-            src={titleRangkaian}
-            alt="title"
-            style={{ margin: "0px 20px" }}
-          />
+          <div className="main-title">
+            <img
+              src={titleRangkaian}
+              alt="title"
+            />
+          </div>
           <img src={elemenAtas} alt="elemen" className="vector-atas" />
         </div>
         <div className="content-rangkaian">
