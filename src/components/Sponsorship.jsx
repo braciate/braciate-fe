@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Sponsorship.css';
 import sponsorshipTitle from '/src/assets/img/sponsorship_title.png';
 
@@ -15,13 +15,34 @@ const sponsorImages = [
 ];
 
 const Sponsorship = () => {
-  const renderSlider = (className) => (
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const handleMouseEvents = (track) => {
+      const items = track.querySelectorAll('.item');
+      items.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          track.style.animationPlayState = 'paused';
+        });
+        item.addEventListener('mouseleave', () => {
+          track.style.animationPlayState = 'running';
+        });
+      });
+    };
+
+    if (sliderRef.current) {
+      const sliderTracks = sliderRef.current.querySelectorAll('.slider-track');
+      sliderTracks.forEach(handleMouseEvents);
+    }
+  }, []);
+
+  const renderSlider = (className, reverse = false) => (
     <div className={`slider ${className}`}>
-      <div className="slider-track">
-        {[...sponsorImages, ...sponsorImages].map((imageUrl, index) => (
+      <div className="slider-track" style={{ animationDirection: reverse ? 'reverse' : 'normal' }}>
+        {[...sponsorImages, ...sponsorImages, ...sponsorImages].map((imageUrl, index) => (
           <div key={index} className="item">
             <div className="circle">
-              <img src={imageUrl} alt={`Sponsor ${index + 1}`} className="sponsor-image" />
+              <img src={imageUrl} alt={`Sponsor ${(index % sponsorImages.length) + 1}`} className="sponsor-image" />
             </div>
           </div>
         ))}
@@ -30,36 +51,18 @@ const Sponsorship = () => {
   );
 
   return (
-    <main className="sponsorship-container">
+    <main className="sponsorship-container" ref={sliderRef}>
       <div className="sponsorship-content">
         <div className="sponsorship-title">
           <img src={sponsorshipTitle} alt="Sponsorship" />
         </div>
         <div className="sliders-wrapper">
           {renderSlider('slider-top')}
-          {renderSlider('slider-bottom')}
+          {renderSlider('slider-bottom', true)}
         </div>
       </div>
     </main>
   );
 };
-
-document.addEventListener('DOMContentLoaded', () => {
-    const sliderTracks = document.querySelectorAll('.slider-track');
-  
-    sliderTracks.forEach(track => {
-      const items = track.querySelectorAll('.item');
-  
-      items.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-          track.style.animationPlayState = 'paused';
-        });
-  
-        item.addEventListener('mouseleave', () => {
-          track.style.animationPlayState = 'running';
-        });
-      });
-    });
-  });
 
 export default Sponsorship;
