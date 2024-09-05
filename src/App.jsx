@@ -10,7 +10,7 @@ import Rangkaian from './components/Rangkaian';
 import Panduan from './components/Panduan';
 import Nominasi from './components/Nominasi';
 import Faq from './components/Faq';
-import Sponsorship from './components/Sponsorship/Sponsorship';
+import Sponsorship from './components/Sponsorship';
 import Footer from './components/Footer';
 
 function App() {
@@ -34,6 +34,7 @@ function App() {
       <Sponsorship />
       <br></br>
       <br></br>
+
       <Footer />
     </div>
     </div>
