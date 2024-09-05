@@ -1,0 +1,47 @@
+.hero-section {
+    min-height: 400px;
+    height: 100vh;
+    width: auto;
+    background-color: black;
+    background-image: url(../assets/img/glitter.png), url(../assets/img/herobackground.png);
+    background-repeat: no-repeat;
+    background-position: top center, bottom center;
+    background-size: cover;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+}
+
+.hero-title {
+    position: relative;
+    height: min-content;
+    width: 100%;
+    max-width: 1200px;
+}
+
+#piala-img {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    width: 30%;
+    filter: brightness(50%);
+    -webkit-filter: brightness(50%);
+}
+
+#title-hero {
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+    z-index: 1;
+    position: relative;
+}
+
+@media (max-height: 400px) {
+    .hero-section {
+        background-size: contain;
+        height: auto;
+        padding: 20px 0;
+    }
+}
