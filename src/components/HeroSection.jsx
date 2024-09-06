@@ -5,7 +5,7 @@ import './HeroSection.css';
 
 const HeroSection = () => {
     return (
-        <main className='hero-section'>
+        <main className='hero-section' id='home'>
             <div className='hero-title'>
                 <img id='piala-img' src={pialaImg} alt="" />
                 <img id='title-hero' src={heroTitle} alt="" />
