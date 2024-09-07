@@ -1,4 +1,3 @@
-import bgFaq from "../assets/faq assets/bg-faq.svg";
 import titleFaq from "../assets/faq assets/faq-title.svg";
 import FaqLayout from "../layout/FaqLayout";
 import { useState } from "react";
@@ -41,14 +40,18 @@ const Faq = () => {
   };
 
   return (
-    <section id="faq" className="w-screen h-screen">
-      <img src={bgFaq} className="brightness-50 absolute z-1" />
-      <div className="faq-container w-full h-full flex flex-wrap items-center justify-evenly">
-        <div className="title-faq z-10">
-          <img src={titleFaq} alt="title" className="bg-transparent" />
-        </div>
-        <div className="faq-content">
+    <section id="faq-section" className="w-screen h-screen">
+      <div className="absolute z-0 darken" />
+      <div className="flex flex-wrap items-center w-full h-full faq-container justify-evenly">
+        <div className="my-16 faq-content">
           <div className="faqs">
+            <div className="flex justify-center z-3 title-faq">
+              <img
+                src={titleFaq}
+                alt="title"
+                className="bg-transparent size-8/12"
+              />
+            </div>
             {faqs.map((faq, index) => (
               <FaqLayout
                 faq={faq}

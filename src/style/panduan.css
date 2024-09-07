@@ -33,18 +33,22 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-right: 25%;
-}
-.text-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 56px;
 }
 
 .title {
-  position: relative;
+  line-height: 1;
+}
+
+.subtitle {
+  font-family: "Jaorent";
+  background-image: var(--gold-texture);
+  background-size: 110%;
+  background-clip: text;
+  background-position: center;
+  color: transparent;
+}
+.subtitle2 {
+  font-family: "Jaoren";
 }
 
 .bling {

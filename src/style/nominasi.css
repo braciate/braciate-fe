@@ -7,7 +7,7 @@
 
 #nominasi {
   position: relative;
-  height: 120vh;
+  height: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,10 +23,25 @@
   -ms-transform: scale(1.5);
   -o-transform: scale(1.5);
 }
-
 .title-nominasi {
-  display: flex;
-  justify-content: center;
+  font-family: "Jaoren";
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  -webkit-text-stroke-width: 0.6px;
+  -webkit-text-stroke-color: goldenrod;
+}
+
+.title-bawah {
+  background-image: var(--gold-texture);
+  background-position: center;
+  background-size: 110%;
+  background-clip: text;
+  color: transparent;
 }
 
 .content-nominasi {
@@ -42,15 +57,12 @@
   justify-content: space-evenly;
   align-items: center;
   gap: 40px;
-
 }
 
 .li-nominasi {
   cursor: pointer;
-  width: 500px;
-  height: 50px;
   list-style: none;
-  padding: 10px 2.7;
+  padding: 10px 2.7px;
   background: var(--white);
   border-radius: 20px;
   background-image: none;
@@ -58,20 +70,18 @@
   align-items: center;
   gap: 2.7;
   display: inline-flex;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
 }
 
 .li-nominasi:hover {
-  width: 555px;
-  height: 72px;
   background-image: var(--gold-texture);
   background-size: 120%;
   background-position: center;
@@ -82,7 +92,6 @@
   font-family: "Poppins";
   text-decoration: none;
   color: var(--black);
-  font-size: 20px;
   font-weight: 600;
   transition: all 0.7s ease-in-out;
   -webkit-transition: all 0.7s ease-in-out;
