@@ -22,7 +22,7 @@ const Footer = () => {
             className="h-16 md:h-12"
           />
         </div>
-        <div className="flex flex-col py-6 items-center md:items-end">
+        <div className="flex flex-col py-4 pb-6 items-center md:items-end">
           <div className="flex mb-4 space-x-8 sm:space-x-6 md:space-x-4 lg:space-x-6 md:mb-2">
             <a
               href="https://instagram.com/braciate2024/"
