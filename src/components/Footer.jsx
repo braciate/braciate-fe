@@ -8,13 +8,13 @@ import tiktokIcon from "../assets/img/tiktok.png";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-6 text-white bg-black">
+    <footer className="w-full py-6 pb-4 text-white bg-black">
       <div className="flex flex-col items-center justify-between px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 md:flex-row">
-        <div className="flex flex-col items-center mb-6 md:mb-0 md:flex-row md:space-x-4">
+        <div className="flex items-center space-x-4 mb-6 md:mb-0">
           <img
             src={braciateLogo}
             alt="Brawijaya Appreciate Logo"
-            className="h-16 mb-2 md:h-12 md:mb-0"
+            className="h-16 md:h-12"
           />
           <img
             src={brawijayaAppreciateLogo}
@@ -22,8 +22,8 @@ const Footer = () => {
             className="h-16 md:h-12"
           />
         </div>
-        <div className="flex flex-col items-center md:items-end">
-          <div className="flex mb-4 space-x-6 md:mb-2 md:space-x-4">
+        <div className="flex flex-col py-6 items-center md:items-end">
+          <div className="flex mb-4 space-x-8 sm:space-x-6 md:space-x-4 lg:space-x-6 md:mb-2">
             <a
               href="https://instagram.com/braciate2024/"
               target="_blank"
@@ -57,7 +57,7 @@ const Footer = () => {
               <img src={tiktokIcon} alt="TikTok" className="w-6 h-6 md:w-5 md:h-5" />
             </a>
           </div>
-          <p className="text-sm font-poppins">
+          <p className="text-xs font-poppins">
             © Tim IT Brawijaya Appreciate 2024
           </p>
         </div>
