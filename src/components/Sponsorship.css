@@ -2,11 +2,11 @@
   --sponsorship-height: 75vh;
   --content-padding-top: 5vh;
   --content-padding-bottom: 10vh;
-  --slider-gap: 1vh;
+  --slider-gap: 3vh;
   --top-slider-item-size: 10vw;
   --bottom-slider-item-size: 7vw;
   --item-margin: 1vw;
-  --animation-duration: 60s;
+  --animation-duration: 100s;
 }
 
 .sponsorship-container {
@@ -190,27 +190,29 @@ height: var(--bottom-slider-item-size);
 /* Responsive adjustments */
 @media screen and (max-width: 1024px) {
   :root {
-      --animation-duration: 40s;
+      --animation-duration: 100s;
       --title-font-size: 7vw;
       --top-slider-item-size: 12vw;
       --bottom-slider-item-size: 9vw;
+      --slider-gap: 3vh;
+      /* --content-padding-bottom: 4vh; */
   }
 }
 
 @media screen and (max-width: 768px) {
   :root {
-      --animation-duration: 30s;
+      --animation-duration: 100s;
       --top-slider-item-size: 22vw;
       --bottom-slider-item-size: 14vw;
       --content-padding-top: 4vh;
       --content-padding-bottom: 8vh;
-      --slider-gap: 2vh;
+      --slider-gap: 3vh;
   }
 }
 
 @media screen and (max-width: 480px) {
   :root {
-      --animation-duration: 20s;
+      --animation-duration: 100s;
       --top-slider-item-size: 22vw;
       --bottom-slider-item-size: 18vw;
       --content-padding-top: 3vh;
