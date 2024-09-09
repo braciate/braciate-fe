@@ -16,14 +16,14 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar />
       <HeroSection />
       <div className='about-filosofi'>
         <AboutUs />
         <FilosofiLogo />
-      </div>
+      </div> */}
       <VisionMission />
-      <EventTheme />
+      {/* <EventTheme />
       <Rangkaian />
       <Panduan />
       <Nominasi />
@@ -35,7 +35,7 @@ function App() {
       <br></br>
       <br></br>
       <Footer />
-    </div>
+    </div> */}
     </div>
   );
 }
