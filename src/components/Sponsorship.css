@@ -202,7 +202,7 @@ height: var(--bottom-slider-item-size);
 @media screen and (max-width: 768px) {
   :root {
       --animation-duration: 100s;
-      --top-slider-item-size: 22vw;
+      --top-slider-item-size: 20vw;
       --bottom-slider-item-size: 14vw;
       --content-padding-top: 4vh;
       --content-padding-bottom: 8vh;
