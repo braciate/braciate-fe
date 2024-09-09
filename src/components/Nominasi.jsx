@@ -10,11 +10,11 @@ const Nominasi = () => {
   const [buttonPopupBem, setButtonPopupBem] = useState(false);
   const [buttonPopupHima, setButtonPopupHima] = useState(false);
   return (
-    <section id="nominasi" className="my-14 ">
+    <section id="nominasi" className="my-8 ">
       <video className="videoBg size-11/12" autoPlay loop muted>
         <source src={backgroundVideo} type="video/mp4" />
       </video>
-      <div className="gap-5 content-nominasi md:gap-14">
+      <div className="gap-9 content-nominasi md:gap-14">
         <div className="flex flex-col items-center title-nominasi">
           <h2 className="text-5xl title-atas md:text-7xl">LKM</h2>
           <div className="relative">
@@ -73,12 +73,8 @@ const Nominasi = () => {
       {/* pop up dpm */}
       <Popup trigger={buttonPopupDpm} setTrigger={setButtonPopupDpm}>
         <div style={{ zIndex: "1" }} className="popup-container">
-          <span className="fav-nom">
-            <p>
-              VOTE
-              <br />
-              BEST FAVORITE
-            </p>
+          <span className="flex fav-nom">
+            <p className="z-10 self-end text-5xl mb-9">BEST FAVORITE</p>
           </span>
           <div className="etc-nom">
             <span>
@@ -95,11 +91,7 @@ const Nominasi = () => {
       <Popup trigger={buttonPopupUkm} setTrigger={setButtonPopupUkm}>
         <div style={{ zIndex: "1" }} className="popup-container">
           <span className="fav-nom">
-            <p>
-              VOTE
-              <br />
-              BEST FAVORITE
-            </p>
+            <p className="z-10 self-end text-5xl mb-9">BEST FAVORITE</p>
           </span>
           <div className="etc-nom">
             <span>
@@ -130,11 +122,7 @@ const Nominasi = () => {
       <Popup trigger={buttonPopupBem} setTrigger={setButtonPopupBem}>
         <div style={{ zIndex: "1" }} className="popup-container">
           <span className="fav-nom">
-            <p>
-              VOTE
-              <br />
-              BEST FAVORITE
-            </p>
+            <p className="z-10 self-end text-5xl mb-9">BEST FAVORITE</p>
           </span>
           <div className="etc-nom">
             <span>
@@ -162,11 +150,7 @@ const Nominasi = () => {
       <Popup trigger={buttonPopupHima} setTrigger={setButtonPopupHima}>
         <div style={{ zIndex: "1" }} className="popup-container">
           <span className="fav-nom">
-            <p>
-              VOTE
-              <br />
-              BEST FAVORITE
-            </p>
+            <p className="z-10 self-end text-5xl mb-9">BEST FAVORITE</p>
           </span>
           <div className="etc-nom">
             <span>
