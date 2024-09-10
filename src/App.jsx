@@ -21,10 +21,10 @@ function App() {
       <div className='about-filosofi'>
         <AboutUs />
         <FilosofiLogo />
-      </div> */}
-      <VisionMission />
-      {/* <EventTheme />
-      <Rangkaian />
+      </div>
+      <VisionMission /> */}
+      <EventTheme />
+      {/* <Rangkaian />
       <Panduan />
       <Nominasi />
       <Faq/>
