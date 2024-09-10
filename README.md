@@ -100,7 +100,7 @@ git push -u origin "nama branch"
 ```
 
 Usahakan commit message memenuhi [Conventional Commit](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13),
-kemudian lakukan pull request ke branch development pada repository braciate-fe.
+kemudian lakukan pull request ke branch dev pada repository braciate-fe.
 
 ## Diskusi dan Request Perubahan Codebase
 
