@@ -89,6 +89,10 @@
     cursor: pointer;
 }
 
+.preview-logo-andro {
+    display: none;
+}
+
 #panah-kiri {
     rotate: 180deg;
     margin-right: 15px;
@@ -120,4 +124,60 @@
 
 .slide p {
     font-family: 'Poppins';
+}
+
+@media (max-width: 768px) {
+    .filosofi-glitter {
+        overflow: hidden;
+    }
+
+    .filosofi-glitter img {
+        width: 150%;
+    }
+
+    #filosofi-logo-img {
+        margin-left: 7vw;
+        width: 90%;
+    }
+
+    .preview-logo {
+        display: none;
+    }
+
+    .preview-logo-andro {
+        display: block;
+        width: 80%;
+        height: 20vh;
+    }
+
+    .carousel-and-indicators {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide {
+        margin-right: 10vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slide img {
+        width: 45%;
+    }
+
+    .slide h1 {
+        font-size: 25px;
+    }
+
+    .slide p {
+        font-size: small;
+        margin-top: -10px;
+        margin-left: -10px;
+    }
+
+    .carousel-controls {
+        width: 30%;
+    }
 }

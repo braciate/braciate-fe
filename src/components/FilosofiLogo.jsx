@@ -13,6 +13,11 @@ import preview2 from '../assets/img/previewlogo-2.svg';
 import preview3 from '../assets/img/previewlogo-3.svg';
 import preview4 from '../assets/img/previewlogo-4.svg';
 import preview5 from '../assets/img/previewlogo-5.svg';
+import previewandro1 from '../assets/img/previewlogoandro-1.svg';
+import previewandro2 from '../assets/img/previewlogoandro-2.svg';
+import previewandro3 from '../assets/img/previewlogoandro-3.svg';
+import previewandro4 from '../assets/img/previewlogoandro-4.svg';
+import previewandro5 from '../assets/img/previewlogoandro-5.svg';
 import './FilosofiLogo.css';
 
 const FilosofiLogo = () => {
@@ -55,6 +60,7 @@ const FilosofiLogo = () => {
     ];
 
     const previews = [preview1, preview2, preview3, preview4, preview5];
+    const previewsAndro = [previewandro1, previewandro2, previewandro3, previewandro4, previewandro5];
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToNext = () => {
@@ -76,8 +82,7 @@ const FilosofiLogo = () => {
             </div>
             <img src={FilosofiLogoImg} alt="" id='filosofi-logo-img' />
             <div className='carousel-and-preview'>
-                {/* Display the preview image based on the currentIndex */}
-                <img src={previews[currentIndex]} alt="" />
+                <img src={previews[currentIndex]} alt="" className='preview-logo'/>
                 <div className='carousel-and-indicators'>
                     <div className='carousel'>
                         <div className='carousel-inner' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
@@ -88,6 +93,7 @@ const FilosofiLogo = () => {
                             ))}
                         </div>
                     </div>
+                    <img src={previewsAndro[currentIndex]} alt="" className='preview-logo-andro'/>
                     <div className='carousel-controls'>
                         <img src={panahIcon} onClick={goToPrevious} id='panah-kiri' alt="" />
                         <div className='carousel-indicators'>
