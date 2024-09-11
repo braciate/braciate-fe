@@ -1,10 +1,4 @@
-@font-face {
-    font-family: 'Jaorent';
-    src: url('../assets/fonts/Jaoren.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
+/* General Navbar Styles */
 .navbar {
     background-color: black;
     width: 100%;
@@ -14,6 +8,7 @@
     justify-content: space-between;
     padding: 0 20px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .navbar-logo {
@@ -27,6 +22,7 @@
     height: 100%;
 }
 
+/* Default navbar links for larger screens */
 .navbar-links {
     display: flex;
     flex-direction: row;
@@ -39,15 +35,8 @@
     text-decoration: none;
     margin: 0 19px;
     font-size: 25px;
-    background-image: none;
-    background-clip: text;
-    -webkit-background-clip: text;
-    transition: background-image 0.3s ease;
-    -webkit-transition: background-image 0.3s ease;
-    -moz-transition: background-image 0.3s ease;
-    -ms-transition: background-image 0.3s ease;
-    -o-transition: background-image 0.3s ease;
     font-family: 'Jaorent';
+    transition: background-image 0.3s ease;
 }
 
 .navbar-links a:hover {
@@ -55,22 +44,58 @@
     color: transparent;
 }
 
+/* Vote now button styling */
 #votenow {
     border: 1px solid white;
     border-radius: 50px;
     margin-left: 15px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
+    padding: 5px 15px;
 }
 
 #votenow:hover {
     background-image: url('../assets/img/goldpic.png');
     border: none;
-    padding: 1px;
 }
 
-#votenow a:hover {
-    color: white;
+/* Navbar Toggle (Hamburger) */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.navbar-toggle .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    margin: 2px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: black;
+        display: none;
+        text-align: center;
+    }
+
+    .navbar-links.open {
+        display: flex;
+    }
+
+    .navbar-links a {
+        margin: 10px 0;
+        font-size: 20px;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
 }
