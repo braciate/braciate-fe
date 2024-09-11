@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import GlitterLeft from '../assets/img/glitterfilosofi-left.svg';
 import GlitterRight from '../assets/img/glitterfilosofi-right.svg';
 import FilosofiLogoImg from '../assets/img/filosofilogo-text.svg';
@@ -9,6 +9,10 @@ import logo4 from '../assets/img/filosofilogo-4.svg';
 import logo5 from '../assets/img/filosofilogo-5.svg';
 import panahIcon from '../assets/img/panahdot.svg';
 import preview1 from '../assets/img/previewlogo-1.png';
+import preview2 from '../assets/img/previewlogo-2.svg';
+import preview3 from '../assets/img/previewlogo-3.svg';
+import preview4 from '../assets/img/previewlogo-4.svg';
+import preview5 from '../assets/img/previewlogo-5.svg';
 import './FilosofiLogo.css';
 
 const FilosofiLogo = () => {
@@ -50,18 +54,19 @@ const FilosofiLogo = () => {
         </div>
     ];
 
+    const previews = [preview1, preview2, preview3, preview4, preview5];
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToNext = () => {
-      const isLastSlide = currentIndex === slides.length - 1;
-      const newIndex = isLastSlide ? 0 : currentIndex + 1;
-      setCurrentIndex(newIndex);
+        const isLastSlide = currentIndex === slides.length - 1;
+        const newIndex = isLastSlide ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
     };
-  
+
     const goToPrevious = () => {
-      const isFirstSlide = currentIndex === 0;
-      const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-      setCurrentIndex(newIndex);
+        const isFirstSlide = currentIndex === 0;
+        const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
     };
 
     return (
@@ -69,9 +74,10 @@ const FilosofiLogo = () => {
             <div className='filosofi-glitter'>
                 <img src={GlitterLeft} alt="" />
             </div>
-            <img src={FilosofiLogoImg} alt="" id='filosofi-logo-img'/>
+            <img src={FilosofiLogoImg} alt="" id='filosofi-logo-img' />
             <div className='carousel-and-preview'>
-                <img src={preview1} alt="" />
+                {/* Display the preview image based on the currentIndex */}
+                <img src={previews[currentIndex]} alt="" />
                 <div className='carousel-and-indicators'>
                     <div className='carousel'>
                         <div className='carousel-inner' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
