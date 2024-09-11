@@ -110,6 +110,11 @@
     text-align: center;
 }
 
+.slide img {
+    width: 100%;
+    border: 1px solid green;
+}
+
 .slide h1 {
     font-family: 'Jaorent';
 }

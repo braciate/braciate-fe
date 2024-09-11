@@ -22,15 +22,31 @@ const FilosofiLogo = () => {
         </div>,
         <div className='slide'>
             <img src={logo2} alt="" />
+            <div className='logo-info'>
+                <h1>BINTANG PRESTASI</h1>
+                <p>Bintang mewakili pencapaian yang gemilang dan menjadi simbol penghargaan yang diberikan kepada Simpul Brawijaya, menegaskan kualitas dan keunggulan yang diakui.</p>
+            </div>
         </div>,
         <div className='slide'>
-
+            <img src={logo3} alt="" />
+            <div className='logo-info'>
+                <h1>MAHKOTA PERJUANGAN</h1>
+                <p>Ikon maskot yang menuju mahkota menggambarkan perjalanan penuh dedikasi dan usaha dari lembaga dalam meraih puncak prestasi, menunjukkan tekad yang kuat untuk mencapai kemenangan.</p>
+            </div>
         </div>,
         <div className='slide'>
-
+            <img src={logo4} alt="" />
+            <div className='logo-info'>
+                <h1>GELOMBANG UKIRAN ABADI</h1>
+                <p>Gelombang ukiran yang memutar menggambarkan perjalanan panjang dan penuh arti dari lembaga dalam merajut kisah sukses, setiap likuan adalah jejak  dari dedikasi dalam mencapai tujuan besar.</p>
+            </div>
         </div>,
         <div className='slide'>
-
+            <img src={logo5} alt="" />
+            <div className='logo-info'>
+            <h1>LINGKARAN TEKAD TAK TERBATAS</h1>
+            <p>Pecahan lingkaran yang mengelilingi logo mencerminkan  tekad tak tergoyahkan lembaga untuk melampaui batas-batas dan mencapai keberhasilan,  dengan semangat yang terus berputar tanpa henti.</p>
+            </div>
         </div>
     ];
 
