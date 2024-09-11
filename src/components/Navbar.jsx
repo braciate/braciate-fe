@@ -30,20 +30,6 @@ const Navbar = () => {
           <a href="#vote">VOTE NOW</a>
         </li>
       </ul>
-      <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
-        <li>
-          <a href="#home">HOME</a>
-        </li>
-        <li>
-          <a href="#about">ABOUT US</a>
-        </li>
-        <li>
-          <a href="#faq-section">FAQ</a>
-        </li>
-        <li id="votenow">
-          <a href="#nominasi">VOTE NOW</a>
-        </li>
-      </ul>
       <div className="navbar-toggle" onClick={toggleMenu}>
         <span className="bar"></span>
         <span className="bar"></span>
