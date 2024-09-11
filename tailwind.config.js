@@ -7,15 +7,14 @@ export default {
   plugins: [],
 };
 module.exports = {
-    content: [
-      "./src/**/*.{js,jsx,ts,tsx}",
-    ],
-    theme: {
-      extend: {
-        fontFamily: {
-          'jaoren': ['Jaoren', 'sans-serif'],
-        },
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        jaoren: ["Jaoren", "sans-serif"],
       },
+      
     },
-    plugins: [],
-  }
+  },
+  plugins: [],
+};

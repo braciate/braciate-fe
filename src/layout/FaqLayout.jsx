@@ -7,7 +7,9 @@ const FaqLayout = ({ faq, index, toggleFAQ }) => {
       key={index}
       onClick={() => toggleFAQ(index)}
     >
-      <div className="pb-2 font-semibold border-b-2 faq-question">{faq.question}</div>
+      <div className="pb-2 text-sm font-semibold border-b-2 faq-question md:text-lg">
+        {faq.question}
+      </div>
       <div className="font-light faq-answer">{faq.answer}</div>
     </div>
   );

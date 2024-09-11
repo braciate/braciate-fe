@@ -2,6 +2,7 @@ import bgFaq from "../assets/faq assets/bg-faq.svg";
 import titleFaq from "../assets/faq assets/faq-title.svg";
 import FaqLayout from "../layout/FaqLayout";
 import { useState } from "react";
+import bling from "../assets/bling.png";
 
 const Faq = () => {
   const [faqs, setFaqs] = useState([
@@ -41,11 +42,18 @@ const Faq = () => {
   };
 
   return (
-    <section id="faq" className="w-screen h-screen">
-      <img src={bgFaq} className="absolute brightness-50 z-1" />
-      <div className="flex flex-wrap items-center w-full h-full faq-container justify-evenly">
-        <div className="z-10 title-faq">
-          <img src={titleFaq} alt="title" className="bg-transparent" />
+    <section
+      id="faq"
+      className="flex items-center justify-center w-screen h-screen"
+    >
+      <div className="absolute darken" />
+      <div className="flex flex-wrap items-center justify-center w-full gap-10 faq-container">
+        <div className="z-0 flex items-center justify-center title-faq">
+          <img
+            src={titleFaq}
+            alt="title"
+            className="bg-transparent size-4/6 md:size-full"
+          />
         </div>
         <div className="faq-content">
           <div className="faqs">
