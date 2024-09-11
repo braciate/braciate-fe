@@ -10,23 +10,6 @@
   flex-direction: column;
 }
 
-.main-title {
-  position: relative;
-  width: min(100%, 560px);
-  height: 76px;
-}
-
-.main-title img {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  transform: translate(0, -25%);
-  -webkit-transform: translate(0, -25%);
-  -moz-transform: translate(0, -25%);
-  -ms-transform: translate(0, -25%);
-  -o-transform: translate(0, -25%);
-}
-
 .vector-atas {
   width: 321px;
   height: 35px;
