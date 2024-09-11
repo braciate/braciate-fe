@@ -35,3 +35,22 @@
 .triangle-icons img {
     width: auto;
 }
+
+@media (max-width: 768px) {
+    #about-us-img {
+        width: 50%;
+        margin-top: 5%;
+    }
+
+    .triangle-icons img {
+        width: 20%;
+    }
+
+    #about-us-info {
+        width: auto;
+        margin-left: 12vh;
+        margin-right: 12vh;
+        margin-top: 70px;
+        font-size: 13px;
+    }
+}
