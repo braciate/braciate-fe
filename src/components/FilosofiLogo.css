@@ -12,6 +12,8 @@
 
 #filosofi-logo-img {
     margin-left: 7vw;
+    width: 100%;
+    max-width: 600px;
 }
 
 .filosofi-glitter {

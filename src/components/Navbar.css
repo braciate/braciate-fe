@@ -1,4 +1,11 @@
-/* General Navbar Styles */
+
+@font-face {
+    font-family: 'Jaorent';
+    src: url('../assets/fonts/Jaoren.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .navbar {
     background-color: black;
     width: 100%;
@@ -8,7 +15,6 @@
     justify-content: space-between;
     padding: 0 20px;
     box-sizing: border-box;
-    position: relative;
 }
 
 .navbar-logo {
@@ -22,7 +28,6 @@
     height: 100%;
 }
 
-/* Default navbar links for larger screens */
 .navbar-links {
     display: flex;
     flex-direction: row;
@@ -35,8 +40,15 @@
     text-decoration: none;
     margin: 0 19px;
     font-size: 25px;
-    font-family: 'Jaorent';
+    background-image: none;
+    background-clip: text;
+    -webkit-background-clip: text;
     transition: background-image 0.3s ease;
+    -webkit-transition: background-image 0.3s ease;
+    -moz-transition: background-image 0.3s ease;
+    -ms-transition: background-image 0.3s ease;
+    -o-transition: background-image 0.3s ease;
+    font-family: 'Jaorent';
 }
 
 .navbar-links a:hover {
@@ -44,17 +56,24 @@
     color: transparent;
 }
 
-/* Vote now button styling */
 #votenow {
     border: 1px solid white;
     border-radius: 50px;
     margin-left: 15px;
-    padding: 5px 15px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
 }
 
 #votenow:hover {
     background-image: url('../assets/img/goldpic.png');
     border: none;
+    padding: 1px;
+}
+
+#votenow a:hover {
+    color: white;
 }
 
 /* Navbar Toggle (Hamburger) */

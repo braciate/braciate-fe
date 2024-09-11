@@ -31,3 +31,7 @@
     justify-content: space-between;
     width: 100%;
 }
+
+.triangle-icons img {
+    width: auto;
+}
