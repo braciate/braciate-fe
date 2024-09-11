@@ -29,11 +29,12 @@ function App() {
       <Nominasi />
       <Faq />
       <div className="flex flex-col min-h-screen">
-        <main className="flex-grow"></main>
-        <Sponsorship />
-        <br></br>
-        <br></br>
-        <Footer />
+      <main className="flex-grow">
+      </main>
+      <Sponsorship />
+      <br></br>
+      <br></br>
+      <Footer />
       </div>
     </div>
   );
