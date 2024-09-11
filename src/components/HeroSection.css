@@ -10,12 +10,14 @@
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
 .hero-title {
     position: relative;
     height: min-content;
+    width: 100%;
 }
 
 #piala-img {
@@ -40,5 +42,21 @@
         background-size: contain;
         height: auto;
         padding: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        background-size: 100% auto, cover;
+    }
+
+    #piala-img {
+        top: 0;
+        width: 50%;
+        right: 22%;
+    }
+
+    #title-hero {
+        margin-top: 15%;
     }
 }
