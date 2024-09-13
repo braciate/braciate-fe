@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9fb087df.css",
+    "main.js": "/static/js/main.2115ea99.js",
+    "static/media/gold_background_design.png": "/static/media/gold_background_design.27a9b5ca80ab0b0cddb0.png",
+    "static/media/Logo_Braciate-Transparent.png": "/static/media/Logo_Braciate-Transparent.4fa67ed3ebfd234a9da2.png",
+    "static/media/Jaoren.woff": "/static/media/Jaoren.4aa6265ddfed24eae478.woff",
+    "static/media/BRAWIJAYA_APPRECIATE.png": "/static/media/BRAWIJAYA_APPRECIATE.6de17d34523b5d970cff.png",
+    "index.html": "/index.html",
+    "main.9fb087df.css.map": "/static/css/main.9fb087df.css.map",
+    "main.2115ea99.js.map": "/static/js/main.2115ea99.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9fb087df.css",
+    "static/js/main.2115ea99.js"
+  ]
+}
