@@ -90,11 +90,13 @@
 #panah-kiri {
   rotate: 180deg;
   margin-right: 15px;
+  cursor: pointer;
 }
 
 #panah-kanan {
   margin-left: 15px;
   z-index: 2;
+  cursor: pointer;
 }
 
 .carousel-indicator.active {
