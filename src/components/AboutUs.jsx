@@ -1,4 +1,3 @@
-import React from "react";
 import AboutUsImg from "../assets/img/aboutustext.svg";
 import TriangleLeft from "../assets/img/triangle-left.svg";
 import TriangleRight from "../assets/img/triangle-right.svg";
