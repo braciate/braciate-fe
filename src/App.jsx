@@ -22,10 +22,10 @@ function App() {
         <AboutUs />
         <FilosofiLogo />
       </div>
-      <VisionMission /> */}
-      <EventTheme />
-      {/* <Rangkaian />
-      <Panduan />
+      <VisionMission />
+      <EventTheme /> */}
+      <Rangkaian />
+      {/* <Panduan />
       <Nominasi />
       <Faq/>
       <div className="flex flex-col min-h-screen">
