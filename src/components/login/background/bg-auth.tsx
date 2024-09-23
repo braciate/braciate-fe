@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import Image from "next/image";
-import BgLogin from "@/public/svg/background/bg-auth.svg";
+import BgLogin from "@/assets/svg/background/bg-auth.svg";
 
 const BgAuth: FC = () => {
   return (

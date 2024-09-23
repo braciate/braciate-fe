@@ -83,8 +83,7 @@ const Nominasi: FC = () => {
           </ul>
         </div>
       </div>
-      {/* pop up dpm */}
-      <Popup trigger={buttonPopupDpm} setTrigger={setButtonPopupDpm}>
+      {/* <Popup trigger={buttonPopupDpm} setTrigger={setButtonPopupDpm}>
         <div style={{ zIndex: "1" }} className="popup-container">
           <span className="flex fav-nom">
             <p className="z-10 self-end text-5xl mb-9">BEST FAVORITE</p>
@@ -100,7 +99,6 @@ const Nominasi: FC = () => {
           </div>
         </div>
       </Popup>
-      {/* pop up ukm */}
       <Popup trigger={buttonPopupUkm} setTrigger={setButtonPopupUkm}>
         <div style={{ zIndex: "1" }} className="popup-container">
           <span className="fav-nom">
@@ -131,7 +129,6 @@ const Nominasi: FC = () => {
           </div>
         </div>
       </Popup>
-      {/* pop up bem */}
       <Popup trigger={buttonPopupBem} setTrigger={setButtonPopupBem}>
         <div style={{ zIndex: "1" }} className="popup-container">
           <span className="fav-nom">
@@ -159,7 +156,6 @@ const Nominasi: FC = () => {
           </div>
         </div>
       </Popup>
-      {/* pop up hima */}
       <Popup trigger={buttonPopupHima} setTrigger={setButtonPopupHima}>
         <div style={{ zIndex: "1" }} className="popup-container">
           <span className="fav-nom">
@@ -186,7 +182,7 @@ const Nominasi: FC = () => {
             </span>
           </div>
         </div>
-      </Popup>
+      </Popup> */}
     </section>
   );
 };
