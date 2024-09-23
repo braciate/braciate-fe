@@ -23,9 +23,7 @@ const LoginPage: FC = () => {
     <main className="flex h-screen justify-center relative">
       <BgAuth />
       <section className="w-1/2 mx-5 md:mx-8 h-fit md:h-5/6 self-center grid">
-        <h2 className="font-jaoren text-4xl text-white text-center">
-          User Login
-        </h2>
+        <h2 className="font-jaoren text-4xl text-white text-center">Login</h2>
         <div className=" bg-black rounded-3xl">
           <div className="flex flex-col md:flex-row h-full">
             <div className="p-7 w-full my-auto">
