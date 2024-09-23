@@ -53,7 +53,7 @@ const Navbar: FC = () => {
             <li className="py-2 border-b-2 border-white border-opacity-40 font-jaoren">
               <Link
                 className="cursor-pointer"
-                href="#home"
+                href="/#home"
                 onClick={toggleSlide}
               >
                 HOME
@@ -62,7 +62,7 @@ const Navbar: FC = () => {
             <li className="py-2 border-b-2 border-white border-opacity-40">
               <Link
                 className="cursor-pointer"
-                href="#about-us"
+                href="/#about-us"
                 onClick={toggleSlide}
               >
                 ABOUT US
@@ -82,7 +82,7 @@ const Navbar: FC = () => {
             >
               <Link
                 className="cursor-pointer"
-                href="#vote"
+                href="/#vote"
                 onClick={toggleSlide}
               >
                 VOTE NOW
@@ -102,12 +102,12 @@ const Navbar: FC = () => {
         className={`hidden ${styles.navbarLinks} md:flex items-center font-jaoren text-2xl`}
       >
         <li>
-          <Link className={styles.links} href="#home">
+          <Link className={styles.links} href="/#home">
             HOME
           </Link>
         </li>
         <li>
-          <Link className={styles.links} href="#about-us">
+          <Link className={styles.links} href="/#about-us">
             ABOUT US
           </Link>
         </li>
@@ -117,7 +117,7 @@ const Navbar: FC = () => {
           </Link>
         </li>
         <li id={styles.votenow}>
-          <Link className={styles.links} href="#vote">
+          <Link className={styles.links} href="/#vote">
             VOTE NOW
           </Link>
         </li>
