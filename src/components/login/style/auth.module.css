@@ -1,0 +1,14 @@
+#title_auth {
+  background-image: url(../../../assets/svg/fragments/gold-texture.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: text;
+}
+
+#submitButton {
+  background-image: url(../../../assets/svg/fragments/gold-texture.svg);
+  background-position: center;
+  background-size: 140%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
