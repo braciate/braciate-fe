@@ -1,0 +1,41 @@
+#panduan {
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtitle {
+  background-image: url("../../../assets/svg/fragments/gold-texture.svg");
+  background-size: 110%;
+  background-clip: text;
+  color: transparent;
+  background-position: center;
+}
+.subtitle2 {
+  font-family: "Jaoren";
+}
+
+.bling {
+  position: absolute;
+  top: -50%;
+  left: -22%;
+}
+.kiri {
+  position: absolute;
+  left: 0;
+}
+
+.desc {
+  font-size: 18px;
+  font-family: "Poppins";
+  color: var(--white);
+}

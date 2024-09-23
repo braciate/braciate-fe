@@ -1,0 +1,30 @@
+.aboutUs {
+  width: auto;
+  height: auto;
+  background-position: cover;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  background-position: contain;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  position: relative;
+  padding-bottom: 140px;
+}
+
+#aboutUsInfo {
+  margin: 40px 25vh 0 25vh;
+  text-align: center;
+}
+
+.triangleIcons {
+  position: absolute;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}

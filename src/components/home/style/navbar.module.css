@@ -1,0 +1,107 @@
+.navbar {
+  background-color: black;
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+}
+
+.navbarLogo {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbarLogo img {
+  height: 100%;
+}
+
+.navbarLinks {
+  flex-direction: row;
+  margin-left: auto;
+  list-style: none;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
+  margin: 0 19px;
+  font-size: 25px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: background-image 0.3s ease;
+  -webkit-transition: background-image 0.3s ease;
+  -moz-transition: background-image 0.3s ease;
+  -ms-transition: background-image 0.3s ease;
+  -o-transition: background-image 0.3s ease;
+}
+
+.links:hover {
+  background-image: url("../../../assets/svg/fragments/gold-texture.svg");
+  background-position: center;
+  color: transparent;
+}
+
+#votenow {
+  border: 1px solid white;
+  padding: 2px;
+  border-radius: 50px;
+  margin-left: 15px;
+  transition: all 0.1s ease-in-out;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+}
+
+#votenow:hover {
+  background-image: url("../../../assets/svg/fragments/gold-texture.svg");
+  border: none;
+  background-position: center;
+}
+
+.vote_slide {
+  border: 1px solid white;
+  background-image: url("../../../assets/svg/fragments/gold-texture.svg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+#votenow a:hover {
+  color: white;
+}
+
+.slideNav {
+  color: white;
+  background-image: url("../../../assets/svg/background/bg-slide.svg");
+  background-position: center;
+  background-size: cover;
+  fill: cornsilk;
+  opacity: 1;
+}
+
+.hamburger {
+  background-image: url(/public/svg/fragments/gold-texture.svg);
+  background-position: center;
+  background-size: 130%;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
