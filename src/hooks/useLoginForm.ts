@@ -57,7 +57,7 @@ const useLoginForm = (): ILoginFormProps => {
       });
       form.setError("root", {
         type: "manual",
-        message: "Email or password is incorrect",
+        message: "Email atau password kamu salah, coba lagi!",
       });
     }
   };

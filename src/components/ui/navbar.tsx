@@ -2,14 +2,14 @@
 
 import styles from "../home/style/navbar.module.css";
 import { useNavbar } from "@/hooks/useNavbar";
+import Image from "next/image";
+import Link from "next/link";
+import type { FC } from "react";
 import LogoImage from "@/assets/svg/logo/logo.svg";
 import LogoTitle from "@/assets/svg/logo/braciate-title.svg";
 import hamburger from "@/assets/svg/fragments/hamburger.svg";
 import goldTexture from "@/assets/svg/fragments/gold-texture.svg";
 import close from "@/assets/svg/fragments/close-slide.svg";
-import Image from "next/image";
-import Link from "next/link";
-import type { FC } from "react";
 
 const Navbar: FC = () => {
   const { isOpen, toggleSlide } = useNavbar();
