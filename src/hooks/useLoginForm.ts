@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import type { UseFormReturn } from "react-hook-form";
 import * as z from "zod";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 //* Data for checking validate login form
 const dataDummy = {
@@ -24,9 +25,12 @@ export type LoginFormValues = z.infer<typeof formSchema>;
 interface ILoginFormProps {
   form: UseFormReturn<LoginFormValues>;
   onSubmit: (values: LoginFormValues) => Promise<void>;
+  showPassword: boolean;
+  setShowPassword: (showPassword: boolean) => void;
 }
 
 const useLoginForm = (): ILoginFormProps => {
+  const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(formSchema),
@@ -53,11 +57,11 @@ const useLoginForm = (): ILoginFormProps => {
       });
       form.setError("root", {
         type: "manual",
-        message: "Email or password is incorrect",
+        message: "Email atau password kamu salah, coba lagi!",
       });
     }
   };
-  return { onSubmit, form };
+  return { onSubmit, form, showPassword, setShowPassword };
 };
 
 export default useLoginForm;
