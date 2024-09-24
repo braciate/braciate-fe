@@ -1,0 +1,23 @@
+#title_auth {
+  background-image: url(../../../assets/svg/fragments/gold-texture.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: text;
+}
+
+#errorMessage {
+  background-image: url(../../../assets/svg/fragments/gold-texture.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  background-clip: text;
+  color: transparent;
+}
+
+.inputBorder {
+  background-image: url(../../../assets/svg/fragments/gold-texture.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-clip: border-box;
+}
