@@ -6,7 +6,13 @@ import glitter from "@/assets/img/background/glitter.png";
 const BgHero: FC = () => {
   return (
     <div className="absolute w-full h-full brightness-100 bg-black">
-      <Image src={glitter} alt="glitter" fill={true} className="object-cover" />
+      <Image
+        src={glitter}
+        alt=""
+        fill={true}
+        className="object-cover"
+        priority={true}
+      />
       <Image
         src={BgHeroSection}
         alt="bg auth"

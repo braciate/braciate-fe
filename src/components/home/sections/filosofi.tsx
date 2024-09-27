@@ -2,13 +2,9 @@
 import { useState } from "react";
 import type { FC } from "react";
 import GlitterLeft from "../../../assets/svg/fragments/glitterfilosofi-left.svg";
-import GlitterRight from "../../../assets/svg/fragments/glitterfilosofi-right.svg";
 import FilosofiLogoImg from "../../../assets/svg/fragments/filosofilogo-text.svg";
 import logo1 from "../../../assets/svg/fragments/filosofilogo-1.svg";
 import logo2 from "../../../assets/svg/fragments/filosofilogo-2.svg";
-import logo3 from "../../../assets/svg/fragments/filosofilogo-3.svg";
-import logo4 from "../../../assets/svg/fragments/filosofilogo-4.svg";
-import logo5 from "../../../assets/svg/fragments/filosofilogo-5.svg";
 import panahIcon from "../../../assets/svg/fragments/panahdot.svg";
 import preview1 from "../../../assets/img/fragments/previewlogo-1.png";
 import style from "../style/filosofi.module.css";
