@@ -5,44 +5,43 @@ import Image from "next/image";
 import style from "../style/sponsorship.module.css";
 import SponsorProps from "@/hooks/useSponsors";
 import { motion } from "framer-motion";
+import { sponsorImage } from "@/lib/sponsor";
 
 const Sponsorship: FC = () => {
   const renderSlider = (className: string, reverse = false): JSX.Element => (
     <div className={`${style.slider} ${className}`}>
       <motion.div
         className={`${style.slider_track} flex gap-4 space-y-4`}
-        initial={{ x: reverse ? "-50%" : "0%" }}
-        animate={{ x: reverse ? "0%" : "-50%" }}
+        initial={{ x: reverse ? "-100%" : "0%" }}
+        animate={{ x: reverse ? "0%" : "-100%" }}
         transition={{
           x: {
             repeat: Infinity,
             repeatType: "loop",
-            duration: 50,
+            duration: 100,
             ease: "linear",
           },
         }}
       >
-        {[...sponsorImages, ...sponsorImages, ...sponsorImages].map(
-          (imageUrl, index) => (
-            <div key={index} className={`${style.item} flex-shrink-0`}>
-              <div
-                className={`${style.circle} w-24 h-24 rounded-full overflow-hidden`}
-              >
-                <Image
-                  src={imageUrl}
-                  alt={`Sponsor ${(index % sponsorImages.length) + 1}`}
-                  className={style.sponsor_image}
-                  width={200}
-                  height={200}
-                />
-              </div>
+        {sponsorImage.map((image, index) => (
+          <div key={index} className={`${style.item} flex-shrink-0`}>
+            <div
+              className={`${style.circle} w-24 h-24 rounded-full overflow-hidden`}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                className={`${style.sponsor_image} object-cover w-full h-full`}
+                width={200}
+                height={200}
+              />
             </div>
-          ),
-        )}
+          </div>
+        ))}
       </motion.div>
     </div>
   );
-  const { sliderRef, sponsorImages } = SponsorProps();
+  const { sliderRef } = SponsorProps();
   return (
     <main className={style.sponsorship_container} ref={sliderRef}>
       <div className={style.sponsorship_content}>
