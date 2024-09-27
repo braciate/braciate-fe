@@ -12,6 +12,9 @@ module.exports = {
         jaoren: ["var(--font-jaoren)"],
         poppins: ["var(--font-poppins)"],
       },
+      borderRadius: {
+        "4xl": "32px",
+      },
       backgroundImage: {},
     },
     plugins: [],

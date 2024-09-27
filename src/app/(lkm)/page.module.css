@@ -1,0 +1,14 @@
+#text_clip {
+  background-image: url(../../assets/svg/fragments/gold-texture.svg);
+  background-position: center;
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  color: transparent;
+}
+
+.dot {
+  background-image: url(../../assets/svg/fragments/gold-texture.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}

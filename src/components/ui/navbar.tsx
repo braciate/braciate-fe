@@ -51,20 +51,12 @@ const Navbar: FC = () => {
           </div>
           <ul className="flex flex-col space-y-4 sm:space-y-8 mb-auto mt-8">
             <li className="py-2 border-b-2 border-white border-opacity-40 font-jaoren">
-              <Link
-                className="cursor-pointer"
-                href="/#home"
-                onClick={toggleSlide}
-              >
+              <Link className="cursor-pointer" href="/" onClick={toggleSlide}>
                 HOME
               </Link>
             </li>
             <li className="py-2 border-b-2 border-white border-opacity-40">
-              <Link
-                className="cursor-pointer"
-                href="/#about-us"
-                onClick={toggleSlide}
-              >
+              <Link className="cursor-pointer" href="/" onClick={toggleSlide}>
                 ABOUT US
               </Link>
             </li>
@@ -80,11 +72,7 @@ const Navbar: FC = () => {
             <li
               className={`self-center px-8 py-1 mt-4 ${styles.vote_slide} w-max`}
             >
-              <Link
-                className="cursor-pointer"
-                href="/#vote"
-                onClick={toggleSlide}
-              >
+              <Link className="cursor-pointer" href="/" onClick={toggleSlide}>
                 VOTE NOW
               </Link>
             </li>
@@ -102,12 +90,12 @@ const Navbar: FC = () => {
         className={`hidden ${styles.navbarLinks} md:flex items-center font-jaoren text-2xl`}
       >
         <li>
-          <Link className={styles.links} href="/#home">
+          <Link className={styles.links} href="/">
             HOME
           </Link>
         </li>
         <li>
-          <Link className={styles.links} href="/#about-us">
+          <Link className={styles.links} href="/">
             ABOUT US
           </Link>
         </li>
@@ -117,7 +105,7 @@ const Navbar: FC = () => {
           </Link>
         </li>
         <li id={styles.votenow}>
-          <Link className={styles.links} href="/#vote">
+          <Link className={styles.links} href="/">
             VOTE NOW
           </Link>
         </li>
