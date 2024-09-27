@@ -11,17 +11,18 @@ import seminarText from "../assets/rangkaian assets/Seminar.svg";
 import awardingText from "../assets/rangkaian assets/Awarding Gala Night.svg";
 import line from "../assets/rangkaian assets/line.svg";
 import type { FC } from "react";
+import Image from "next/image";
 
 const Rangkaian: FC = () => {
   return (
     <section id="rangkaian">
       <div className="title-rangkaian">
         <div className="atas">
-          <Image src={elemenAtas} alt="elemen" className="vector-atas" />
+          <Image src={elemenAtas} alt="elemen" />
           <div className="ml-5 main-title">
             <Image src={titleRangkaian} alt="title" />
           </div>
-          <Image src={elemenAtas} alt="elemen" className="vector-atas" />
+          <Image src={elemenAtas} alt="elemen" />
         </div>
         <div className="content-rangkaian">
           <div className="acara">
