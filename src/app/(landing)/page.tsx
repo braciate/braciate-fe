@@ -11,7 +11,7 @@ import Sponsorship from "@/components/home/sections/sponsorship";
 
 const Home: React.FC = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Hero />
       <section className={style.aboutFilosofi} id="about-us">
         <AboutUs />
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
         <main className="flex-grow"></main>
         <Sponsorship />
       </section>
-    </>
+    </div>
   );
 };
 

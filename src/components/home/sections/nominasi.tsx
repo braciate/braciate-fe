@@ -21,10 +21,10 @@ const Nominasi: FC = () => {
       </div>
       <div className="flex flex-col items-center space-y-4">
         <div className="flex flex-col items-center font-jaoren">
-          <h2 className="text-5xl titleatas sm:text-7xl">LKM</h2>
+          <h2 className="text-6xl titleatas sm:text-7xl">LKM</h2>
           <div className="relative">
             <h1
-              className={`text-6xl font-extrabold tracking-wider ${style.titlebawah} sm:text-8xl bg-goldTexture`}
+              className={`text-7xl font-extrabold tracking-wider ${style.titlebawah} sm:text-8xl bg-goldTexture`}
             >
               NOMINATION
             </h1>
@@ -43,22 +43,22 @@ const Nominasi: FC = () => {
         <div>
           <ul className="text-xs sm:text-xl cursor-pointer text-center space-y-6 flex flex-col justify-center items-center mt-8 text-black font-poppins font-bold">
             <li
-              className={`hover:w-64 hover:h-8 w-60 h-7 sm:w-[500px] sm:h-[50px] py-1 px-[1.7px] sm:py-6 sm:px-1 sm:hover:w-[555px] sm:hover:h-[72px] border-white transition-all ease-in-out duration-300 rounded-2xl flex items-center justify-center bg-white bg-center ${style.nominasi} bg-goldTexture`}
+              className={`w-72 h-9 sm:w-[500px] sm:h-[50px] py-1 px-[1.7px] sm:py-6 sm:px-1 sm:hover:w-[555px] sm:hover:h-[72px] border-white transition-all ease-in-out duration-300 rounded-2xl flex items-center justify-center bg-white bg-center ${style.nominasi} bg-goldTexture`}
             >
               <span>Dewan Perwakilan Mahasiswa</span>
             </li>
             <li
-              className={`hover:w-64 hover:h-8 w-60 h-7 sm:w-[500px] sm:h-[50px] py-1 px-[1.7px] sm:py-6 sm:px-1 sm:hover:w-[555px] sm:hover:h-[72px] border-white transition-all ease-in-out duration-300 rounded-2xl flex items-center justify-center bg-white bg-center ${style.nominasi} bg-goldTexture`}
+              className={`w-72 h-9 sm:w-[500px] sm:h-[50px] py-1 px-[1.7px] sm:py-6 sm:px-1 sm:hover:w-[555px] sm:hover:h-[72px] border-white transition-all ease-in-out duration-300 rounded-2xl flex items-center justify-center bg-white bg-center ${style.nominasi} bg-goldTexture`}
             >
               <span>Badan Eksekutif Mahasiswa</span>
             </li>
             <li
-              className={`hover:w-64 hover:h-8 w-60 h-7 sm:w-[500px] sm:h-[50px] py-1 px-[1.7px] sm:py-6 sm:px-1 sm:hover:w-[555px] sm:hover:h-[72px] border-white transition-all ease-in-out duration-300 rounded-2xl flex items-center justify-center bg-white bg-center ${style.nominasi} bg-goldTexture`}
+              className={`w-72 h-9 sm:w-[500px] sm:h-[50px] py-1 px-[1.7px] sm:py-6 sm:px-1 sm:hover:w-[555px] sm:hover:h-[72px] border-white transition-all ease-in-out duration-300 rounded-2xl flex items-center justify-center bg-white bg-center ${style.nominasi} bg-goldTexture`}
             >
               <span>Himpunan Mahasiswa</span>
             </li>
             <li
-              className={`hover:w-64 hover:h-8 w-60 h-7 sm:w-[500px] sm:h-[50px] py-1 px-[1.7px] sm:py-6 sm:px-1 sm:hover:w-[555px] sm:hover:h-[72px] border-white transition-all ease-in-out duration-300 rounded-2xl flex items-center justify-center bg-white bg-center ${style.nominasi} bg-goldTexture`}
+              className={`w-72 h-9 sm:w-[500px] sm:h-[50px] py-1 px-[1.7px] sm:py-6 sm:px-1 sm:hover:w-[555px] sm:hover:h-[72px] border-white transition-all ease-in-out duration-300 rounded-2xl flex items-center justify-center bg-white bg-center ${style.nominasi} bg-goldTexture`}
             >
               <span>Unit Kegiatan Mahasiswa</span>
             </li>

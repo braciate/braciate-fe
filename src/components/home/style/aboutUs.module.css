@@ -14,11 +14,6 @@
   padding-bottom: 140px;
 }
 
-#aboutUsInfo {
-  margin: 40px 25vh 0 25vh;
-  text-align: center;
-}
-
 .triangleIcons {
   position: absolute;
   display: flex;
@@ -27,4 +22,14 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .aboutUs {
+    width: auto;
+    margin-left: 12vh;
+    margin-right: 12vh;
+    margin-top: 70px;
+    font-size: 13px;
+  }
 }

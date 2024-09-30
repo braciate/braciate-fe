@@ -3,38 +3,52 @@ import iconLeft from "../../../assets/svg/fragments/visi-misi-left.svg";
 import iconRight from "../../../assets/svg/fragments/visi-misi-right.svg";
 import visiText from "../../../assets/svg/fragments/visi-text.svg";
 import misiText from "../../../assets/svg/fragments/misi-text.svg";
-import style from "../style/vision.module.css";
 import type { FC } from "react";
 import Image from "next/image";
 
 const VisionMission: FC = () => {
   return (
-    <main className={style.vision_mission}>
-      <div className={style.background_icons}>
-        <Image src={iconLeft} alt="" id={style.icon_left} />
-        <Image src={iconRight} alt="" id={style.icon_right} />
+    <section className="w-full h-screen relative flex flex-col justify-center">
+      <div className="absolute w-full h-auto flex flex-row items-center justify-between">
+        <Image src={iconLeft} alt="" className="w-3/12 md:w-2/12 h-auto" />
+        <Image src={iconRight} alt="" className="w-3/12 md:w-2/12 h-auto" />
       </div>
-      <div className={style.vision_container}>
-        <p id={style.vision_info}>
-          Bring The Great Story with Harmonization and Collaborative Simpul
-          Brawijaya.
-        </p>
-        <Image src={visiText} alt="" id={style.visi_text} />
-      </div>
-      <div className={style.mission_container}>
-        <Image src={misiText} alt="" id={style.misi_text} />
-        <p className="z-0">
-          1. Menciptakan dan memaksimalkan kolaboratif simpul brawijaya yang
-          berlandaskan kebersamaan dan pengembangan
-          <br />
-          2. Menciptakan branding serta citra positif bagi simpul brawijaya
-          dengan semangat sinergi dan harmonisasi
-          <br />
-          3. Memotivasi simpul brawijaya menjadi wadah mahasiswa yang berimpact,
-          berintegritas, dan future oriented
-        </p>
-      </div>
-    </main>
+      <main className="w-4/6 mx-auto space-y-6">
+        <div className="flex flex-col md:flex-row-reverse gap-4 items-center md:items-end text-center w-full">
+          <Image src={visiText} alt="" className="w-6/12 md:w-3/12" />
+          <p className="text-xs sm:text-base">
+            Bring The Great Story with Harmonization and Collaborative Simpul
+            Brawijaya.
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row gap-8 w-full items-center">
+          <Image src={misiText} alt="" className="w-7/12 md:w-4/12" />
+          <ol className="list-none p-0 m-0 space-y-2 text-xs sm:text-base">
+            <li className="flex">
+              <span className="flex-none w-6">1.</span>
+              <span>
+                Menciptakan dan memaksimalkan kolaboratif simpul brawijaya yang
+                berlandaskan kebersamaan dan pengembangan
+              </span>
+            </li>
+            <li className="flex">
+              <span className="flex-none w-6">2.</span>
+              <span>
+                Menciptakan branding serta citra positif bagi simpul brawijaya
+                dengan semangat kolaboratif
+              </span>
+            </li>
+            <li className="flex">
+              <span className="flex-none w-6">3.</span>
+              <span>
+                Memotivasi simpul brawijaya menjadi wadah mahasiswa yang
+                progressive, berinovasi, dan future oriented
+              </span>
+            </li>
+          </ol>
+        </div>
+      </main>
+    </section>
   );
 };
 

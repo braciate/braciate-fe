@@ -62,7 +62,7 @@ const LoginPage: FC = () => {
                 }}
                 className="space-y-4 text-black"
               >
-                <div className=" bg-black h-60 rounded-3xl p-7 grid items-center">
+                <div className=" bg-black h-max rounded-3xl p-7 grid items-center">
                   {errors.root != null && (
                     <p className="text-sm bg-red-900 p-2 rounded-lg text-white font-medium">
                       {errors.root.message}

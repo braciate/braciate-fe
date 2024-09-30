@@ -45,7 +45,8 @@ const useLoginForm = (): ILoginFormProps => {
       values.email === dataDummy.email &&
       values.password === dataDummy.password
     ) {
-      router.push("/admin/list-anggota");
+      alert("submitted");
+      router.push("/");
     } else {
       form.setError("email", {
         type: "manual",
