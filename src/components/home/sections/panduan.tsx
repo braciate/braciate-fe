@@ -7,7 +7,7 @@ import style from "../style/panduan.module.css";
 import Image from "next/image";
 const Panduan: FC = () => {
   return (
-    <section id={style.panduan} className="h-screen relative">
+    <section id="panduan" className={`h-screen relative ${style.panduan}`}>
       <BgPanduan />
       <div className={`${style.content} pr-0 lg:pr-64 relative w-screen`}>
         <Image

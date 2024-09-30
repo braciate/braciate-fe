@@ -17,8 +17,10 @@ const Navbar: FC = () => {
   return (
     <nav className={`${styles.navbar}`}>
       <div className={styles.navbarLogo}>
-        <Image src={LogoImage} alt="Logo" className="w-max" />
-        <Image src={LogoTitle} alt="Title" className="w-max" />
+        <Link href="/" className="flex">
+          <Image src={LogoImage} alt="Logo" className="w-max" />
+          <Image src={LogoTitle} alt="Title" className="w-max" />
+        </Link>
       </div>
       <span
         className="flex justify-center h-8 p-1 cursor-pointer w-9 hamburger md:hidden"
@@ -56,8 +58,12 @@ const Navbar: FC = () => {
               </Link>
             </li>
             <li className="py-2 border-b-2 border-white border-opacity-40">
-              <Link className="cursor-pointer" href="/" onClick={toggleSlide}>
-                ABOUT US
+              <Link
+                className="cursor-pointer"
+                href="/#panduan"
+                onClick={toggleSlide}
+              >
+                Panduan
               </Link>
             </li>
             <li className="py-2 border-b-2 border-white border-opacity-40">
@@ -72,8 +78,12 @@ const Navbar: FC = () => {
             <li
               className={`self-center px-8 py-1 mt-4 ${styles.vote_slide} w-max`}
             >
-              <Link className="cursor-pointer" href="/" onClick={toggleSlide}>
-                VOTE NOW
+              <Link
+                className="cursor-pointer"
+                href="/login"
+                onClick={toggleSlide}
+              >
+                LOGIN
               </Link>
             </li>
           </ul>
@@ -95,8 +105,8 @@ const Navbar: FC = () => {
           </Link>
         </li>
         <li>
-          <Link className={styles.links} href="/">
-            ABOUT US
+          <Link className={styles.links} href="/#panduan">
+            Panduan
           </Link>
         </li>
         <li>
@@ -105,8 +115,8 @@ const Navbar: FC = () => {
           </Link>
         </li>
         <li id={styles.votenow}>
-          <Link className={styles.links} href="/">
-            VOTE NOW
+          <Link className={styles.links} href="/login">
+            Login
           </Link>
         </li>
       </ul>

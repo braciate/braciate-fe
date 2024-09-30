@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import goldTexture from "../../../assets/svg/fragments/gold-texture.svg";
 import type { FC } from "react";
+import bling from "@/assets/img/fragments/bling.png";
 
 interface FaqProps {
   question: string;
@@ -68,7 +69,21 @@ const Faq: FC = () => {
     <div className="h-max w-screen">
       <BgFaq />
       <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-4 ">
-        <Image src={titleFaq} alt="..." className="w-2/3 sm:w-1/2 lg:w-1/3" />
+        <div className="w-2/3 sm:w-1/2 lg:w-1/3">
+          <div className="relative">
+            <Image
+              src={bling}
+              alt="bling"
+              className="absolute right-0 -top-5 sm:right-14 lg:right-20 sm:top-0 "
+            />
+            <Image
+              src={bling}
+              alt="bling"
+              className="absolute bottom-0 -left-5 sm:-left-5 sm:bottom-2 w-32 h-auto"
+            />
+            <Image src={titleFaq} alt="Faq" />
+          </div>
+        </div>
         <div className="mt-8 -space-y-4">
           {faqs.map((faq, index) => (
             <FaqLayout
