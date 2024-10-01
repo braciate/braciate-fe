@@ -12,6 +12,7 @@
 
 #filosofi_logo_img {
   margin-left: 7vw;
+  z-index: 1;
 }
 
 .filosofi_glitter {
@@ -108,18 +109,4 @@
   flex-direction: row;
   width: 100%;
   text-align: center;
-}
-
-.slide h1 {
-  font-family: "Jaorent";
-}
-
-.slide p {
-  font-family: "Poppins";
-}
-
-.logo-info h1 {
-  font-family: "Jaorent";
-  font-size: 2em;
-  margin-bottom: 20px;
 }

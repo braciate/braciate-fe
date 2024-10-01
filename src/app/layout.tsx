@@ -4,10 +4,9 @@ import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const mainFont = Poppins({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-poppins",
-  weight: "500",
+  weight: ["400", "500", "600", "700"],
 });
 const subFont = localFont({
   src: "../assets/fonts/Jaoren.woff",
@@ -29,7 +28,7 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
       <body
-        className={`${subFont.variable} ${mainFont.className} overflow-x-hidden`}
+        className={`${subFont.variable} ${poppins.className} overflow-x-hidden`}
       >
         {children}
       </body>

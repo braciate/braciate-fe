@@ -2,6 +2,7 @@ import type { FC } from "react";
 import Image from "next/image";
 import BgHeroSection from "@/assets/img/background/herobackground.png";
 import glitter from "@/assets/img/background/glitter.png";
+import ShadowBot from "@/assets/img/fragments/blackshadow-bottom.png";
 
 const BgHero: FC = () => {
   return (
@@ -18,6 +19,11 @@ const BgHero: FC = () => {
         alt="bg auth"
         className="object-cover"
         fill={true}
+      />
+      <Image
+        src={ShadowBot}
+        alt="bg auth"
+        className="absolute h-full bottom-0"
       />
     </div>
   );

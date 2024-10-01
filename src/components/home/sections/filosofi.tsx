@@ -5,6 +5,9 @@ import GlitterLeft from "../../../assets/svg/fragments/glitterfilosofi-left.svg"
 import FilosofiLogoImg from "../../../assets/svg/fragments/filosofilogo-text.svg";
 import logo1 from "../../../assets/svg/fragments/filosofilogo-1.svg";
 import logo2 from "../../../assets/svg/fragments/filosofilogo-2.svg";
+import logo3 from "../../../assets/svg/fragments/filosofilogo-3.svg";
+import logo4 from "../../../assets/svg/fragments/filosofilogo-4.svg";
+import logo5 from "../../../assets/svg/fragments/filosofilogo-5.svg";
 import panahIcon from "../../../assets/svg/fragments/panahdot.svg";
 import preview1 from "../../../assets/img/fragments/previewlogo-1.png";
 import style from "../style/filosofi.module.css";
@@ -16,27 +19,75 @@ const FilosofiLogo: FC = () => {
   }
 
   const Slide: React.FC<SlideProps> = ({ children }) => (
-    <div className="slide">{children}</div>
+    <div className={style.slide}>{children}</div>
   );
 
   const slides: React.ReactElement[] = [
     <Slide key="slide1">
-      <Image src={logo1} alt="Logo 1" />
-      <div className={style.logo_info}>
-        <h1>KILAU EMAS KEJAYAAN</h1>
-        <p>
-          Warna emas melambangkan prestasi, kemakmuran, dan keberhasilan yang
-          diraih oleh seluruh Simpul Brawijaya, mencerminkan kekuatan dan
-          pencapaian yang terus bersinar.
-        </p>
+      <div className="flex flex-col sm:flex-row items-center">
+        <Image src={logo1} alt="Logo 1" />
+        <div className="text-center space-y-4">
+          <h1 className="font-jaoren text-4xl">KILAU EMAS KEJAYAAN</h1>
+          <p>
+            Warna emas melambangkan prestasi, kemakmuran, dan keberhasilan yang
+            diraih oleh seluruh Simpul Brawijaya, mencerminkan kekuatan dan
+            pencapaian yang terus bersinar.
+          </p>
+        </div>
       </div>
     </Slide>,
     <Slide key="slide2">
-      <Image src={logo2} alt="Logo 2" />
+      <div className="flex flex-col sm:flex-row items-center">
+        <Image src={logo2} alt="Logo 1" />
+        <div className="text-center space-y-4">
+          <h1 className="font-jaoren text-4xl">KILAU EMAS KEJAYAAN</h1>
+          <p>
+            Warna emas melambangkan prestasi, kemakmuran, dan keberhasilan yang
+            diraih oleh seluruh Simpul Brawijaya, mencerminkan kekuatan dan
+            pencapaian yang terus bersinar.
+          </p>
+        </div>
+      </div>
     </Slide>,
-    <Slide key="slide3">/</Slide>,
-    <Slide key="slide4">/</Slide>,
-    <Slide key="slide5">/</Slide>,
+    <Slide key="slide3">
+      <div className="flex flex-col sm:flex-row items-center">
+        <Image src={logo3} alt="Logo 1" />
+        <div className="text-center space-y-4">
+          <h1 className="font-jaoren text-4xl">KILAU EMAS KEJAYAAN</h1>
+          <p>
+            Warna emas melambangkan prestasi, kemakmuran, dan keberhasilan yang
+            diraih oleh seluruh Simpul Brawijaya, mencerminkan kekuatan dan
+            pencapaian yang terus bersinar.
+          </p>
+        </div>
+      </div>
+    </Slide>,
+    <Slide key="slide4">
+      <div className="flex flex-col sm:flex-row items-center">
+        <Image src={logo4} alt="Logo 1" />
+        <div className="text-center space-y-4">
+          <h1 className="font-jaoren text-4xl">KILAU EMAS KEJAYAAN</h1>
+          <p>
+            Warna emas melambangkan prestasi, kemakmuran, dan keberhasilan yang
+            diraih oleh seluruh Simpul Brawijaya, mencerminkan kekuatan dan
+            pencapaian yang terus bersinar.
+          </p>
+        </div>
+      </div>
+    </Slide>,
+    <Slide key="slide5">
+      <div className="flex flex-col sm:flex-row items-center">
+        <Image src={logo5} alt="Logo 1" />
+        <div className="text-center space-y-4">
+          <h1 className="font-jaoren text-4xl">KILAU EMAS KEJAYAAN</h1>
+          <p>
+            Warna emas melambangkan prestasi, kemakmuran, dan keberhasilan yang
+            diraih oleh seluruh Simpul Brawijaya, mencerminkan kekuatan dan
+            pencapaian yang terus bersinar.
+          </p>
+        </div>
+      </div>
+    </Slide>,
   ];
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);

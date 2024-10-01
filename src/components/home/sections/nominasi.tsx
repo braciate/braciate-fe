@@ -41,7 +41,7 @@ const Nominasi: FC = () => {
           </div>
         </div>
         <div>
-          <ul className="text-xs sm:text-xl cursor-pointer text-center space-y-6 flex flex-col justify-center items-center mt-8 text-black font-poppins font-bold">
+          <ul className="text-xs sm:text-xl cursor-pointer text-center space-y-6 flex flex-col justify-center items-center mt-8 text-black font-poppins font-medium">
             <li
               className={`w-72 h-9 sm:w-[500px] sm:h-[50px] py-1 px-[1.7px] sm:py-6 sm:px-1 sm:hover:w-[555px] sm:hover:h-[72px] border-white transition-all ease-in-out duration-300 rounded-2xl flex items-center justify-center bg-white bg-center ${style.nominasi} bg-goldTexture`}
             >

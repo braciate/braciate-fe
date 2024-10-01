@@ -13,7 +13,7 @@ const VisionMission: FC = () => {
         <Image src={iconLeft} alt="" className="w-3/12 md:w-2/12 h-auto" />
         <Image src={iconRight} alt="" className="w-3/12 md:w-2/12 h-auto" />
       </div>
-      <main className="w-4/6 mx-auto space-y-6">
+      <main className="w-4/6 mx-auto grid gap-9">
         <div className="flex flex-col md:flex-row-reverse gap-4 items-center md:items-end text-center w-full">
           <Image src={visiText} alt="" className="w-6/12 md:w-3/12" />
           <p className="text-xs sm:text-base">
@@ -22,7 +22,7 @@ const VisionMission: FC = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-8 w-full items-center">
-          <Image src={misiText} alt="" className="w-7/12 md:w-4/12" />
+          <Image src={misiText} alt="" className="w-7/12 md:w-4/12 md:-mt-10" />
           <ol className="list-none p-0 m-0 space-y-2 text-xs sm:text-base">
             <li className="flex">
               <span className="flex-none w-6">1.</span>
