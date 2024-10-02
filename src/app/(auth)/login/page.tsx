@@ -24,7 +24,7 @@ const LoginPage: FC = () => {
   const { errors, isSubmitted } = form.formState;
 
   return (
-    <main className="flex h-screen justify-center relative overflow-hidden">
+    <main className="flex min-h-screen justify-center relative overflow-hidden">
       <BgAuth />
       <section className="w-screen mx-6 sm:w-4/6 lg:w-1/2 h-fit md:h-5/6 self-center grid space-y-4 gap-4 z-10">
         <div className="text-center space-y-0 grid h-max self-end justify-center">
