@@ -15,7 +15,7 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-import ListLkm from "@/components/home/utils/dropdown";
+import ListLkm from "@/utils/dropdown";
 
 const Page: FC = () => {
   const { onSubmit, form } = useLinkForm();
@@ -67,6 +67,7 @@ const Page: FC = () => {
                           <ListLkm
                             {...field}
                             error={Boolean(errors.lkm) && isSubmitted}
+                            lkm="BEM"
                           />
                         </FormControl>
                         <FormMessage

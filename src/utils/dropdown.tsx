@@ -32,9 +32,10 @@ const organisasiList: Organisasi[] = [
 
 interface ListLkmProps extends ControllerRenderProps {
   error?: boolean;
+  lkm: string;
 }
 
-const ListLkm: FC<ListLkmProps> = ({ onChange, value, error }) => {
+const ListLkm: FC<ListLkmProps> = ({ onChange, value, error, lkm }) => {
   const [open, setOpen] = React.useState(false);
   const [selectedOrganisasi, setSelectedOrganisasi] =
     React.useState<Organisasi | null>(
@@ -72,7 +73,7 @@ const ListLkm: FC<ListLkmProps> = ({ onChange, value, error }) => {
         type="text"
         value={selectedOrganisasi?.label || ""}
         readOnly
-        placeholder="Pilih BEM Fakultasmu / Klik Ctrl + J"
+        placeholder={`Pilih ${lkm} Fakultasmu / Klik Ctrl + J`}
         className={`border-2 rounded-xl pl-10 pr-4 py-2 bg-white text-black cursor-pointer placeholder:text-gray-400 ${
           error ? "border-red-500" : ""
         }`}
@@ -82,7 +83,7 @@ const ListLkm: FC<ListLkmProps> = ({ onChange, value, error }) => {
       />
       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-black" />
       <CommandDialog open={open} onOpenChange={setOpen}>
-        <CommandInput placeholder="Cari BEM mu..." />
+        <CommandInput placeholder={`Cari ${lkm} mu...`} />
         <CommandList className="h-60 overflow-x-auto">
           <CommandEmpty>Ketik yang bener yaa...</CommandEmpty>
           {organisasiList.map((organisasi) => (

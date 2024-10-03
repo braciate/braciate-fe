@@ -15,6 +15,7 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
+import ListLkm from "@/utils/dropdown";
 
 const Page: FC = () => {
   const { onSubmit, form } = useLinkForm();
@@ -40,12 +41,6 @@ const Page: FC = () => {
               >
                 Ketentutan pengiriman
               </h1>
-              <p className="text-sm sm:text-base text-justify md:text-start">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-                repellendus neque tenetur obcaecati illum voluptate alias
-                aliquid qui debitis, quae minus ratione officia repellat
-                laborum. Laboriosam neque alias accusamus a!
-              </p>
             </div>
             <div>
               <p className="font-semibold mb-2">Indikator:</p>
@@ -63,6 +58,25 @@ const Page: FC = () => {
                   }}
                   className="space-y-4 text-white"
                 >
+                  <FormField
+                    control={form.control}
+                    name="lkm"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <ListLkm
+                            {...field}
+                            error={Boolean(errors.lkm) && isSubmitted}
+                            lkm="UKM"
+                          />
+                        </FormControl>
+                        <FormMessage
+                          id={style.errorMessage}
+                          className="text-xs sm:text-sm"
+                        />
+                      </FormItem>
+                    )}
+                  />
                   <FormField
                     control={form.control}
                     name="link"
