@@ -39,10 +39,10 @@ const Page: FC = () => {
       <section className="flex flex-col items-center space-y-3 w-full max-w-6xl px-4 py-12">
         <div className="font-jaoren text-center mt-12 mb-4">
           <h1 className="text-4xl sm:text-6xl md:text-7xl">
-            Unit Kegiatan Mahasiswa
+            Badan Eskutif Mahasiswa
           </h1>
           <h2 id={style.text_clip} className="text-4xl sm:text-5xl md:text-6xl">
-            Best Productive
+            Best Collaborative
           </h2>
         </div>
         <div className="border-2 rounded-3xl border-white w-full sm:w-11/12 md:w-10/12 lg:w-9/12 p-6 sm:p-10">
@@ -58,9 +58,9 @@ const Page: FC = () => {
             <div>
               <p className="font-semibold mb-2">Indikator:</p>
               <p className="text-sm sm:text-base mb-4 text-justify md:text-start">
-                Diukur dari jumlah program kerja yang terlaksana beserta
-                dokumentasi program kerja sesuai dengan jumlah total bobot
-                penilaian.
+                Diukur dari total kegiatan partnership baik studi banding atau
+                hal lainnya dalam lingkup UB maupun eksternal UB sesuai dengan
+                jumlah total bobot penilaian.
               </p>
               <Form {...form}>
                 <form

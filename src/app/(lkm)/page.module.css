@@ -12,3 +12,11 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.inputBorder {
+  background-image: url(../../assets/svg/fragments/gold-texture.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-clip: border-box;
+}

@@ -7,7 +7,7 @@
   --top-slider-item-size: 10vw;
   --bottom-slider-item-size: 7vw;
   --item-margin: 1vw;
-  --animation-duration: 20s;
+  --animation-duration: 50s;
 
   width: 100%;
   height: var(--sponsorship-height);
@@ -136,7 +136,7 @@
 /* Responsive adjustments for tablet devices */
 @media screen and (max-width: 1024px) {
   .sponsorship_container {
-    --animation-duration: 20s;
+    --animation-duration: 50s;
     --title-font-size: 7vw;
     --top-slider-item-size: 15vw;
     --bottom-slider-item-size: 12vw;
@@ -147,7 +147,7 @@
 /* Responsive adjustments for large mobile devices */
 @media screen and (max-width: 768px) {
   .sponsorship_container {
-    --animation-duration: 20s;
+    --animation-duration: 50s;
     --top-slider-item-size: 20vw;
     --bottom-slider-item-size: 16vw;
     --content-padding-top: 4vh;
@@ -159,7 +159,7 @@
 /* Responsive adjustments for small mobile devices */
 @media screen and (max-width: 480px) {
   .sponsorship_container {
-    --animation-duration: 20s;
+    --animation-duration: 50s;
     --top-slider-item-size: 22vw;
     --bottom-slider-item-size: 18vw;
     --content-padding-top: 3vh;

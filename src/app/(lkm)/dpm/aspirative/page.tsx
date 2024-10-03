@@ -3,8 +3,9 @@ import type { FC } from "react";
 import BgKategori from "@/components/lkm/background/bg-main";
 import style from "../../page.module.css";
 import { Input } from "@/components/ui/input";
-import { Link } from "lucide-react";
+import { Link, Loader2, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 import Image from "next/image";
 import gold from "../../../../assets/svg/fragments/gold-texture.svg";
 import useLinkForm from "@/hooks/useLinkForm";
@@ -13,12 +14,24 @@ import {
   FormControl,
   FormField,
   FormItem,
+  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import ListLkm from "@/utils/dropdown";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import React from "react";
 
 const Page: FC = () => {
-  const { onSubmit, form } = useLinkForm();
+  const {
+    form,
+    onSubmit,
+    isModalOpen,
+    setIsModalOpen,
+    formValues,
+    handleKeyValidation,
+    keyValidationForm,
+    submissionState,
+  } = useLinkForm();
   const { errors, isSubmitted } = form.formState;
   return (
     <main className="w-screen min-h-screen relative flex justify-center">
@@ -26,7 +39,7 @@ const Page: FC = () => {
       <section className="flex flex-col items-center space-y-3 w-full max-w-6xl px-4 py-12">
         <div className="font-jaoren text-center mt-12 mb-4">
           <h1 className="text-4xl sm:text-6xl md:text-7xl">
-            Dewan Perwakilan Mahasiswa{" "}
+            Dewan Perwakilan Mahasiswa
           </h1>
           <h2 id={style.text_clip} className="text-4xl sm:text-5xl md:text-6xl">
             Best Aspirative
@@ -67,7 +80,7 @@ const Page: FC = () => {
                           <ListLkm
                             {...field}
                             error={Boolean(errors.lkm) && isSubmitted}
-                            lkm="DPM"
+                            lkm="BEM"
                           />
                         </FormControl>
                         <FormMessage
@@ -116,6 +129,71 @@ const Page: FC = () => {
                   </div>
                 </form>
               </Form>
+              <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+                <DialogContent className={`bg-black border-spacing-0.5`}>
+                  <Form {...keyValidationForm}>
+                    <form
+                      onSubmit={keyValidationForm.handleSubmit(
+                        handleKeyValidation,
+                      )}
+                      className="space-y-4"
+                    >
+                      <FormField
+                        control={keyValidationForm.control}
+                        name="key"
+                        render={({ field }) => (
+                          <FormItem className="flex flex-col items-center">
+                            <FormLabel className="font-jaoren text-3xl mb-4">
+                              Masukkan Key
+                            </FormLabel>
+                            <FormControl>
+                              <div
+                                className={`${style.inputBorder} w-full p-[1.5px] rounded-lg`}
+                              >
+                                <div className="bg-black rounded-lg">
+                                  <Input
+                                    {...field}
+                                    placeholder="Password hanya dimiliki organisasi"
+                                    className={`text-center p-2 rounded-lg text-white focus:bg-transparent focus:outline-none text-xs sm:text-sm bg-transparent`}
+                                  />
+                                </div>
+                              </div>
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <div className="relative">
+                        <Button
+                          type="submit"
+                          className="border-2 w-full rounded-full font-jaoren text-white text-2xl"
+                          disabled={submissionState !== "idle"}
+                        >
+                          <Image
+                            src={gold}
+                            alt=""
+                            className="absolute object-cover -z-10 brightness-75 rounded-full"
+                            fill={true}
+                          />
+                          {submissionState === "idle" && "Verifikasi"}
+                          {submissionState === "submitting" && (
+                            <>
+                              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                              Submitting
+                            </>
+                          )}
+                          {submissionState === "submitted" && (
+                            <>
+                              <CheckCircle className="mr-2 h-4 w-4" />
+                              Submitted
+                            </>
+                          )}
+                        </Button>
+                      </div>
+                    </form>
+                  </Form>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
