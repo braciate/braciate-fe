@@ -1,34 +1,25 @@
-import React from "react";
-import EventThemeTitle from "../../../assets/svg/fragments/eventheme-text.svg";
-import EventThemeImg from "../../../assets/svg/fragments/anargya-text.svg";
-import GlitterBg from "../../../assets/img/fragments/glitter-eventtheme.png";
-import style from "../style/tema.module.css";
+import React from 'react';
+import EventThemeTitle from '../../../assets/svg/Theme_imgs/eventheme-text.svg';
+import EventThemeImg from '../../../assets/svg/Theme_imgs/anargya-text.svg';
+import GlitterBg from '../../../assets/svg/Theme_imgs/glitter-eventtheme.png';
+import EventThemeImgHp from '../../../assets/svg/Theme_imgs/EventThemeImgHp.svg';
+import Image from 'next/image';
 import type { FC } from "react";
-import Image from "next/image";
 
 const EventTheme: FC = () => {
-  return (
-    <main className={`${style.event_theme} h-96 sm:h-screen`}>
-      <div className="absolute h-auto w-full ">
-        <Image src={GlitterBg} alt="" />
-      </div>
-      <Image
-        src={EventThemeTitle}
-        alt=""
-        className="w-8/12 sm:w-7/12 md:w-5/12 z-[1]"
-      />
-      <Image
-        src={EventThemeImg}
-        alt=""
-        id={style.anargya_text}
-        className=" -mt-10 md:-mt-20 z-[1]"
-      />
-      <p className="text-sm sm:text-xl -mt-10 md:-mt-20 font-medium">
-        Cita-cita untuk menjadikan Universitas Brawijaya sebagai tempat yang
-        berharga dan bermanfaat bagi seluruh simpul Brawijaya.
-      </p>
-    </main>
-  );
-};
+    return (
+        <main className="w-full h-full bg-black py-[9%] flex flex-col items-center justify-center relative bg-cover bg-center object-cover">
+            <div className="absolute w-full md:top-0 md:left-0">
+                <Image src={GlitterBg} alt="" className="w-full h-auto" />
+            </div>
+            <Image src={EventThemeTitle} alt="" className='hidden md:block'/>
+            <Image src={EventThemeImgHp } alt="" className="block md:hidden"/>
+            <Image src={EventThemeImg} alt="" className="md:mt-[-5em] mt-[-2em] md:w-full w-[80%] max-w-[800px]" />
+            <p className="font-poppins font-light md:text-[18px] text-[9px] text-center w-[70%] max-w-[550px] md:mt-[-80px] mt-[-30px]">
+                Cita-cita untuk menjadikan Universitas Brawijaya sebagai tempat yang berharga dan bermanfaat bagi seluruh simpul Brawijaya.
+            </p>
+        </main>
+    );
+}
 
 export default EventTheme;
