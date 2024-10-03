@@ -4,6 +4,7 @@ import type { UseFormReturn } from "react-hook-form";
 import * as z from "zod";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import axios from "axios";
 
 //* Data for checking validate login form
 const dataDummy = {
@@ -48,6 +49,8 @@ const useLoginForm = (): ILoginFormProps => {
       alert("submitted");
       router.push("/");
     } else {
+      console.log("error");
+
       form.setError("email", {
         type: "manual",
         message: "",
