@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import BgFaq from "@/components/Faq/background/bg-faq";
 import useFaq from "@/hooks/useFaq";
 import titleFaq from "../../../assets/svg/faq-assets/faq-title.svg";

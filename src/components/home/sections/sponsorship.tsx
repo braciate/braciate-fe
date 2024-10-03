@@ -5,6 +5,7 @@ import type { FC } from "react";
 import Image from "next/image";
 import style from "../style/sponsorship.module.css";
 import SponsorProps from "@/hooks/useSponsors";
+import { JSX } from "react";
 import { sponsorImage } from "@/lib/sponsor";
 
 // Renders a slider with sponsor logos

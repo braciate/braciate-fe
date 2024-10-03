@@ -1,4 +1,5 @@
 import Footer from "@/components/ui/footer";
+import React from "react";
 import Navbar from "@/components/ui/navbar";
 
 interface ILandingLayoutProps {

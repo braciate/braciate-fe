@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import React from "react";
 import type { FC } from "react";
 import GlitterLeft from "../../../assets/svg/fragments/glitterfilosofi-left.svg";
 import FilosofiLogoImg from "../../../assets/svg/fragments/filosofilogo-text.svg";
