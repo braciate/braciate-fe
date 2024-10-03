@@ -21,7 +21,7 @@ const Home: React.FC = () => {
       <section>
         <VisionMission />
         <EventTheme />
-        <Rangkaian/>
+        <Rangkaian />
         <Panduan />
       </section>
       <section id="vote">

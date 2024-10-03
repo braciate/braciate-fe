@@ -81,7 +81,7 @@ const Rangkaian: FC = () => {
 
               <div className="flex flex-col gap-10 -mt-16 ml-20">
                 <div className="flex items-center justify-center gap-6">
-                  <div className="flex flex-col items-center justify-center ">
+                  <div className="flex flex-col items-center justify-center gap-2 ">
                     <Image src={parade} alt="parade" className="w-10" />
                     <Image src={ParadeHp} alt="paradeText" className="" />
                   </div>
@@ -92,7 +92,7 @@ const Rangkaian: FC = () => {
                 </div>
 
                 <div className="flex items-center justify-center gap-6">
-                  <div className="flex flex-col items-center justify-center">
+                  <div className="flex flex-col items-center justify-center gap-2">
                     <Image src={bazar} alt="parade" className="w-10" />
                     <Image src={BazarHp} alt="paradeText" className="" />
                   </div>
@@ -104,7 +104,7 @@ const Rangkaian: FC = () => {
                 </div>
 
                 <div className="flex items-center justify-center gap-6">
-                  <div className="flex flex-col items-center justify-center">
+                  <div className="flex flex-col items-center justify-center gap-2">
                     <Image src={pameran} alt="parade" className="w-10" />
                     <Image src={PameranHp} alt="paradeText" className="" />
                   </div>
@@ -117,7 +117,7 @@ const Rangkaian: FC = () => {
                 </div>
 
                 <div className="flex items-center justify-center gap-6">
-                  <div className="flex flex-col items-center justify-center">
+                  <div className="flex flex-col items-center justify-center gap-2">
                     <Image src={awarding} alt="parade" className="w-10" />
                     <Image src={AwardingHp} alt="paradeText" className="" />
                   </div>
