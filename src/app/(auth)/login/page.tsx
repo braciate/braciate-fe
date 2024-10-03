@@ -22,7 +22,6 @@ import bling from "../../../assets/img/fragments/bling.png";
 const LoginPage: FC = () => {
   const { form, onSubmit, showPassword, setShowPassword } = useLoginForm();
   const { errors, isSubmitted } = form.formState;
-
   return (
     <main className="flex min-h-screen justify-center relative overflow-hidden">
       <BgAuth />

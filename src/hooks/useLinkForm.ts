@@ -4,7 +4,8 @@ import type { UseFormReturn } from "react-hook-form";
 import * as z from "zod";
 
 const formSchema = z.object({
-  link: z.string().min(1, { message: "Link is required!" }),
+  link: z.string().url("Link is required!"),
+  lkm: z.string().min(1, "LKM is required!"),
 });
 
 export type LinkFormValues = z.infer<typeof formSchema>;
@@ -18,21 +19,26 @@ const useLinkForm = (): LinkFormProps => {
   const form = useForm<LinkFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      lkm: "",
       link: "",
     },
   });
 
   const onSubmit = async (values: LinkFormValues): Promise<void> => {
     if (values.link != null) {
-      alert("link submitted");
+      alert(values.lkm);
     } else {
+      form.setError("lkm", {
+        type: "manual",
+        message: "Lkm is required!",
+      });
       form.setError("link", {
         type: "manual",
         message: "Link is required!",
       });
       form.setError("root", {
         type: "manual",
-        message: "Please enter a valid link",
+        message: "Please enter a link or lkm",
       });
     }
   };
