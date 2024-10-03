@@ -26,13 +26,13 @@
       }
     ],
 
-    "@typescript-eslint/comma-dangle": "off",
-    "@typescript-eslint/member-delimiter-style": "off",
-    "@typescript-eslint/quotes": [
-      "error",
-      "double",
-      { "allowTemplateLiterals": true }
-    ],
+    // "@typescript-eslint/comma-dangle": "off",
+    // "@typescript-eslint/member-delimiter-style": "off",
+    // "@typescript-eslint/quotes": [
+    //   "error",
+    //   "double",
+    //   { "allowTemplateLiterals": true }
+    // ],
 
     "@typescript-eslint/space-before-function-paren": [
       "error",

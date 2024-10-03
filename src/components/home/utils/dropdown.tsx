@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/command";
 import { Input } from "@/components/ui/input";
 import { Search, X } from "lucide-react";
-import { ControllerRenderProps } from "react-hook-form";
+import type { ControllerRenderProps } from "react-hook-form";
 
 interface Organisasi {
   value: string;
@@ -76,7 +76,9 @@ const ListLkm: FC<ListLkmProps> = ({ onChange, value, error }) => {
         className={`border-2 rounded-xl pl-10 pr-4 py-2 bg-white text-black cursor-pointer placeholder:text-gray-400 ${
           error ? "border-red-500" : ""
         }`}
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setOpen(true);
+        }}
       />
       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-black" />
       <CommandDialog open={open} onOpenChange={setOpen}>
@@ -86,7 +88,9 @@ const ListLkm: FC<ListLkmProps> = ({ onChange, value, error }) => {
           {organisasiList.map((organisasi) => (
             <CommandItem
               key={organisasi.value}
-              onSelect={() => handleSelect(organisasi)}
+              onSelect={() => {
+                handleSelect(organisasi);
+              }}
               className="hover:bg-white/80 hover:text-black hover:font-semibold transition-all duration-100 ease-in-out cursor-pointer"
             >
               <span>{organisasi.label}</span>
