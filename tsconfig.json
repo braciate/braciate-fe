@@ -23,16 +23,16 @@
       "@/components/*": ["./src/components/*"],
       "@/lib/*": ["./src/lib/*"],
       "@/assets/*": ["./src/assets/*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["next-auth"]
   },
   "include": [
-    "video.d.ts",
-    "video.d.ts",
-    "video.d.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

@@ -6,3 +6,10 @@
   background-position: bottom, top, center;
   background-size: 110%;
 }
+.bgCredits {
+  background-image: url(../assets/svg/background/shader-credit.svg),
+    url(../assets/img/background/bg-panduan.png);
+  background-repeat: no-repeat, repeat;
+  background-position: bottom, center;
+  background-size: 100%;
+}
