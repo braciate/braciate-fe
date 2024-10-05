@@ -6,10 +6,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  box-sizing: border-box;
-  position: sticky;
-  top: 0;
-  z-index: 5;
 }
 
 .navbarLogo {
@@ -104,4 +100,10 @@
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
+}
+
+.countDown {
+  background-image: url("../../../assets/svg/fragments/countdown.svg");
+  background-size: cover;
+  background-position: center;
 }

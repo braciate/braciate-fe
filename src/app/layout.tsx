@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import type React from "react";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
+import { Providers } from "@/components/Providers";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -17,7 +18,7 @@ const subFont = localFont({
 
 export const metadata: Metadata = {
   title: "Braciate",
-  description: "Official braciate website",
+  description: "Website Braciate",
 };
 
 interface IRootLayoutProps {
@@ -30,7 +31,7 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
       <body
         className={`${subFont.variable} ${poppins.className} overflow-x-hidden`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
