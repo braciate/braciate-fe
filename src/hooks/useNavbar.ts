@@ -13,18 +13,19 @@ export const useNavbar = (): NavbarProps => {
   const [timeLeft, setTimeLeft] = useState(0);
 
   useEffect(() => {
-    const endDate = localStorage.getItem("countdownEndDate");
-    if (!endDate) {
-      const newEndDate = new Date(
-        Date.now() + 25 * 24 * 60 * 60 * 1000,
-      ).getTime();
-      localStorage.setItem("countdownEndDate", newEndDate.toString());
-    }
+    // Set the end date to October 30th, current year, 23:59:59
+    const endDate = new Date(
+      new Date().getFullYear(),
+      9,
+      30,
+      23,
+      59,
+      59,
+    ).getTime();
 
     const updateCountdown = () => {
-      const end = parseInt(localStorage.getItem("countdownEndDate") || "0");
       const now = new Date().getTime();
-      const timeRemaining = Math.max(0, end - now);
+      const timeRemaining = Math.max(0, endDate - now);
       setTimeLeft(timeRemaining);
     };
 
@@ -35,7 +36,7 @@ export const useNavbar = (): NavbarProps => {
   }, []);
 
   const handleLogout = (): void => {
-    signOut({ callbackUrl: "/" });
+    signOut();
   };
 
   const toggleSlide = (): void => {

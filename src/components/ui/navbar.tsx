@@ -11,7 +11,7 @@ import hamburger from "@/assets/svg/fragments/hamburger.svg";
 import goldTexture from "@/assets/svg/fragments/gold-texture.svg";
 import close from "@/assets/svg/fragments/close-slide.svg";
 import React from "react";
-import { useSession } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 
 const Navbar: FC = () => {
   const { isOpen, toggleSlide, handleLogout, timeLeft } = useNavbar();
@@ -47,7 +47,7 @@ const Navbar: FC = () => {
         </span>
         {/* nav mobile */}
         <div
-          className={`md:hidden font-jaoren fixed inset-0 right-0 flex justify-end w-full h-full transform transition-transform duration-300 ease-in-out ${
+          className={`md:hidden font-jaoren fixed z-30 inset-0 right-0 flex justify-end w-full h-full transform transition-transform duration-300 ease-in-out ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
           onClick={toggleSlide}
