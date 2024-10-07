@@ -56,7 +56,7 @@ const Rangkaian: FC = () => {
           />
         </div>
 
-        <div className="flex flex-col mt-14 gap-8">
+        <div className="flex flex-col mt-14 mx-4 xl:mx-8 gap-8">
           <div className="hidden md:block">
             <div className="flex justify-center xl:gap-60 lg:gap-44 md:gap-24">
               <Image src={parade} alt="parade" />
