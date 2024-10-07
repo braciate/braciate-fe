@@ -3,6 +3,7 @@ import type React from "react";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import { Providers } from "@/components/Providers";
+import PageTransition from "@/components/(loading)/PageTransition";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -31,7 +32,9 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
       <body
         className={`${subFont.variable} ${poppins.className} overflow-x-hidden`}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <PageTransition>{children}</PageTransition>
+        </Providers>
       </body>
     </html>
   );

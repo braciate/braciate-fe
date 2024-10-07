@@ -11,17 +11,51 @@ import hamburger from "@/assets/svg/fragments/hamburger.svg";
 import goldTexture from "@/assets/svg/fragments/gold-texture.svg";
 import close from "@/assets/svg/fragments/close-slide.svg";
 import React from "react";
-import { useSession, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
+import { usePathname } from "next/navigation";
 
 const Navbar: FC = () => {
-  const { isOpen, toggleSlide, handleLogout, timeLeft } = useNavbar();
+  const { isOpen, toggleSlide, scrollToPanduan, handleLogout, timeLeft } =
+    useNavbar();
   const { data: session, status } = useSession();
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
     (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
   );
   const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+  const PanduanLink = ({
+    className,
+    onClick,
+  }: {
+    className?: string;
+    onClick?: () => void;
+  }) => {
+    if (isHomePage) {
+      return (
+        <span
+          className={`cursor-pointer ${styles.links}`}
+          onClick={scrollToPanduan}
+        >
+          Panduan
+        </span>
+      );
+    } else {
+      return (
+        <Link
+          href="/#panduan"
+          className={`cursor-pointer ${styles.links}`}
+          onClick={onClick}
+        >
+          Panduan
+        </Link>
+      );
+    }
+  };
+
   return (
     <main className="sticky top-0 z-20 w-full">
       <nav className={`${styles.navbar}`}>
@@ -67,13 +101,7 @@ const Navbar: FC = () => {
                 </Link>
               </li>
               <li className="py-2 border-b-2 border-white border-opacity-40">
-                <Link
-                  className="cursor-pointer"
-                  href="/#panduan"
-                  onClick={toggleSlide}
-                >
-                  Panduan
-                </Link>
+                <PanduanLink onClick={toggleSlide} />
               </li>
               <li className="py-2 border-b-2 border-white border-opacity-40">
                 <Link
@@ -124,9 +152,7 @@ const Navbar: FC = () => {
             </Link>
           </li>
           <li>
-            <Link className={styles.links} href="/#panduan">
-              Panduan
-            </Link>
+            <PanduanLink onClick={toggleSlide} />
           </li>
           <li>
             <Link className={styles.links} href="/faq">
@@ -161,4 +187,5 @@ const Navbar: FC = () => {
     </main>
   );
 };
+
 export default Navbar;

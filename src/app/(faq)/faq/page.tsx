@@ -35,16 +35,16 @@ const FaqLayout: React.FC<{
             src={goldTexture}
             alt=".."
             fill={true}
-            className="absolute object-cover -z-10 brightness-[.85]"
+            className="absolute object-cover -z-10 brightness-[.70] scale-110"
           />
         </div>
         <h3 className="text-lg font-medium text-white mr-auto">
           {faq.question}
         </h3>
         {faq.open ? (
-          <ChevronUp className="h-auto w-7 text-white" />
+          <ChevronUp className="h-auto min-w-7 text-white" />
         ) : (
-          <ChevronDown className="h-auto w-7 text-white" />
+          <ChevronDown className="h-auto min-w-7 text-white" />
         )}
       </div>
       <div
