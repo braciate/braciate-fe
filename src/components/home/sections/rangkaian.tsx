@@ -134,7 +134,7 @@ const Rangkaian: FC = () => {
           {/* Mobile */}
 
           {/* Desktop */}
-          <div className="hidden md:block">
+          <div className="hidden md:block mx-4">
             <div className="flex justify-center gap-9 text-center text-white text-xs font-poppins ">
               <div className="flex flex-wrap justify-center gap-2 w-full">
                 <Image src={paradeText} alt="paradeText" />

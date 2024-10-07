@@ -150,11 +150,11 @@ const Navbar: FC = () => {
         <span
           className={`p-1 rounded-br-3xl pr-4 text-white ${styles.countDown}`}
         >
-          <p className="font-jaoren font-white tracking-wider ">
+          <p className="font-jaoren font-white tracking-wider text-sm sm:text-base md:text-xl">
             Real Time Countdown
           </p>
         </span>
-        <p className="font-light text-lg p-1 bottom-0">
+        <p className="font-light text-sm sm:text-base md:text-lg p-1 bottom-0">
           {days}d: {hours}h: {minutes}m: {seconds}s
         </p>
       </div>
