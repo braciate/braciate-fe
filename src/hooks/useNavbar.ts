@@ -6,6 +6,7 @@ interface NavbarProps {
   timeLeft: number;
   toggleSlide: () => void;
   handleLogout: () => void;
+  scrollToPanduan: () => void;
 }
 
 export const useNavbar = (): NavbarProps => {
@@ -43,5 +44,16 @@ export const useNavbar = (): NavbarProps => {
     setIsOpen(!isOpen);
   };
 
-  return { isOpen, toggleSlide, handleLogout, timeLeft };
+  const scrollToPanduan = () => {
+    const panduanSection = document.getElementById("panduan");
+    if (panduanSection) {
+      panduanSection.scrollIntoView({ behavior: "smooth" });
+    }
+    if (isOpen) {
+      toggleSlide();
+    }
+  };
+  
+
+  return { isOpen, toggleSlide, handleLogout, timeLeft, scrollToPanduan };
 };
