@@ -32,6 +32,7 @@ export const authOptions: NextAuthOptions = {
               id: data.id,
               email: data.email,
               accessToken: data.access_token,
+              expired_at: data.expired_at,
             };
           }
         } catch (error) {
@@ -47,12 +48,25 @@ export const authOptions: NextAuthOptions = {
     async jwt({ token, user }) {
       if (user) {
         token.accessToken = user.accessToken;
+        token.expired_at = user.expired_at;
       }
+
+      // Check if the token has expired
+      const expiredAt = token.expired_at as number | undefined;
+      if (typeof expiredAt === 'number' && Date.now() > expiredAt * 1000) {
+        return { ...token, error: "TokenExpired" };
+      }
+
       return token;
     },
     async session({ session, token }) {
+      if (token.error === "TokenExpired") {
+        return {} as any;
+      }
+
       if (session.user) {
-        session.user.accessToken = token.accessToken;
+        session.user.accessToken = token.accessToken as string;
+        session.user.expired_at = token.expired_at as number;
       }
       return session;
     },
