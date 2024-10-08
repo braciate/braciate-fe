@@ -53,9 +53,6 @@ const Page: FC = () => {
                       {item.title}
                     </h3>
                     <Button
-                      // onClick={() => {
-                      //   router.push("/login");
-                      // }}
                       className="text-xs sm:text-base lg:text-xl rounded-full border w-full font-jaoren mt-0 lg:mt-2 h-6"
                     >
                       Vote
