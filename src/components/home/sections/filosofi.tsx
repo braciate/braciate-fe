@@ -1,160 +1,160 @@
 "use client";
-import { useState } from "react";
-import type { FC } from "react";
-import GlitterLeft from "../../../assets/svg/fragments/glitterfilosofi-left.svg";
-import FilosofiLogoImg from "../../../assets/svg/fragments/filosofilogo-text.svg";
-import logo1 from "../../../assets/svg/fragments/filosofilogo-1.svg";
-import logo2 from "../../../assets/svg/fragments/filosofilogo-2.svg";
-import logo3 from "../../../assets/svg/fragments/filosofilogo-3.svg";
-import logo4 from "../../../assets/svg/fragments/filosofilogo-4.svg";
-import logo5 from "../../../assets/svg/fragments/filosofilogo-5.svg";
-import panahIcon from "../../../assets/svg/fragments/panahdot.svg";
-import preview1 from "../../../assets/img/fragments/previewlogo-1.png";
-import style from "../style/filosofi.module.css";
+
+import React, { useState, useRef } from "react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-const FilosofiLogo: FC = () => {
-  interface SlideProps {
-    children: React.ReactNode;
-  }
+import FilosofiLogoImg from "../../../assets/svg/fragments/filosofilogo-text.svg";
+import filosofiIcon1 from "../../../assets/img/fragments/filosofi_icon_1.png";
+import filosofiIcon2 from "../../../assets/img/fragments/filosofi_icon_2.png";
+import filosofiIcon3 from "../../../assets/img/fragments/filosofi_icon_3.png";
+import filosofiIcon4 from "../../../assets/img/fragments/filosofi_icon_4.png";
+import filosofiIcon5 from "../../../assets/img/fragments/filosofi_icon_5.png";
+import titleImage1 from "../../../assets/img/fragments/KILAU EMAS KEJAYAAN.png";
+import titleImage2 from "../../../assets/img/fragments/mahkota perjuangan.png";
+import titleImage3 from "../../../assets/img/fragments/BINTANG PRESTASI.png";
+import titleImage4 from "../../../assets/img/fragments/gelombang ukiran abadi.png";
+import titleImage5 from "../../../assets/img/fragments/lingkaran tekad tak terbatas.png";
+import panahIcon from "../../../assets/svg/fragments/panahdot.svg";
 
-  const Slide: React.FC<SlideProps> = ({ children }) => (
-    <div className={style.slide}>{children}</div>
-  );
+const FilosofiLogo = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const swiperRef = useRef<SwiperType | null>(null);
 
-  const slides: React.ReactElement[] = [
-    <Slide key="slide1">
-      <div className="flex flex-col sm:flex-row items-center">
-        <Image src={logo1} alt="Logo 1" />
-        <div className="text-center space-y-4">
-          <h1 className="font-jaoren text-4xl">KILAU EMAS KEJAYAAN</h1>
-          <p>
-            Warna emas melambangkan prestasi, kemakmuran, dan keberhasilan yang
-            diraih oleh seluruh Simpul Brawijaya, mencerminkan kekuatan dan
-            pencapaian yang terus bersinar.
-          </p>
-        </div>
-      </div>
-    </Slide>,
-    <Slide key="slide2">
-      <div className="flex flex-col sm:flex-row items-center">
-        <Image src={logo2} alt="Logo 1" />
-        <div className="text-center space-y-4">
-          <h1 className="font-jaoren text-4xl">KILAU EMAS KEJAYAAN</h1>
-          <p>
-            Warna emas melambangkan prestasi, kemakmuran, dan keberhasilan yang
-            diraih oleh seluruh Simpul Brawijaya, mencerminkan kekuatan dan
-            pencapaian yang terus bersinar.
-          </p>
-        </div>
-      </div>
-    </Slide>,
-    <Slide key="slide3">
-      <div className="flex flex-col sm:flex-row items-center">
-        <Image src={logo3} alt="Logo 1" />
-        <div className="text-center space-y-4">
-          <h1 className="font-jaoren text-4xl">KILAU EMAS KEJAYAAN</h1>
-          <p>
-            Warna emas melambangkan prestasi, kemakmuran, dan keberhasilan yang
-            diraih oleh seluruh Simpul Brawijaya, mencerminkan kekuatan dan
-            pencapaian yang terus bersinar.
-          </p>
-        </div>
-      </div>
-    </Slide>,
-    <Slide key="slide4">
-      <div className="flex flex-col sm:flex-row items-center">
-        <Image src={logo4} alt="Logo 1" />
-        <div className="text-center space-y-4">
-          <h1 className="font-jaoren text-4xl">KILAU EMAS KEJAYAAN</h1>
-          <p>
-            Warna emas melambangkan prestasi, kemakmuran, dan keberhasilan yang
-            diraih oleh seluruh Simpul Brawijaya, mencerminkan kekuatan dan
-            pencapaian yang terus bersinar.
-          </p>
-        </div>
-      </div>
-    </Slide>,
-    <Slide key="slide5">
-      <div className="flex flex-col sm:flex-row items-center">
-        <Image src={logo5} alt="Logo 1" />
-        <div className="text-center space-y-4">
-          <h1 className="font-jaoren text-4xl">KILAU EMAS KEJAYAAN</h1>
-          <p>
-            Warna emas melambangkan prestasi, kemakmuran, dan keberhasilan yang
-            diraih oleh seluruh Simpul Brawijaya, mencerminkan kekuatan dan
-            pencapaian yang terus bersinar.
-          </p>
-        </div>
-      </div>
-    </Slide>,
+  const slides = [
+    {
+      logo: filosofiIcon1,
+      titleImage: titleImage1,
+      content: "Melambangkan kebebasan untuk berkreasi, berinovasi, dan mengembangkan diri, mendorong setiap Simpul Brawijaya untuk terbang tinggi meraih impian.",
+    },
+    {
+      logo: filosofiIcon2,
+      titleImage: titleImage2,
+      content: "Ikon maskot yang menuju mahkota menggambarkan perjalanan penuh dedikasi dan usaha dari lembaga dalam meraih puncak prestasi, menunjukkan tekad yang kuat untuk mencapai kemenangan.",
+    },
+    {
+      logo: filosofiIcon3,
+      titleImage: titleImage3,
+      content: "Melambangkan kebebasan untuk berkreasi, berinovasi, dan mengembangkan diri, mendorong setiap Simpul Brawijaya untuk terbang tinggi meraih impian.",
+    },
+    {
+      logo: filosofiIcon4,
+      titleImage: titleImage4,
+      content: "Menggambarkan persatuan dan kebersamaan seluruh Simpul Brawijaya dalam mencapai visi dan misi bersama, bahu-membahu menciptakan karya yang gemilang.",
+    },
+    {
+      logo: filosofiIcon5,
+      titleImage: titleImage5,
+      content: "Simbol komitmen dan dedikasi tanpa batas dari seluruh Simpul Brawijaya, terus bergerak maju tanpa henti mengejar kesempurnaan dalam setiap langkah.",
+    },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-
-  const goToNext = (): void => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === slides.length - 1 ? 0 : prevIndex + 1,
-    );
-  };
-
-  const goToPrevious = (): void => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1,
-    );
+  const goToSlide = (index: number) => {
+    if (swiperRef.current) {
+      swiperRef.current.slideTo(index);
+    }
   };
 
   return (
-    <main className={style.filosofi_logo}>
-      <div className={style.filosofi_glitter}>
-        <Image src={GlitterLeft} alt="" />
-      </div>
-      <Image src={FilosofiLogoImg} alt="" id={style.filosofi_logo_img} />
-      <div className={style.carousel_and_preview}>
-        <Image src={preview1} alt="" />
-        <div className={style.carousel_and_indicators}>
-          <div className={style.carousel}>
+    <div className="w-full h-screen flex flex-col items-center justify-center">
+      <Image
+        src={FilosofiLogoImg}
+        alt="Filosofi Logo"
+        className="mb-8"
+        width={400}
+        height={100}
+      />
+      <div className="w-full max-w-4xl flex">
+        <div className="w-1/6 flex flex-col items-center justify-center mr-4">
+          {slides.map((slide, index) => (
             <div
-              className={style.carousel_inner}
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              key={index}
+              className={`cursor-pointer transition-all duration-300 mb-4 ${
+                index === activeIndex ? 'scale-125 opacity-100' : 'opacity-50'
+              }`}
+              onClick={() => goToSlide(index)}
             >
-              {slides.map((slide, index) => (
-                <div key={index} className={style.carousel_slide}>
-                  {slide}
-                </div>
-              ))}
+              <Image
+                src={slide.logo}
+                alt={`Logo ${index + 1}`}
+                width={40}
+                height={40}
+              />
             </div>
-          </div>
-          <div className={style.carousel_controls}>
+          ))}
+        </div>
+        <div className="w-5/6">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={30}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
+            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            className="w-full"
+          >
+            {slides.map((slide, index) => (
+              <SwiperSlide key={index}>
+                <div className="flex items-center">
+                  <div className="mr-8">
+                    <Image
+                      src={slide.logo}
+                      alt={`Logo ${index + 1}`}
+                      width={150}
+                      height={150}
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <Image
+                      src={slide.titleImage}
+                      alt={`Title ${index + 1}`}
+                      width={300}
+                      height={50}
+                      className="mb-4"
+                    />
+                    <p className="text-sm text-gray-300">{slide.content}</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="flex justify-center items-center mt-6">
             <Image
               src={panahIcon}
-              onClick={goToPrevious}
-              id={style.panah_kiri}
-              alt=""
+              onClick={() => swiperRef.current?.slidePrev()}
+              className="transform rotate-180 cursor-pointer"
+              width={20}
+              height={20}
+              alt="Previous"
             />
-            <div className={style.carousel_indicators}>
+            <div className="flex mx-4">
               {slides.map((_, index) => (
                 <div
                   key={index}
-                  className={`${style.carousel_indicator} ${
-                    index === currentIndex ? "active" : ""
+                  className={`w-2 h-2 rounded-full mx-1 cursor-pointer ${
+                    index === activeIndex ? 'bg-yellow-500' : 'bg-gray-400'
                   }`}
-                  onClick={() => {
-                    setCurrentIndex(index);
-                  }}
+                  onClick={() => goToSlide(index)}
                 />
               ))}
             </div>
             <Image
               src={panahIcon}
-              onClick={goToNext}
-              id={style.panah_kanan}
-              alt=".."
+              onClick={() => swiperRef.current?.slideNext()}
+              className="cursor-pointer"
+              width={20}
+              height={20}
+              alt="Next"
             />
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 
