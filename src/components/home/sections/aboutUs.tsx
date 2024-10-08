@@ -8,7 +8,7 @@ const AboutUs: FC = () => {
   return (
     <div className="h-screen">
       <main
-        className="w-screen h-auto flex flex-col items-center p-24 relative"
+        className="w-screen h-auto flex flex-col items-center p-80 relative"
         id="about"
       >
         <div className="absolute flex flex-row flex-nowrap items-center justify-between w-full">

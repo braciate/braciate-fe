@@ -1,6 +1,6 @@
 .filosofi_logo {
   width: 100%;
-  height: 90vh;
+  height: 10px;
   background-size: cover;
   background-position: center;
   background-color: #000;
@@ -9,13 +9,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10px;
   z-index: 0; /* Background */
 }
 
 #filosofi_logo_img {
   margin: 0 auto;
-  width: 600px;
-  height: 400px;
+  width: 800px;
+  height: 100px;
   z-index: 2; /* Logo above background */
 }
 
@@ -48,7 +49,6 @@
   width: 80px; /* Set fixed width */
   z-index: 3;
   position: relative;
-  border: 3px solid red;
 }
 
 .left_logo {
@@ -131,7 +131,7 @@
   background-color: gold;
 }
 
-#panah_kiri {
+/* #panah_kiri {
   transform: rotate(180deg);
   cursor: pointer;
   width: 20px;
@@ -140,17 +140,13 @@
 
 #panah_kanan {
   cursor: pointer;
-  width: 20px;
-  height: 20px;
-}
+  width: 10px;
+  height: 10px;
+} */
 
-/* Hide Swiper's default navigation */
-.swiper_wrapper :global(.swiper-button-next),
-.swiper_wrapper :global(.swiper-button-prev) {
-  display: none;
-}
-
-/* Hide Swiper's default pagination */
-.swiper_wrapper :global(.swiper-pagination) {
-  display: none;
+/* Hide Swiper's default navigation and pagination */
+.swiper-no-default-ui .swiper-button-next,
+.swiper-no-default-ui .swiper-button-prev,
+.swiper-no-default-ui .swiper-pagination {
+  display: none !important;
 }
