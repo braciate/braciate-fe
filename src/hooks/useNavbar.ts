@@ -1,24 +1,27 @@
 import { useState, useEffect } from "react";
 import { signOut } from "next-auth/react";
-
+import { useRouter } from "next/navigation";
 interface NavbarProps {
   isOpen: boolean;
   timeLeft: number;
   toggleSlide: () => void;
   handleLogout: () => void;
   scrollToPanduan: () => void;
+  isManualLogout: boolean;
 }
 
 export const useNavbar = (): NavbarProps => {
   const [isOpen, setIsOpen] = useState(false);
   const [timeLeft, setTimeLeft] = useState(0);
+  const router = useRouter();
+  const [isManualLogout, setIsManualLogout] = useState<boolean>(false);
 
   useEffect(() => {
     // Set the end date to October 30th, current year, 23:59:59
     const endDate = new Date(
       new Date().getFullYear(),
       9,
-      30,
+      26,
       23,
       59,
       59,
@@ -36,8 +39,11 @@ export const useNavbar = (): NavbarProps => {
     return () => clearInterval(timer);
   }, []);
 
-  const handleLogout = (): void => {
-    signOut();
+  const handleLogout = async () => {
+    setIsManualLogout(true);
+    localStorage.removeItem("expire_at");
+    await signOut({ redirect: false });
+    router.push("/");
   };
 
   const toggleSlide = (): void => {
@@ -53,7 +59,13 @@ export const useNavbar = (): NavbarProps => {
       toggleSlide();
     }
   };
-  
 
-  return { isOpen, toggleSlide, handleLogout, timeLeft, scrollToPanduan };
+  return {
+    isOpen,
+    toggleSlide,
+    handleLogout,
+    timeLeft,
+    scrollToPanduan,
+    isManualLogout,
+  };
 };

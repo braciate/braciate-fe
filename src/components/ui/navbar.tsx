@@ -96,7 +96,11 @@ const Navbar: FC = () => {
             </div>
             <ul className="flex flex-col space-y-4 sm:space-y-8 mb-auto mt-8">
               <li className="py-2 border-b-2 border-white border-opacity-40 font-jaoren">
-                <Link className="cursor-pointer" href="/" onClick={toggleSlide}>
+                <Link
+                  className={`cursor-pointer ${styles.links}`}
+                  href="/"
+                  onClick={toggleSlide}
+                >
                   HOME
                 </Link>
               </li>
@@ -105,7 +109,7 @@ const Navbar: FC = () => {
               </li>
               <li className="py-2 border-b-2 border-white border-opacity-40">
                 <Link
-                  className="cursor-pointer"
+                  className={`cursor-pointer ${styles.links}`}
                   href="/faq"
                   onClick={toggleSlide}
                 >
