@@ -31,31 +31,31 @@ const FilosofiLogo = () => {
     {
       logo: filosofiIcon1,
       titleImage: titleImage1,
-      titleImageSize: { width: 450, height: 60 },
+      titleImageSize: { width: 400, height: 60 },
       content: "Melambangkan kebebasan untuk berkreasi, berinovasi, dan mengembangkan diri, mendorong setiap Simpul Brawijaya untuk terbang tinggi meraih impian.",
     },
     {
       logo: filosofiIcon2,
       titleImage: titleImage2,
-      titleImageSize: { width: 450, height: 70 },
+      titleImageSize: { width: 400, height: 70 },
       content: "Ikon maskot yang menuju mahkota menggambarkan perjalanan penuh dedikasi dan usaha dari lembaga dalam meraih puncak prestasi, menunjukkan tekad yang kuat untuk mencapai kemenangan.",
     },
     {
       logo: filosofiIcon3,
       titleImage: titleImage3,
-      titleImageSize: { width: 380, height: 55 },
+      titleImageSize: { width: 400, height: 55 },
       content: "Melambangkan kebebasan untuk berkreasi, berinovasi, dan mengembangkan diri, mendorong setiap Simpul Brawijaya untuk terbang tinggi meraih impian.",
     },
     {
       logo: filosofiIcon4,
       titleImage: titleImage4,
-      titleImageSize: { width: 500, height: 75 },
+      titleImageSize: { width: 400, height: 75 },
       content: "Menggambarkan persatuan dan kebersamaan seluruh Simpul Brawijaya dalam mencapai visi dan misi bersama, bahu-membahu menciptakan karya yang gemilang.",
     },
     {
       logo: filosofiIcon5,
       titleImage: titleImage5,
-      titleImageSize: { width: 600, height: 65 },
+      titleImageSize: { width: 400, height: 65 },
       content: "Simbol komitmen dan dedikasi tanpa batas dari seluruh Simpul Brawijaya, terus bergerak maju tanpa henti mengejar kesempurnaan dalam setiap langkah.",
     },
   ];
@@ -67,7 +67,8 @@ const FilosofiLogo = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-start pt-4 relative overflow-hidden">
+    <div className="flex flex-col items-center text-center w-full max-w-6xl mx-auto px-4 -mt-48 md:-mt-48">
+      
       {/* Glitter overlay */}
       <div className="absolute inset-0 z-10 pointer-events-none" style={{ top: '-10%', height: '40%' }}>
         <Image
@@ -81,35 +82,38 @@ const FilosofiLogo = () => {
       </div>
       
       {/* Main content */}
-      <div className="ml-10 relative z-20 w-full flex flex-col items-center mr-0">
+      <div className="flex flex-col items-center text-center">
         <Image
           src={FilosofiLogoImg}
           alt="Filosofi Logo"
-          className="mb-6"
-          width={600}
-          height={112}
+          className="mb-6 ml-10"
+          width={400}
+          height={60}
         />
-        <div className="w-full max-w-6xl flex px-8">
-          {/* Left slider - Adjusted position */}
-          <div className="w-1/6 flex flex-col items-center justify-start mr-8 -mt-20">
+        <div className="max-w-md md:max-w-6xl mr-8 ml-0 flex flex-col md:flex-row">
+          
+          {/* Left slider for large screens */}
+          <div className="hidden md:flex md:flex-col md:w-1/12 md:mr-4 items-center justify-start md:-mt-20">
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className={`cursor-pointer transition-all duration-300 mb-2 ${
-                  index === activeIndex ? 'scale-150 opacity-100' : 'opacity-50'
+                className={`cursor-pointer transition-all duration-300 mb-0 ${
+                  index === activeIndex ? 'opacity-100' : 'opacity-50'
                 }`}
                 onClick={() => goToSlide(index)}
               >
                 <Image
                   src={slide.logo}
                   alt={`Logo ${index + 1}`}
-                  width={70}
-                  height={70}
+                  width={100}
+                  height={100}
                 />
               </div>
             ))}
           </div>
-          <div className="w-5/6">
+
+          {/* Main content area */}
+          <div className="w-full md:w-10/12 md:max-w-3xl">
             <Swiper
               modules={[Navigation, Pagination]}
               spaceBetween={40}
@@ -122,29 +126,55 @@ const FilosofiLogo = () => {
             >
               {slides.map((slide, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex items-start">
-                    <div className="mr-10">
+                  <div className="flex flex-row items-start">
+                  <div className="mr-0 flex flex-shrink-0 pl-5 md:pl-0"> 
                       <Image
                         src={slide.logo}
                         alt={`Logo ${index + 1}`}
-                        width={200}
-                        height={200}
+                        width={300}
+                        height={300}
+                        className="w-[150px] h-[150px] md:w-[100px] md:h-[100px] md:pl-0"
                       />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex flex-col items-center md:items-start md:max-w-xl small-screen-adjust">
                       <Image
                         src={slide.titleImage}
                         alt={`Title ${index + 1}`}
                         width={slide.titleImageSize.width}
                         height={slide.titleImageSize.height}
-                        className="mb-4"
+                        className="mb-2 w-auto h-[30px] md:h-[60px] pr-8"
                       />
-                      <p className="text-lg text-gray-300 leading-relaxed">{slide.content}</p>
+                      <p className="text-xs md:text-lg text-gray-300 leading-relaxed pr-8">
+                        {slide.content}
+                      </p>
                     </div>
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
+
+            {/* Bottom slider for small screens */}
+          <div className="flex md:hidden justify-start mt-3 ml-10 mr-6 pl-12 overflow-x-auto">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`cursor-pointer transition-all duration-300 mx-0 flex flex-col items-start ${
+                  index === activeIndex ? 'opacity-100' : 'opacity-50'
+                }`}
+                onClick={() => goToSlide(index)}
+              >
+                <Image
+                  src={slide.logo}
+                  alt={`Logo ${index + 1}`}
+                  width={60}
+                  height={60}
+                  className="mb-2"
+                />
+              </div>
+            ))}
+          </div>
+
+            {/* Navigation dots and arrows */}
             <div className="flex justify-center items-center mt-8">
               <Image
                 src={panahIcon}
@@ -158,8 +188,8 @@ const FilosofiLogo = () => {
                 {slides.map((_, index) => (
                   <div
                     key={index}
-                    className={`w-3 h-3 rounded-full mx-1 cursor-pointer ${
-                      index === activeIndex ? 'bg-yellow-500' : 'bg-white'
+                    className={`w-2 h-2 rounded-full mx-1 cursor-pointer ${
+                      index === activeIndex ? 'bg-yellow-500' : 'bg-gray-500'
                     }`}
                     onClick={() => goToSlide(index)}
                   />
