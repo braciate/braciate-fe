@@ -47,13 +47,14 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
+        user.user_id = user.accessToken;
         token.accessToken = user.accessToken;
         token.expired_at = user.expired_at;
       }
 
       // Check if the token has expired
       const expiredAt = token.expired_at as number | undefined;
-      if (typeof expiredAt === 'number' && Date.now() > expiredAt * 1000) {
+      if (typeof expiredAt === "number" && Date.now() > expiredAt * 1000) {
         return { ...token, error: "TokenExpired" };
       }
 

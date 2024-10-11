@@ -4,30 +4,43 @@ import React from "react";
 import BgKategori from "@/components/lkm/background/bg-main";
 import style from "@/app/(lkm)/page.module.css";
 import { Input } from "@/components/ui/input";
-import usePage from "@/hooks/useFavPage";
+import usePage from "@/hooks/useFavUkm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { StepBack, StepForward, Search } from "lucide-react";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
-interface props {
+import LoadingScreen from "@/components/loading/LoadingScreen";
+
+interface Props {
   title: string;
   lkm: string;
   type: string;
 }
 
-export function FavoritePage({ title, lkm, type }: props) {
-  const router = useRouter();
+export function FavoriteUKM({ title, lkm, type }: Props) {
   const {
     currentPage,
     currentItems,
     setCurrentPage,
     totalPages,
     setSearchTerm,
+    setActiveFilter,
+    activeFilter,
     searchTerm,
+    filterKategori,
     noDataFound,
-  } = usePage(lkm, type);
+    isLoading,
+    error,
+  } = usePage("ukm", "6");
   const placeholder = lkm.toUpperCase();
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <section className="w-screen h-max relative flex flex-col items-center">
@@ -49,11 +62,11 @@ export function FavoritePage({ title, lkm, type }: props) {
             />
             <Search className="absolute bottom-3 left-4" />
           </div>
-          {type != "0" ? (
+          {type !== "0" ? (
             <div className="gap-4 justify-center flex flex-wrap">
-              {/* {filter.map((item, index) => (
+              {filterKategori.map((item: any) => (
                 <span
-                  key={index}
+                  key={item.type}
                   className={`font-jaoren rounded-3xl tracking-wider bg-transparent px-2 py-0.5 text-xl transition-colors cursor-pointer text-center border-2 w-36 ${
                     activeFilter === item.kategori
                       ? "bg-white text-black border-black"
@@ -63,13 +76,13 @@ export function FavoritePage({ title, lkm, type }: props) {
                 >
                   {item.kategori}
                 </span>
-              ))} */}
+              ))}
             </div>
           ) : null}
           <div className="flex justify-center items-center gap-2">
             <Button
               onClick={() => {
-                setCurrentPage((prev) => Math.max(prev - 1, 1));
+                setCurrentPage((prev: number) => Math.max(prev - 1, 1));
               }}
               disabled={currentPage === 1}
               className="p-0"
@@ -82,13 +95,13 @@ export function FavoritePage({ title, lkm, type }: props) {
                   Data tidak ditemukan
                 </div>
               ) : (
-                currentItems.map((item) => (
+                currentItems.map((item: any) => (
                   <Card
                     key={item.id}
                     className="flex flex-col justify-between border-2 mx-auto items-center rounded-4xl min-h-40 sm:h-40 md:h-44 lg:h-48 gap-4  w-36 sm:w-48 md:w-40 lg:w-44 "
                   >
                     <CardContent className="px-3 py-2 flex items-center flex-col text-center w-full">
-                      <span className="w-20 h-20 lg:w-24 lg:h-24 rounded-full mb-2 lg:mb-2 relative overflow-hidden border-2 border-gray-500 bg-black/60">
+                      <span className="w-20 h-20 lg:w-24 lg:h-24 rounded-full mb-2 lg:mb-2 relative overflow-hidden border-2 border-gray-500 bg-white/40">
                         <Image
                           src={item.logo_file}
                           alt={item.name}
@@ -118,7 +131,9 @@ export function FavoritePage({ title, lkm, type }: props) {
             </div>
             <Button
               onClick={() => {
-                setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+                setCurrentPage((prev: number) =>
+                  Math.min(prev + 1, totalPages),
+                );
               }}
               disabled={currentPage === totalPages}
               className="p-0"
