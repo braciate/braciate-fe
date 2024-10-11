@@ -4,7 +4,16 @@ import type { FC } from "react";
 import Image from "next/image";
 import bling from "@/assets/img/fragments/bling.png";
 import style from "../style/nominasi.module.css";
+import { useState } from "react";
+import Favorite from "../utils/modal/favorite";
+
 const Nominasi: FC = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const hanldeModal = () => {
+    setIsModalOpen(!isModalOpen);
+  }
+
   return (
     <section
       id="nominasi"
