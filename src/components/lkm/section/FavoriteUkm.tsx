@@ -10,7 +10,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { StepBack, StepForward, Search } from "lucide-react";
 import Image from "next/image";
 import LoadingScreen from "@/components/loading/LoadingScreen";
-
+import { useState } from "react";
+import { Check } from "lucide-react";
 interface Props {
   title: string;
   lkm: string;
@@ -34,6 +35,29 @@ export function FavoriteUKM({ title, lkm, type }: Props) {
   } = usePage("ukm", "6");
   const placeholder = lkm.toUpperCase();
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState<any>(null);
+  const [voteSuccess, setVoteSuccess] = useState(false);
+  const handleVoteClick = (item: any) => {
+    setSelectedItem(item);
+    setIsModalOpen(true);
+    setVoteSuccess(false);
+  };
+
+  const handleConfirmVote = () => {
+    setVoteSuccess(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setVoteSuccess(false);
+  };
+
+  const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if ((e.target as HTMLElement).id === "modal-overlay") {
+      handleCloseModal();
+    }
+  };
   if (isLoading) {
     return <LoadingScreen />;
   }
@@ -98,10 +122,10 @@ export function FavoriteUKM({ title, lkm, type }: Props) {
                 currentItems.map((item: any) => (
                   <Card
                     key={item.id}
-                    className="flex flex-col justify-between border-2 mx-auto items-center rounded-4xl min-h-40 sm:h-40 md:h-44 lg:h-48 gap-4  w-36 sm:w-48 md:w-40 lg:w-44 "
+                    className="flex flex-col justify-between border-2 mx-auto items-center rounded-4xl max-h-40 md:max-h-44 lg:max-h-48 sm:h-40 md:h-44 lg:h-48 gap-4  w-36 sm:w-48 md:w-40 lg:w-44"
                   >
                     <CardContent className="px-3 py-2 flex items-center flex-col text-center w-full">
-                      <span className="w-20 h-20 lg:w-24 lg:h-24 rounded-full mb-2 lg:mb-2 relative overflow-hidden border-2 border-gray-500 bg-white/40">
+                      <span className="w-20 h-20 lg:w-24 lg:h-24 rounded-full mb-2 lg:mb-2 relative overflow-hidden border-2 border-gray-500 bg-black/40">
                         <Image
                           src={item.logo_file}
                           alt={item.name}
@@ -117,9 +141,7 @@ export function FavoriteUKM({ title, lkm, type }: Props) {
                         </div>
                       </div>
                       <Button
-                        onClick={() => {
-                          alert(item.id);
-                        }}
+                        onClick={() => handleVoteClick(item)}
                         className="text-xs sm:text-sm md:text-base lg:text-xl rounded-full border w-full font-jaoren mt-0 lg:mt-2 h-6 md:h-8 hover:bg-white/50 hover:text-black"
                       >
                         Vote
@@ -159,6 +181,76 @@ export function FavoriteUKM({ title, lkm, type }: Props) {
           )}
         </div>
       </main>
+      {/* Modal confirmation */}
+      {isModalOpen && selectedItem && (
+        <div
+          id="modal-overlay"
+          onClick={handleOutsideClick}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-[2px]"
+        >
+          <div
+            className="relative p-6 bg-gradient-to-b from-[#D4AF37] to-[#2B1D55] text-white rounded-[2rem] w-3/4 sm:max-w-sm sm:w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {!voteSuccess ? (
+              <>
+                <button
+                  onClick={handleCloseModal}
+                  className="absolute top-2 right-2 text-white text-2xl"
+                >
+                  ✕
+                </button>
+                <h3 className="text-center text-2xl font-jaoren">
+                  Yakin Sudah Sesuai Pilihanmu?
+                </h3>
+                <div className="flex flex-col items-center gap-4 mt-4">
+                  <div className="w-32 h-32 rounded-full bg-black/40 relative overflow-hidden border-4 border-white">
+                    <Image
+                      src={selectedItem.logo_file}
+                      alt={selectedItem.name}
+                      fill={true}
+                      className="object-contain"
+                    />
+                  </div>
+                  <h4 className="text-3xl font-bold font-jaoren">
+                    {selectedItem.name}
+                  </h4>
+                </div>
+                <div className="flex justify-center">
+                  <Button
+                    onClick={handleConfirmVote}
+                    className="px-6 py-2 border font-jaoren text-xl border-white rounded-full text-white hover:bg-white hover:text-black transition-all"
+                  >
+                    Vote Now
+                  </Button>
+                </div>
+              </>
+            ) : (
+              <>
+                {/* Modal Sukses Vote */}
+                <div className="flex flex-col items-center gap-4 mt-4">
+                  <div className="w-32 h-32 rounded-full bg-[#D4AF37] flex justify-center items-center border-2 border-black">
+                    <span className="text-black">
+                      <Check className="w-20 h-20" />
+                    </span>
+                  </div>
+                  <h4 className=" text-2xl md:text-3xl font-bold mt-2 font-jaoren">
+                    Kamu Berhasil Nge-Vote!
+                  </h4>
+                </div>
+                <div className="flex justify-center mt-6">
+                  <Button
+                    onClick={handleCloseModal}
+                    className="px-8 py-2 border font-jaoren text-xl border-white rounded-full text-white hover:bg-white hover:text-black transition-all"
+                  >
+                    Kembali
+                  </Button>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 }

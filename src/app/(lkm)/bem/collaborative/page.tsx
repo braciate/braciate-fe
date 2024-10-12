@@ -14,6 +14,9 @@ const Page: FC = () => {
         description="Diukur dari total kegiatan partnership baik studi banding atau
                 hal lainnya dalam lingkup UB maupun eksternal UB sesuai dengan
                 jumlah total bobot penilaian."
+        id="bem"
+        type="0"
+        nomination_id="best-collaborative-bem"
       />
     </main>
   );
