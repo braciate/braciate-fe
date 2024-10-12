@@ -1,18 +1,133 @@
 import type { FC } from "react";
+import Link from "next/link";
+import Instagram from "@/assets/img/icon/instagram.png";
+import Linkedin from "@/assets/img/icon/linkedin.png";
+import Image from "next/image";
+import shader from "../../../assets/svg/background/shader-credit.svg";
+import style from "../../global.module.css";
+interface TeamMember {
+  id: number;
+  name: string;
+  role: string;
+  linkedin: string;
+  instagram: string;
+}
+
+const teamMembers: TeamMember[] = [
+  {
+    id: 1,
+    name: "Risqi Achmad Fahreal | Teknik Informatika",
+    role: "tech",
+    linkedin: "https://www.linkedin.com/in/risqi-achmad-fahreal-a2b7a4289//",
+    instagram: "https://www.instagram.com/arfah.real_/",
+  },
+  {
+    id: 2,
+    name: "Syifani Adillah Salsabila | Teknik Informatika",
+    role: "ui",
+    linkedin: "https://www.linkedin.com/in/risqi-achmad-fahreal-b355781b0/",
+    instagram: "https://www.instagram.com/risqiachmadfahreal/",
+  },
+  {
+    id: 3,
+    name: "Vincentia Melody Viviane | Teknik Informatika",
+    role: "ui",
+    linkedin: "https://www.linkedin.com/in/risqi-achmad-fahreal-b355781b0/",
+    instagram: "https://www.instagram.com/risqiachmadfahreal/",
+  },
+  {
+    id: 4,
+    name: "Nickolas Quinn Budiyono | Teknik Informatika",
+    role: "fe",
+    linkedin: "https://www.linkedin.com/in/risqi-achmad-fahreal-b355781b0/",
+    instagram: "https://www.instagram.com/risqiachmadfahreal/",
+  },
+  {
+    id: 5,
+    name: "Sayyidah Fatimah Azzahra | Teknik Informatika",
+    role: "fe",
+    linkedin: "https://www.linkedin.com/in/risqi-achmad-fahreal-b355781b0/",
+    instagram: "https://www.instagram.com/risqiachmadfahreal/",
+  },
+  {
+    id: 6,
+    name: "Putu Indah Githa Cahyani | Teknik Informatika",
+    role: "fe",
+    linkedin: "https://www.linkedin.com/in/risqi-achmad-fahreal-b355781b0/",
+    instagram: "https://www.instagram.com/risqiachmadfahreal/",
+  },
+  {
+    id: 7,
+    name: "Akbar Fikri Abdillah | Teknik Informatika",
+    role: "be",
+    linkedin: "https://www.linkedin.com/in/risqi-achmad-fahreal-b355781b0/",
+    instagram: "https://www.instagram.com/risqiachmadfahreal/",
+  },
+  {
+    id: 8,
+    name: "Kadek Nandana Tyo Nayotama | Teknik Informatika",
+    role: "be",
+    linkedin: "https://www.linkedin.com/in/risqi-achmad-fahreal-b355781b0/",
+    instagram: "https://www.instagram.com/risqiachmadfahreal/",
+  },
+  {
+    id: 9,
+    name: "Gaung Taqwa Indraswara | Teknik Informatika",
+    role: "be",
+    linkedin: "https://www.linkedin.com/in/risqi-achmad-fahreal-b355781b0/",
+    instagram: "https://www.instagram.com/risqiachmadfahreal/",
+  },
+];
+
+const TeamMemberCard: FC<TeamMember> = ({ name, linkedin, instagram }) => (
+  <div className="flex gap-2 sm:gap-6 my-4">
+    <div className="border-2 p-0.5 sm:p-4 rounded-full bg-white text-center w-full flex gap-2 justify-center font-jaoren text-black text-xl sm:text-2xl md:text-3xl items-center">
+      <h2>{name}</h2>
+    </div>
+    <div className="flex items-center gap-2 sm:gap-4">
+      <Link
+        href={instagram}
+        target="_blank"
+        className="flex items-center justify-center rounded-full bg-white p-2 text-black w-12 h-12 sm:w-16 sm:h-16"
+      >
+        <Image src={Instagram} alt="..." className="h-auto w-full" />
+      </Link>
+      <Link
+        href={linkedin}
+        target="_blank"
+        className="flex items-center justify-center rounded-full bg-white p-2 text-black w-12 h-12 sm:w-16 sm:h-16"
+      >
+        <Image src={Linkedin} alt="..." className="h-auto w-full" />
+      </Link>
+    </div>
+  </div>
+);
+
+const TeamSection: FC<{ title: string; role: string }> = ({ title, role }) => (
+  <section className="mt-10">
+    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 bg-[#D7A129] p-2 sm:p-4 text-black text-center rounded-full font-jaoren w-5/12 ">
+      {title}
+    </h2>
+    {teamMembers
+      .filter((member) => member.role === role)
+      .map((member) => (
+        <TeamMemberCard key={member.id} {...member} />
+      ))}
+  </section>
+);
+
 const Page: FC = () => {
   return (
-    <main className="w-screen h-screen flex justify-center items-center">
-      <div className="w-3/6 space-y-4">
-        <div className="border-2 p-2 rounded-full bg-transparent text-center w-full flex gap-2 justify-center">
-          <h1>Risqi Achmad Fahreal -</h1>
-          <p>{`Front End Engineer | TIF 23'`}</p>
-        </div>
-        <div className="border-2 p-2 rounded-full bg-transparent text-center w-full">
-          <h1>Risqi Achmad Fahreal</h1>
-          <p>{`Front End Engineer | TIF 23'`}</p>
+    <section className={`w-full h-max py-12 relative ${style.bgCredits}`}>
+      <div className="w-11/12 max-w-5xl mx-auto">
+        <div className="flex flex-col">
+          <TeamSection title="IT Leader & Front End" role="tech" />
+          <TeamSection title="Tim UI/UX" role="ui" />
+          <TeamSection title="Tim Front end" role="fe" />
+          <TeamSection title="Tim Back end" role="be" />
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 

@@ -8,6 +8,7 @@ import FilosofiLogo from "@/components/home/sections/filosofi";
 import VisionMission from "@/components/home/sections/vision";
 import EventTheme from "@/components/home/sections/tema";
 import Sponsorship from "@/components/home/sections/sponsorship";
+import Rangkaian from "@/components/home/sections/rangkaian";
 
 const Home: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
       <section>
         <VisionMission />
         <EventTheme />
+        <Rangkaian />
         <Panduan />
       </section>
       <section id="vote">

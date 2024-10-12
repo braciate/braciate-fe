@@ -1,9 +1,10 @@
 "use client";
 
+import React from "react";
 import BgAuth from "@/components/login/background/bg-auth";
 import type { FC } from "react";
 import useLoginForm from "@/hooks/useLoginForm";
-import { EyeIcon, EyeOffIcon } from "lucide-react";
+import { EyeIcon, EyeOffIcon, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,11 +21,11 @@ import gold from "../../../assets/svg/fragments/gold-texture.svg";
 import bling from "../../../assets/img/fragments/bling.png";
 
 const LoginPage: FC = () => {
-  const { form, onSubmit, showPassword, setShowPassword } = useLoginForm();
+  const { form, onSubmit, showPassword, setShowPassword, isLoading } =
+    useLoginForm();
   const { errors, isSubmitted } = form.formState;
-
   return (
-    <main className="flex h-screen justify-center relative overflow-hidden">
+    <main className="flex min-h-screen justify-center relative overflow-hidden">
       <BgAuth />
       <section className="w-screen mx-6 sm:w-4/6 lg:w-1/2 h-fit md:h-5/6 self-center grid space-y-4 gap-4 z-10">
         <div className="text-center space-y-0 grid h-max self-end justify-center">
@@ -70,12 +71,12 @@ const LoginPage: FC = () => {
                   )}
                   <FormField
                     control={form.control}
-                    name="email"
+                    name="nim_email"
                     render={({ field }) => (
-                      <FormItem>
+                      <FormItem className="mb-4">
                         <FormControl>
                           <div
-                            className={`flex mt-2 relative flex-col border rounded-xl p-0.5 ${Boolean(errors.email) && Boolean(isSubmitted) ? "border-red-500" : style.inputBorder} gap-1`}
+                            className={`flex mt-2 relative flex-col border rounded-xl p-0.5 ${Boolean(errors.nim_email) && Boolean(isSubmitted) ? "border-red-500" : style.inputBorder} gap-1`}
                           >
                             <div className="bg-black rounded-xl px-4 py-2">
                               <FormLabel className="text-white pt-1 text-xs sm:text-sm">
@@ -83,7 +84,7 @@ const LoginPage: FC = () => {
                               </FormLabel>
                               <Input
                                 placeholder="235150XXXXXXXXX/brawijayaapreciate@student.ub.ac.id"
-                                type="email"
+                                type="text"
                                 className={`bg-transparent text-white focus:bg-transparent focus:outline-none text-xs sm:text-sm`}
                                 {...field}
                               />
@@ -144,6 +145,7 @@ const LoginPage: FC = () => {
                   <Button
                     type="submit"
                     className="w-full py-6 hover:brightness-75 relative text-white font-jaoren text-2xl sm:text-3xl border-white border-4 rounded-full overflow-hidden"
+                    disabled={isLoading}
                   >
                     <Image
                       src={gold}
@@ -151,7 +153,14 @@ const LoginPage: FC = () => {
                       className="absolute object-cover -z-10 brightness-75"
                       fill={true}
                     />
-                    Masuk
+                    {isLoading ? (
+                      <>
+                        <Loader2 className="mr-2 h-6 w-6 animate-spin" />
+                        Memproses...
+                      </>
+                    ) : (
+                      "Masuk"
+                    )}
                   </Button>
                 </div>
               </form>

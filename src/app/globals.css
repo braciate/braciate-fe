@@ -22,6 +22,7 @@
 
 body {
   background-color: black;
+  font-family: "Poppin", sans-serif;
 }
 
 input:-webkit-autofill,
