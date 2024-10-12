@@ -132,7 +132,7 @@ const FilosofiLogo = () => {
           </div>
 
           {/* Main content area */}
-          <div className="w-full mt-4 md:w-11/12">
+          <div className="w-full mt-6 md:w-11/12">
             <Swiper
               modules={[Pagination]}
               spaceBetween={40}
@@ -189,7 +189,7 @@ const FilosofiLogo = () => {
                 </div>
 
             {/* Navigation dots and arrows */}
-            <div className="flex justify-center items-center mt-4">
+            <div className="flex justify-center md:-ml-50 md:-mr-40 items-center mt-4">
               <button onClick={handlePrev} className="focus:outline-none p-2">
                 <Image
                   src={panahIcon}
