@@ -132,7 +132,7 @@ const FilosofiLogo = () => {
           </div>
 
           {/* Main content area */}
-          <div className="w-full md:w-11/12">
+          <div className="w-full mt-6 md:w-11/12">
             <Swiper
               modules={[Pagination]}
               spaceBetween={40}
@@ -160,7 +160,7 @@ const FilosofiLogo = () => {
                       height={slide.titleImageSize.height}
                       className="mb-2 w-full h-auto max-w-[200px] md:max-w-sm"
                     />
-                    <p className="text-sm md:text-base lg:text-base text-gray-300 leading-relaxed text-center w-[90%]">
+                    <p className="text-xs md:text-base lg:text-base text-gray-300 mt-2 leading-relaxed text-center w-[90%]">
                       {slide.content}
                     </p>
                   </div>
@@ -189,7 +189,7 @@ const FilosofiLogo = () => {
                 </div>
 
             {/* Navigation dots and arrows */}
-            <div className="flex justify-center items-center mt-4">
+            <div className="flex justify-center md:-ml-50 md:-mr-40 items-center mt-4">
               <button onClick={handlePrev} className="focus:outline-none p-2">
                 <Image
                   src={panahIcon}
