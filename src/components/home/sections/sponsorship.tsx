@@ -5,28 +5,25 @@ import type { FC } from "react";
 import Image from "next/image";
 import style from "../style/sponsorship.module.css";
 import SponsorProps from "@/hooks/useSponsors";
-import { JSX } from "react";
 import { sponsorImage } from "@/lib/sponsor";
 
 // Renders a slider with sponsor logos
 const renderSlider = (className: string, reverse = false): JSX.Element => (
   <div className={`${style.slider} ${style[className]}`}>
     <div className={`${style.slider_track} ${reverse ? style.reverse : ""}`}>
-      {[...sponsorImage, ...sponsorImage, ...sponsorImage].map(
-        (image, index) => (
-          <div key={index} className={style.item}>
-            <div className={style.circle}>
-              <Image
-                src={image.src}
-                alt={image.alt}
-                className={style.sponsor_image}
-                width={200}
-                height={200}
-              />
-            </div>
+      {[...sponsorImage, ...sponsorImage, ...sponsorImage].map((image, index) => (
+        <div key={index} className={style.item}>
+          <div className={style.circle}>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              className={style.sponsor_image}
+              width={200}
+              height={200}
+            />
           </div>
-        ),
-      )}
+        </div>
+      ))}
     </div>
   </div>
 );
@@ -37,9 +34,9 @@ const Sponsorship: FC = () => {
   return (
     <main className={style.sponsorship_container} ref={sliderRef}>
       {/* Background gradient overlay */}
-      <div
+      <div 
         style={{
-          position: "absolute",
+          position: 'absolute',
           top: 0,
           left: 0,
           right: 0,
@@ -55,9 +52,9 @@ const Sponsorship: FC = () => {
             ),
             url(${sponsorshipBg.src})
           `,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
           opacity: 1,
           zIndex: 1,
         }}
@@ -69,8 +66,8 @@ const Sponsorship: FC = () => {
             src={sponsorshipTitle}
             alt="Sponsorship"
             style={{
-              width: "auto",
-              height: "200px",
+              width: 'auto',
+              height: '200px',
             }}
           />
         </div>
