@@ -11,6 +11,8 @@ import { StepBack, StepForward, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Check } from "lucide-react";
+import useVote from "@/hooks/useVote";
+import bg from "@/assets/svg/background/bg-validFav.svg";
 
 interface props {
   title: string;
@@ -31,19 +33,37 @@ export function FavoritePage({ title, lkm, type }: props) {
   } = usePage(lkm, type);
   const placeholder = lkm.toUpperCase();
 
+  const { submitVote, error: voteError } = useVote();
+  const [isVoting, setIsVoting] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState<any>(null);
   const [voteSuccess, setVoteSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const handleVoteClick = (item: any) => {
     setSelectedItem(item);
     setIsModalOpen(true);
     setVoteSuccess(false);
   };
 
-  const handleConfirmVote = () => {
-    setVoteSuccess(true);
+  const handleConfirmVote = async () => {
+    if (selectedItem) {
+      setIsVoting(true);
+      setError(null);
+      try {
+        const result = await submitVote(selectedItem.id, lkm);
+        if (result) {
+          setVoteSuccess(true);
+        } else if (voteError) {
+          setError(voteError);
+        }
+      } catch (err) {
+        console.error("Failed to submit vote:", err);
+        setError("Failed to submit vote. Please try again.");
+      } finally {
+        setIsVoting(false);
+      }
+    }
   };
-
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setVoteSuccess(false);
@@ -161,9 +181,15 @@ export function FavoritePage({ title, lkm, type }: props) {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-[2px]"
         >
           <div
-            className="relative p-6 bg-gradient-to-b from-[#D4AF37] to-[#2B1D55] text-white rounded-[2rem] w-3/4 sm:max-w-sm sm:w-full"
+            className="relative p-6 text-white rounded-[2rem] w-3/4 overflow-hidden sm:max-w-sm sm:w-full border-white border"
             onClick={(e) => e.stopPropagation()}
           >
+            <Image
+              src={bg}
+              alt=""
+              className="object-cover absolute -z-10 brightness-[.4]"
+              fill
+            />
             {!voteSuccess ? (
               <>
                 <button
@@ -175,7 +201,7 @@ export function FavoritePage({ title, lkm, type }: props) {
                 <h3 className="text-center text-2xl font-jaoren">
                   Yakin Sudah Sesuai Pilihanmu?
                 </h3>
-                <div className="flex flex-col items-center gap-4 mt-4">
+                <div className="flex flex-col items-center gap-2">
                   <div className="w-32 h-32 rounded-full bg-gray-300 relative overflow-hidden border-4 border-white">
                     <Image
                       src={selectedItem.logo_file}
@@ -191,11 +217,20 @@ export function FavoritePage({ title, lkm, type }: props) {
                 <div className="flex justify-center">
                   <Button
                     onClick={handleConfirmVote}
+                    disabled={isVoting}
                     className="px-6 py-2 border font-jaoren text-xl border-white rounded-full text-white hover:bg-white hover:text-black transition-all"
                   >
-                    Vote Now
+                    {isVoting ? "Voting..." : "Vote Now"}
                   </Button>
                 </div>
+                {error && (
+                  <div className="text-red-500 text-center">{error}</div>
+                )}
+                {voteSuccess && (
+                  <div className="text-green-500">
+                    Vote submitted successfully!
+                  </div>
+                )}
               </>
             ) : (
               <>

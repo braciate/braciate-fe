@@ -9,8 +9,11 @@ import "./globals.css";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap",
 });
-const subFont = localFont({
+
+const jaoren = localFont({
   src: "../assets/fonts/Jaoren.woff",
   variable: "--font-jaoren",
   display: "swap",
@@ -30,7 +33,7 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
       <body
-        className={`${subFont.variable} ${poppins.className} overflow-x-hidden`}
+        className={`${poppins.variable} ${jaoren.variable} font-poppins overflow-x-hidden`}
       >
         <AuthProvider>
           <PageTransition>{children}</PageTransition>
