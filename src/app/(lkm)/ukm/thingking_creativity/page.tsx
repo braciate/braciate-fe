@@ -8,11 +8,14 @@ const Page: FC = () => {
     <main className="w-screen min-h-screen relative flex justify-center">
       <BgKategori />
       <UploaderComponent
-      lkm="UKM"
+        lkm="UKM"
         title="Unit Kegiatan Mahasiswa"
         subtitle="BEST Achievement of Critical Thinking & Creativity"
         description="Diukur dari hasil prestasi berdasarkan skala bagi UKM Penalaran
                 & Minat Bakat sesuai dengan jumlah total bobot penilaian."
+        id="ukm"
+        type="6"
+        nomination_id="best-aoctc-ukm"
       />
     </main>
   );

@@ -1,12 +1,10 @@
 "use client";
-
-import style from "@/app/(lkm)/page.module.css";
-import { Input } from "@/components/ui/input";
-import { Link, Loader2, CheckCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
-import gold from "../../../assets/svg/fragments/gold-texture.svg";
-import useLinkForm from "@/hooks/useLinkForm";
+import { Link, Loader2, CheckCircle } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -15,15 +13,20 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import ListLkm from "@/utils/dropdown";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import React from "react";
+import ListLkm from "@/utils/dropdown";
+import useLinkForm from "@/hooks/useLinkForm";
+import style from "@/app/(lkm)/page.module.css";
+import gold from "@/assets/svg/fragments/gold-texture.svg";
 
-interface props {
+interface UploaderComponentProps {
   title: string;
   subtitle: string;
   description: string;
   lkm: string;
+  id: string;
+  type: string;
+  nomination_id: string;
 }
 
 export function UploaderComponent({
@@ -31,18 +34,24 @@ export function UploaderComponent({
   subtitle,
   description,
   lkm,
-}: props) {
+  id,
+  type,
+  nomination_id,
+}: UploaderComponentProps) {
   const {
     form,
     onSubmit,
     isModalOpen,
     setIsModalOpen,
-    formValues,
     handleKeyValidation,
     keyValidationForm,
     submissionState,
+    setNominationId,
   } = useLinkForm();
   const { errors, isSubmitted } = form.formState;
+  useEffect(() => {
+    setNominationId(nomination_id);
+  }, [nomination_id, setNominationId]);
   return (
     <section className="flex flex-col items-center space-y-3 w-full max-w-6xl px-4 py-12">
       <div className="font-jaoren text-center mt-12 mb-4">
@@ -84,6 +93,8 @@ export function UploaderComponent({
                           {...field}
                           error={Boolean(errors.lkm) && isSubmitted}
                           lkm={lkm}
+                          id={id}
+                          type={type}
                         />
                       </FormControl>
                       <FormMessage
@@ -95,13 +106,17 @@ export function UploaderComponent({
                 />
                 <FormField
                   control={form.control}
-                  name="link"
+                  name="url"
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
                         <div className="relative flex w-full mt-3">
                           <Input
-                            className={`bg-transparent border-2 rounded-2xl py-3 px-12 w-full text-white ${Boolean(errors.link) && Boolean(isSubmitted) ? "border-red-500 " : null} `}
+                            className={`bg-transparent border-2 rounded-2xl py-3 px-12 w-full text-white ${
+                              Boolean(errors.url) && Boolean(isSubmitted)
+                                ? "border-red-500"
+                                : ""
+                            }`}
                             placeholder="Link pengumpulan"
                             type="text"
                             {...field}
@@ -203,15 +218,3 @@ export function UploaderComponent({
     </section>
   );
 }
-
-//   return (
-//     <main className="w-screen min-h-screen relative flex justify-center">
-//       <FormComponent
-//         title="Unit Kegiatan Mahasiswa"
-//         subtitle="BEST Achievement of Art & Sport"
-//         description="Diukur dari hasil prestasi berdasarkan skala bagi UKM Kesenian & Olahraga sesuai dengan jumlah total bobot penilaian."
-//         onSubmit={handleSubmit}
-//         onKeyValidation={handleKeyValidation}
-//       />
-//     </main>
-//   );

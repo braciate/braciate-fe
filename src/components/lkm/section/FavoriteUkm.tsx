@@ -1,36 +1,40 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import BgKategori from "@/components/lkm/background/bg-main";
 import style from "@/app/(lkm)/page.module.css";
 import { Input } from "@/components/ui/input";
-import usePage from "@/hooks/useFavPage";
+import usePage from "@/hooks/useFavUkm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { StepBack, StepForward, Search } from "lucide-react";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
+import LoadingScreen from "@/components/loading/LoadingScreen";
+import { useState } from "react";
 import { Check } from "lucide-react";
-import useVote from "@/hooks/useVote";
 import bg from "@/assets/svg/background/bg-validFav.svg";
+import useVote from "@/hooks/useVote";
 
-interface props {
+interface Props {
   title: string;
   lkm: string;
   type: string;
 }
 
-export function FavoritePage({ title, lkm, type }: props) {
-  const router = useRouter();
+export function FavoriteUKM({ title, lkm, type }: Props) {
   const {
     currentPage,
     currentItems,
     setCurrentPage,
     totalPages,
     setSearchTerm,
+    setActiveFilter,
+    activeFilter,
     searchTerm,
+    filterKategori,
     noDataFound,
-  } = usePage(lkm, type);
+    isLoading,
+  } = usePage("ukm", "6");
   const placeholder = lkm.toUpperCase();
 
   const { submitVote, error: voteError } = useVote();
@@ -75,6 +79,9 @@ export function FavoritePage({ title, lkm, type }: props) {
     }
   };
 
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
   return (
     <section className="w-screen h-max relative flex flex-col items-center">
       <BgKategori />
@@ -95,11 +102,27 @@ export function FavoritePage({ title, lkm, type }: props) {
             />
             <Search className="absolute bottom-3 left-4" />
           </div>
-          <div className="gap-4 justify-center flex flex-wrap"></div>
+          {type !== "0" ? (
+            <div className="gap-4 justify-center flex flex-wrap">
+              {filterKategori.map((item: any) => (
+                <span
+                  key={item.type}
+                  className={`font-jaoren rounded-3xl tracking-wider bg-transparent px-2 py-0.5 text-xl transition-colors cursor-pointer text-center border-2 w-36 ${
+                    activeFilter === item.kategori
+                      ? "bg-white text-black border-black"
+                      : "border-white text-white"
+                  }`}
+                  onClick={() => setActiveFilter(item.kategori)}
+                >
+                  {item.kategori}
+                </span>
+              ))}
+            </div>
+          ) : null}
           <div className="flex justify-center items-center gap-2">
             <Button
               onClick={() => {
-                setCurrentPage((prev) => Math.max(prev - 1, 1));
+                setCurrentPage((prev: number) => Math.max(prev - 1, 1));
               }}
               disabled={currentPage === 1}
               className="p-0"
@@ -112,13 +135,13 @@ export function FavoritePage({ title, lkm, type }: props) {
                   Data tidak ditemukan
                 </div>
               ) : (
-                currentItems.map((item) => (
+                currentItems.map((item: any) => (
                   <Card
                     key={item.id}
-                    className="flex flex-col justify-between border-2 mx-auto items-center rounded-4xl max-h-40 md:max-h-44 lg:max-h-48 sm:h-40 md:h-44 lg:h-48 gap-4  w-36 sm:w-48 md:w-40 lg:w-44 "
+                    className="flex flex-col justify-between border-2 mx-auto items-center rounded-4xl max-h-40 md:max-h-44 lg:max-h-48 sm:h-40 md:h-44 lg:h-48 gap-4  w-36 sm:w-48 md:w-40 lg:w-44"
                   >
                     <CardContent className="px-3 py-2 flex items-center flex-col text-center w-full">
-                      <span className="w-20 h-20 lg:w-24 lg:h-24 rounded-full mb-2 lg:mb-2 relative overflow-hidden border-2 border-gray-500 bg-black/60">
+                      <span className="w-20 h-20 lg:w-24 lg:h-24 rounded-full mb-2 lg:mb-2 relative overflow-hidden border-2 border-gray-500 bg-black/40">
                         <Image
                           src={item.logo_file}
                           alt={item.name}
@@ -146,7 +169,9 @@ export function FavoritePage({ title, lkm, type }: props) {
             </div>
             <Button
               onClick={() => {
-                setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+                setCurrentPage((prev: number) =>
+                  Math.min(prev + 1, totalPages),
+                );
               }}
               disabled={currentPage === totalPages}
               className="p-0"
@@ -172,7 +197,6 @@ export function FavoritePage({ title, lkm, type }: props) {
           )}
         </div>
       </main>
-
       {/* Modal confirmation */}
       {isModalOpen && selectedItem && (
         <div
@@ -202,7 +226,7 @@ export function FavoritePage({ title, lkm, type }: props) {
                   Yakin Sudah Sesuai Pilihanmu?
                 </h3>
                 <div className="flex flex-col items-center gap-2">
-                  <div className="w-32 h-32 rounded-full bg-gray-300 relative overflow-hidden border-4 border-white">
+                  <div className="w-32 h-32 rounded-full bg-black/40 relative overflow-hidden border-2 p-1 border-white">
                     <Image
                       src={selectedItem.logo_file}
                       alt={selectedItem.name}

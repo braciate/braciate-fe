@@ -1,12 +1,14 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import type { UseFormReturn } from "react-hook-form";
-import { useState } from "react";
+import { useState, Dispatch, SetStateAction } from "react";
 import { useRouter } from "next/navigation";
 import * as z from "zod";
+import { useSession } from "next-auth/react";
+import axios from "axios";
 
 const formSchema = z.object({
-  link: z.string().url("Link is required!"),
+  url: z.string().url("Link is required!"),
   lkm: z.string().min(1, "LKM is required!"),
 });
 const keyValidationSchema = z.object({
@@ -21,23 +23,26 @@ export interface LinkFormProps {
   onSubmit: (values: LinkFormValues) => Promise<void>;
   isModalOpen: boolean;
   setIsModalOpen: (isOpen: boolean) => void;
+  setNominationId: Dispatch<SetStateAction<string>>;
   formValues: LinkFormValues | null;
   handleKeyValidation: (values: KeyValidationValues) => Promise<void>;
   submissionState: "idle" | "submitting" | "submitted";
 }
 
 const useLinkForm = (): LinkFormProps => {
+  const [nominationId, setNominationId] = useState<string>("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formValues, setFormValues] = useState<LinkFormValues | null>(null);
   const [submissionState, setSubmissionState] = useState<
     "idle" | "submitting" | "submitted"
   >("idle");
+  const { data: session } = useSession();
   const router = useRouter();
   const form = useForm<LinkFormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       lkm: "",
-      link: "",
+      url: "",
     },
   });
 
@@ -49,7 +54,7 @@ const useLinkForm = (): LinkFormProps => {
   });
 
   const onSubmit = async (values: LinkFormValues): Promise<void> => {
-    if (values.link != null && values.lkm != null) {
+    if (values.url != null && values.lkm != null) {
       setFormValues(values);
       setIsModalOpen(true);
     } else {
@@ -57,7 +62,7 @@ const useLinkForm = (): LinkFormProps => {
         type: "manual",
         message: "Lkm is required!",
       });
-      form.setError("link", {
+      form.setError("url", {
         type: "manual",
         message: "Link is required!",
       });
@@ -67,11 +72,30 @@ const useLinkForm = (): LinkFormProps => {
       });
     }
   };
-  const handleKeyValidation = async (values: KeyValidationValues) => {
+  const handleKeyValidation = async (
+    values: KeyValidationValues,
+  ): Promise<void> => {
     const validKey = process.env.NEXT_PUBLIC_LKM_KEY;
+    const URL = process.env.NEXT_PUBLIC_API_URL_DEV + "api/v1/assets/create";
     if (validKey && values.key === validKey) {
       setSubmissionState("submitting");
-      // Simulate API call
+      try {
+        const { data } = await axios.post(
+          URL,
+          {
+            user_id: session?.user.user_id,
+            lkm_id: formValues?.lkm,
+            nomination_id: nominationId,
+            url: formValues?.url,
+          },
+          {
+            headers: { "Content-Type": "application/json" },
+          },
+        );
+      } catch (err) {
+        console.error(err);
+        return;
+      }
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       console.log("Submitting form with values:", formValues);
@@ -79,7 +103,7 @@ const useLinkForm = (): LinkFormProps => {
       console.log(JSON.stringify(formValues));
 
       await new Promise((resolve) => setTimeout(resolve, 1000));
-      router.push("/");
+      // router.push("/");
     } else {
       keyValidationForm.setError("key", {
         type: "manual",
@@ -89,6 +113,7 @@ const useLinkForm = (): LinkFormProps => {
   };
 
   return {
+    setNominationId,
     keyValidationForm,
     form,
     onSubmit,

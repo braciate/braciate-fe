@@ -8,12 +8,15 @@ const Page: FC = () => {
     <main className="w-screen min-h-screen relative flex justify-center">
       <BgKategori />
       <UploaderComponent
-      lkm="UKM"
+        lkm="UKM"
         title="Unit Kegiatan Mahasiswa"
         subtitle="BEST Productive"
         description=" Diukur dari jumlah program kerja yang terlaksana beserta
                 dokumentasi program kerja sesuai dengan jumlah total bobot
                 penilaian."
+        id="ukm"
+        type="6"
+        nomination_id="best-productive-ukm"
       />
     </main>
   );

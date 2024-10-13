@@ -1,6 +1,7 @@
 import CredentialsProvider from "next-auth/providers/credentials";
 import type { NextAuthOptions } from "next-auth";
 import axios from "axios";
+import jwt from "jsonwebtoken";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -49,11 +50,21 @@ export const authOptions: NextAuthOptions = {
       if (user) {
         token.accessToken = user.accessToken;
         token.expired_at = user.expired_at;
+
+        try {
+          const decodedToken = jwt.decode(token.accessToken as string) as {
+            id: string;
+          } | null;
+          if (decodedToken && decodedToken.id) {
+            token.user_id = decodedToken.id;
+          }
+        } catch (error) {
+          console.error("Failed to decode access token:", error);
+        }
       }
 
-      // Check if the token has expired
       const expiredAt = token.expired_at as number | undefined;
-      if (typeof expiredAt === 'number' && Date.now() > expiredAt * 1000) {
+      if (typeof expiredAt === "number" && Date.now() > expiredAt * 1000) {
         return { ...token, error: "TokenExpired" };
       }
 
@@ -67,6 +78,7 @@ export const authOptions: NextAuthOptions = {
       if (session.user) {
         session.user.accessToken = token.accessToken as string;
         session.user.expired_at = token.expired_at as number;
+        session.user.user_id = token.user_id as string;
       }
       return session;
     },
