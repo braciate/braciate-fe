@@ -46,11 +46,22 @@ const ListLkm: FC<ListLkmProps> = ({
     const fetchLkms = async () => {
       try {
         setLoading(true);
-        const response = await axios.get<Organisasi[]>(
-          `${process.env.NEXT_PUBLIC_API_URL_DEV}api/v1/lkms/get/${id}/${type}`,
-        );
-        console.log(response.data);
-        setOrganisasiList(response.data);
+        if (type === "6") {
+          const requests = [1, 2, 3, 4, 5].map((type) =>
+            axios.get(
+              `${process.env.NEXT_PUBLIC_API_URL_DEV}api/v1/lkms/get/${id}/${type}`,
+            ),
+          );
+          const responses = await Promise.all(requests);
+          const allData = responses.flatMap((response) => response.data);
+          setOrganisasiList(allData);
+        } else {
+          const response = await axios.get(
+            `${process.env.NEXT_PUBLIC_API_URL_DEV}api/v1/lkms/get/${id}/${type}`,
+          );
+          console.log(response.data);
+          setOrganisasiList(response.data);
+        }
         setLoading(false);
       } catch (error) {
         console.error("Error fetching LKMs:", error);

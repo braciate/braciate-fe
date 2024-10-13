@@ -92,7 +92,6 @@ const useLinkForm = (): LinkFormProps => {
             headers: { "Content-Type": "application/json" },
           },
         );
-        console.log(data);
       } catch (err) {
         console.error(err);
         return;

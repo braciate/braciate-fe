@@ -7,12 +7,15 @@ const Page: FC = () => {
     <main className="w-screen min-h-screen relative flex justify-center">
       <BgKategori />
       <UploaderComponent
-      lkm="HIMA"
+        lkm="HIMA"
         title="Himpunan Mahasiswa"
         subtitle="Best Collaborative"
         description="Diukur dari total kegiatan partnership baik studi banding atau
                 hal lainnya dalam lingkup UB maupun eksternal UB sesuai dengan
                 jumlah total bobot penilaian."
+        id="hima"
+        type="0"
+        nomination_id="best-collaborative-hima"
       />
     </main>
   );

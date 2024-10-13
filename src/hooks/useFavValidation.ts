@@ -10,8 +10,6 @@ const useFavValidation = () => {
     setSelectedItem(item);
     setIsModalOpen(true);
     setVoteSuccess(false);
-    console.log(isModalOpen);
-    console.log(selectedItem);
   };
 
   const handleConfirmVote = () => {

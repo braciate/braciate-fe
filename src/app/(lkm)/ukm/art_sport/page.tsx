@@ -8,11 +8,14 @@ const Page: FC = () => {
     <main className="w-screen min-h-screen relative flex justify-center">
       <BgKategori />
       <UploaderComponent
-      lkm="UKM"
+        lkm="UKM"
         title="Unit Kegiatan Mahasiswa"
         subtitle="BEST Achievement of Art & Sport"
         description="Diukur dari hasil prestasi berdasarkan skala bagi UKM Kesenian &
                 Olahraga sesuai dengan jumlah total bobot penilaian."
+        id="ukm"
+        type="6"
+        nomination_id="best-art-sport-ukm"
       />
     </main>
   );

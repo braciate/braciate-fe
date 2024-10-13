@@ -16,6 +16,7 @@ const Page: FC = () => {
                 penilaian."
         id="bem"
         type="0"
+        nomination_id="best-productive-bem"
       />
     </main>
   );
