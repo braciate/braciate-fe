@@ -7,7 +7,7 @@
   --top-slider-item-size: 10vw;
   --bottom-slider-item-size: 7vw;
   --item-margin: 1vw;
-  --animation-duration: 20s;
+  --animation-duration: 50s;
 
   width: 100%;
   height: var(--sponsorship-height);
@@ -148,7 +148,7 @@
 @media screen and (max-width: 768px) {
   .sponsorship_container {
     --animation-duration: 20s;
-    --top-slider-item-size: 20vw; 
+    --top-slider-item-size: 20vw;
     --bottom-slider-item-size: 16vw;
     --content-padding-top: 4vh;
     --content-padding-bottom: 8vh;
@@ -161,7 +161,7 @@
   .sponsorship_container {
     --animation-duration: 20s;
     --top-slider-item-size: 22vw;
-    --bottom-slider-item-size: 18vw; 
+    --bottom-slider-item-size: 18vw;
     --content-padding-top: 3vh;
     --content-padding-bottom: 6vh;
     --title-margin-bottom: 3vh;

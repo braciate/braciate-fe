@@ -55,7 +55,7 @@ const FaqLayout: React.FC<{
         <div
           className={`transform transition-transform duration-300 ${faq.open ? "translate-y-0" : "-translate-y-4"}`}
         >
-          <p className="text-black text-justify p-4 text-xs sm:text-lg">
+          <p className="text-black text-justify p-4 text-base sm:text-lg">
             {faq.answer}
           </p>
         </div>
