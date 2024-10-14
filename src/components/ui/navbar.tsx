@@ -62,7 +62,7 @@ const Navbar: FC = () => {
         <div className={styles.navbarLogo}>
           <Link href="/" className="flex">
             <Image src={LogoImage} alt="Logo" className="w-max" />
-            <Image src={LogoTitle} alt="Title" className="w-max" />
+            <Image src={LogoTitle} alt="Title" className="w-max" priority />
           </Link>
         </div>
         <span

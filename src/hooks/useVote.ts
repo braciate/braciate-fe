@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useSession } from "next-auth/react";
 import { useCallback, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function useVote() {
+  const router = useRouter();
   const { data: session } = useSession();
   const [error, setError] = useState<string | null>(null);
   const BaseURL = process.env.NEXT_PUBLIC_API_URL_DEV;
@@ -58,8 +60,8 @@ export default function useVote() {
             headers: { "Content-Type": "application/json" },
           },
         );
-        console.log(data);
         setError(null);
+        router.push("/");
         return data;
       } catch (err) {
         console.error(err);

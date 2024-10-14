@@ -97,13 +97,9 @@ const useLinkForm = (): LinkFormProps => {
         return;
       }
       await new Promise((resolve) => setTimeout(resolve, 2000));
-
-      console.log("Submitting form with values:", formValues);
       setSubmissionState("submitted");
-      console.log(JSON.stringify(formValues));
-
       await new Promise((resolve) => setTimeout(resolve, 1000));
-      // router.push("/");
+      router.push("/");
     } else {
       keyValidationForm.setError("key", {
         type: "manual",
