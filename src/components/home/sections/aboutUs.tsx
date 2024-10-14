@@ -8,7 +8,7 @@ const AboutUs: FC = () => {
   return (
     <div className="h-screen">
       <main
-        className="w-screen h-auto flex flex-col items-center p-24 relative"
+        className="w-screen flex flex-col items-center p-24 relative"
         id="about"
       >
         <div className="absolute flex flex-row flex-nowrap items-center justify-between w-full">
@@ -19,7 +19,7 @@ const AboutUs: FC = () => {
           <Image
             src={AboutUsImg}
             alt=""
-            className="scale-125 sm:scale-110 md:scale-100"
+            className="scale-100 sm:scale-80 md:scale-100"
           />
           <div className="w-64 sm:w-96 md:w-auto">
             <p className="text-xs sm:text-base text-center mt-10 font-poppins">

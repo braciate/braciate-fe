@@ -1,59 +1,77 @@
 "use client";
-import sponsorshipTitle from "../../../assets/img/title/sponsorship_title.png";
+import sponsorshipTitle from "@/assets/img/title/sponsorship_title.png";
+import sponsorshipBg from "@/assets/img/background/sponsorship_bg.png";
 import type { FC } from "react";
 import Image from "next/image";
 import style from "../style/sponsorship.module.css";
 import SponsorProps from "@/hooks/useSponsors";
-import { motion } from "framer-motion";
 import { sponsorImage } from "@/lib/sponsor";
 
-const Sponsorship: FC = () => {
-  const renderSlider = (className: string, reverse = false): JSX.Element => (
-    <div className={`${style.slider} ${className}`}>
-      <motion.div
-        className={`${style.slider_track} flex gap-4 space-y-4`}
-        initial={{ x: reverse ? "-100%" : "0%" }}
-        animate={{ x: reverse ? "0%" : "-100%" }}
-        transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 100,
-            ease: "linear",
-          },
-        }}
-      >
-        {sponsorImage.map((image, index) => (
-          <div key={index} className={`${style.item} flex-shrink-0`}>
-            <div
-              className={`${style.circle} w-24 h-24 rounded-full overflow-hidden`}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                className={`${style.sponsor_image} object-cover w-full h-full`}
-                width={200}
-                height={200}
-              />
-            </div>
+// Renders a slider with sponsor logos
+const renderSlider = (className: string, reverse = false): JSX.Element => (
+  <div className={`${style.slider} ${style[className]}`}>
+    <div className={`${style.slider_track} ${reverse ? style.reverse : ""}`}>
+      {[...sponsorImage, ...sponsorImage, ...sponsorImage].map((image, index) => (
+        <div key={index} className={style.item}>
+          <div className={style.circle}>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              className={style.sponsor_image}
+              width={200}
+              height={200}
+            />
           </div>
-        ))}
-      </motion.div>
+        </div>
+      ))}
     </div>
-  );
+  </div>
+);
+
+// Main Sponsorship component
+const Sponsorship: FC = () => {
   const { sliderRef } = SponsorProps();
   return (
     <main className={style.sponsorship_container} ref={sliderRef}>
+      {/* Background gradient overlay */}
+      <div 
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundImage: `
+            linear-gradient(to bottom, 
+              rgba(0,0,0,1) 0%, 
+              rgba(0,0,0,0.6) 25%, 
+              rgba(0,0,0,0.2) 40%, 
+              rgba(0,0,0,0.2) 70%, 
+              rgba(0,0,0,0.6) 90%, 
+              rgba(0,0,0,1) 100%
+            ),
+            url(${sponsorshipBg.src})
+          `,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          opacity: 1,
+          zIndex: 1,
+        }}
+      />
       <div className={style.sponsorship_content}>
+        {/* Sponsorship title */}
         <div className={style.sponsorship_title}>
           <Image
             src={sponsorshipTitle}
             alt="Sponsorship"
-            width={300}
-            height={100}
-            layout="responsive"
+            style={{
+              width: 'auto',
+              height: '200px',
+            }}
           />
         </div>
+        {/* Sponsor logo sliders */}
         <div className={style.sliders_wrapper}>
           {renderSlider("slider_top")}
           {renderSlider("slider_bottom", true)}

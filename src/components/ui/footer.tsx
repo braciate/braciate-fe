@@ -76,9 +76,12 @@ const Footer: FC = () => {
               />
             </Link>
           </div>
-          <p className="text-xs font-poppins">
+          <Link
+            className="text-xs font-poppins animate-bounce underline"
+            href="/credit"
+          >
             © Tim IT Brawijaya Appreciate 2024
-          </p>
+          </Link>
         </div>
       </div>
     </footer>

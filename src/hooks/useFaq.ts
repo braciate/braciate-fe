@@ -14,21 +14,30 @@ interface UseFaqResult {
 const useFaq = (): UseFaqResult => {
   const [faqs, setFaqs] = useState<FaqItem[]>([
     {
-      question: "Pertanyaan ke-1",
+      question:
+        "Apakah satu akun hanya dapat memberikan satu voting pada masing-masing LKM dan UKM?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra lorem eu dolor rhoncus, at scelerisque ligula gravida. Sed porta id mi sit amet convallis. Etiam iaculis massa sit amet lacus blandit sodales. Nulla ultrices velit a diam placerat congue. Pellentesque iaculis, ipsum quis eleifend dapibus, est dui eleifend ante, quis fermentum mi ligula quis nisl. Ut et ex dui. Integer id venenatis quam.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra lorem eu dolor rhoncus, at scelerisque ligula gravida. Sed porta id mi sit amet convallis. Etiam iaculis massa sit amet lacus blandit sodales. Nulla ultrices velit a diam placerat congue. Pellentesque iaculis, ipsum quis eleifend dapibus, est dui eleifend ante, quis fermentum mi ligula quis nisl. Ut et ex dui. Integer id venenatis quam.",
+        "Satu akun dapat memberikan voting untuk kategori Best Favorite minimal satu kali pada masing-masing LKM (DPM, BEM, HIMA) dan UKM.",
       open: false,
     },
     {
-      question: "Pertanyaan ke-2",
+      question:
+        "Jika ingin mengikuti lebih dari dua kategori nominasi, apakah harus mengunggah dua kali?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra lorem eu dolor rhoncus, at scelerisque ligula gravida. Sed porta id mi sit amet convallis. Etiam iaculis massa sit amet lacus blandit sodales. Nulla ultrices velit a diam placerat congue. Pellentesque iaculis, ipsum quis eleifend dapibus, est dui eleifend ante, quis fermentum mi ligula quis nisl. Ut et ex dui. Integer id venenatis quam.",
+        "Ya, masing-masing file PPT harus diunggah dalam format PDF sesuai dengan ketentuan yang telah ditetapkan. File tersebut kemudian diunggah ke dalam Link Google Drive (Catatan: ubah link GDrive menjadi akses terbuka untuk semua orang).",
       open: false,
     },
     {
-      question: "Pertanyaan ke-3",
+      question:
+        "Untuk best favorite itu pure dari voting seluruh mahasiswa UB atau ada lainnya?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra lorem eu dolor rhoncus, at scelerisque ligula gravida. Sed porta id mi sit amet convallis. Etiam iaculis massa sit amet lacus blandit sodales. Nulla ultrices velit a diam placerat congue. Pellentesque iaculis, ipsum quis eleifend dapibus, est dui eleifend ante, quis fermentum mi ligula quis nisl. Ut et ex dui. Integer id venenatis quam.",
+        "Ya, Best favorite akan dihitung sesuai jumlah voting terbanyak yang dilakukan oleh seluruh mahasiswa Universitas Brawijaya.",
+      open: false,
+    },
+    {
+      question: "Apakah akan ada awarding terkait nominasi yang disediakan?",
+      answer:
+        "Pasti ada, awarding akan dilaksanakan pada main event Brawijaya Appreciate 2024 di Auditorium Merah tanggal 01 November 2024.",
       open: false,
     },
   ]);

@@ -14,9 +14,9 @@
 
 6. ‌[Axios](https://axios-http.com/)
 
-7. [Zustand](https://zustand-demo.pmnd.rs/)
+7. [NextAuth.js](https://next-auth.js.org/)
 
-8. ‌[React Hook Form](https://www.react-hook-form.com/)
+7. ‌[React Hook Form](https://www.react-hook-form.com/)
 
 ## Aturan Penulisan Kode
 

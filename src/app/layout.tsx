@@ -1,14 +1,19 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import type React from "react";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
+import { AuthProvider } from "@/app/context/Providers";
+import PageTransition from "@/components/loading/PageTransition";
 import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap",
 });
-const subFont = localFont({
+
+const jaoren = localFont({
   src: "../assets/fonts/Jaoren.woff",
   variable: "--font-jaoren",
   display: "swap",
@@ -17,7 +22,7 @@ const subFont = localFont({
 
 export const metadata: Metadata = {
   title: "Braciate",
-  description: "Official braciate website",
+  description: "Website Braciate",
 };
 
 interface IRootLayoutProps {
@@ -28,9 +33,11 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
       <body
-        className={`${subFont.variable} ${poppins.className} overflow-x-hidden`}
+        className={`${poppins.variable} ${jaoren.variable} font-poppins overflow-x-hidden`}
       >
-        {children}
+        <AuthProvider>
+          <PageTransition>{children}</PageTransition>
+        </AuthProvider>
       </body>
     </html>
   );

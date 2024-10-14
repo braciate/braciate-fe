@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-module.exports = nextConfig;
 const withVideos = require("next-videos");
 
-module.exports = withVideos();
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        hostname: "xzzrzpvflmlugnhzkdki.supabase.co",
+      },
+    ],
+  },
+};
+
+module.exports = withVideos(nextConfig);
