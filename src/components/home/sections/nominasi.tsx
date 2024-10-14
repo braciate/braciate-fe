@@ -5,7 +5,7 @@ import Image from "next/image";
 import bling from "@/assets/img/fragments/bling.png";
 import style from "../style/nominasi.module.css";
 import { useState } from "react";
-import Favorite from "../utils/modal/favorite";
+import Favorite from "../utils/modal/partials/favorite";
 
 const Nominasi: FC = () => {
 

@@ -8,6 +8,9 @@ import productive from '@/assets/svg/Modal_imgs/dpm_imgs/productive.svg';
 import collab from "@/assets/svg/Modal_imgs/dpm_imgs/collab.svg"
 import { useState } from 'react'
 import Close from '@/assets/svg/Modal_imgs/Close.svg'
+import Favorite from "@/components/home/utils/modal/partials/favorite";
+import BgBem from "@/assets/svg/Modal_imgs/BgBem.svg"
+import BgDpm from "@/assets/svg/Modal_imgs/dpm_imgs/BgDpm.svg"
 
 export default function Bem() {
     const [isModalVisible, setIsModalVisible] = useState(true);
@@ -20,26 +23,28 @@ export default function Bem() {
 
 
     return (
-        <header className='flex flex-col items-center justify-center'>
-            <div className='relative bg-[#D7A129] rounded-lg p-4'>
+        <header className='flex items-center justify-center relative left-48'>
+        <Favorite/>
+            <div className='relative'>
             <Image 
             src={Close}
             alt="Close button"
-            className=" absolute top-1 right-2 cursor-pointer"
+            className=" absolute top-28 right-48 cursor-pointer"
             onClick={closeModal}
             />
-            <div className='flex gap-2'>
-                <div className='cursor-pointer bg-[#D7A129] border-2 border-white rounded-lg p-1 flex flex-col items-center justify-center '>
-                    <Image src={upload} alt='Upload BEM' />
-                    <Image src={best} alt='Best BEM' />
-                    <Image src={productive} alt='Productive BEM' />
-                </div>
-                <div className='cursor-pointer bg-[#D7A129] border-2 border-white rounded-lg p-1 flex flex-col items-center justify-center '>
-                    <Image src={upload} alt="Upload BEM" />
-                    <Image src={best} alt="Best BEM" />
-                    <Image src={collab} alt="collab BEM" />
+            <div className='flex gap-7 absolute bottom-28 left-28'>
+                <div className=" cursor-pointer  border-2 border-white rounded-3xl  flex flex-col items-center justify-center ">
+                <Image src={upload} alt="Upload DPM" className="w-full" />
+                <Image src={best} alt="Best DPM" className="w-full" />
+                <Image src={productive} alt="Productive DPM" className="w-[200px]"/>
+            </div>
+                <div className='cursor-pointer border-2 border-white rounded-3xl py-1 flex flex-col items-center justify-center '>
+                <Image src={upload} alt="Upload DPM" className="w-full" />
+                <Image src={best} alt="Best DPM" className="w-full" />
+                <Image src={collab} alt="Productive DPM" className="w-52"/>
                 </div>
             </div>
+            <Image src={BgBem} alt="Background BEM" className="w-[90%]"/>
             </div>
         </header>
     )
