@@ -110,7 +110,7 @@ export function FavoriteUKM({ title, lkm, type }: Props) {
                   className={`font-jaoren rounded-3xl tracking-wider bg-transparent px-2 py-0.5 text-xl transition-colors cursor-pointer text-center border-2 w-36 ${
                     activeFilter === item.kategori
                       ? "bg-white text-black border-black"
-                      : "border-white text-white"
+                      : "border-white text-white hover:bg-white/40 hover:text-black"
                   }`}
                   onClick={() => setActiveFilter(item.kategori)}
                 >

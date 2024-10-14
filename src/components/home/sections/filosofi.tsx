@@ -11,11 +11,11 @@ import "swiper/css/pagination";
 
 import FilosofiLogoImg from "../../../assets/svg/fragments/filosofilogo-text.svg";
 import glitterImage from "../../../assets/img/fragments/glitter.png";
-import filosofiIcon1 from "../../../assets/img/fragments/filosofi_icon_1.png";
-import filosofiIcon2 from "../../../assets/img/fragments/filosofi_icon_2.png";
-import filosofiIcon3 from "../../../assets/img/fragments/filosofi_icon_3.png";
-import filosofiIcon4 from "../../../assets/img/fragments/filosofi_icon_4.png";
-import filosofiIcon5 from "../../../assets/img/fragments/filosofi_icon_5.png";
+import filosofiIcon3 from "../../../assets/img/fragments/filosofi_icon_1.png";
+import filosofiIcon4 from "../../../assets/img/fragments/filosofi_icon_2.png";
+import filosofiIcon2 from "../../../assets/img/fragments/filosofi_icon_3.png";
+import filosofiIcon5 from "../../../assets/img/fragments/filosofi_icon_4.png";
+import filosofiIcon1 from "../../../assets/img/fragments/filosofi_icon_5.png";
 import titleImage1 from "../../../assets/img/fragments/KILAU EMAS KEJAYAAN@2x.png";
 import titleImage2 from "../../../assets/img/fragments/mahkota perjuangan@2x.png";
 import titleImage3 from "../../../assets/img/fragments/BINTANG PRESTASI@2x.png";
@@ -33,7 +33,7 @@ const FilosofiLogo = () => {
       titleImage: titleImage1,
       titleImageSize: { width: 400, height: 30 },
       content:
-        "Melambangkan kebebasan untuk berkreasi, berinovasi, dan mengembangkan diri, mendorong setiap Simpul Brawijaya untuk terbang tinggi meraih impian.",
+        "Warna emas melambangkan prestasi, kemakmuran, dan keberhasilan yang diraih oleh seluruh Simpul Brawijaya, mencerminkan kekuatan dan pencapaian yang terus bersinar.",
     },
     {
       logo: filosofiIcon2,
@@ -45,23 +45,23 @@ const FilosofiLogo = () => {
     {
       logo: filosofiIcon3,
       titleImage: titleImage3,
-      titleImageSize: { width: 400, height: 55 },
+      titleImageSize: { width: 350, height: 55 },
       content:
-        "Melambangkan kebebasan untuk berkreasi, berinovasi, dan mengembangkan diri, mendorong setiap Simpul Brawijaya untuk terbang tinggi meraih impian.",
+        "Bintang mewakili pencapaian yang gemilang dan menjadi simbol penghargaan yang diberikan kepada Simpul Brawijaya, menegaskan kualitas dan keunggulan yang diakui.",
     },
     {
       logo: filosofiIcon4,
       titleImage: titleImage4,
       titleImageSize: { width: 500, height: 75 },
       content:
-        "Menggambarkan persatuan dan kebersamaan seluruh Simpul Brawijaya dalam mencapai visi dan misi bersama, bahu-membahu menciptakan karya yang gemilang.",
+        "Gelombang ukiran yang memutar menggambarkan perjalanan panjang dan penuh arti dari lembaga dalam merajut kisah sukses, setiap likuan adalah jejak dari dedikasi dalam mencapai tujuan besar.",
     },
     {
       logo: filosofiIcon5,
       titleImage: titleImage5,
       titleImageSize: { width: 500, height: 65 },
       content:
-        "Simbol komitmen dan dedikasi tanpa batas dari seluruh Simpul Brawijaya, terus bergerak maju tanpa henti mengejar kesempurnaan dalam setiap langkah.",
+        "Pecahan lingkaran yang mengelilingi logo mencerminkan tekad tak tergoyahkan lembaga untuk melampaui batas-batas dan mencapai keberhasilan, dengan semangat yang terus berputar tanpa henti.",
     },
   ];
 

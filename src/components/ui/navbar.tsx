@@ -61,7 +61,7 @@ const Navbar: FC = () => {
       <nav className={`${styles.navbar}`}>
         <div className={styles.navbarLogo}>
           <Link href="/" className="flex">
-            <Image src={LogoImage} alt="Logo" className="w-max" />
+            <Image src={LogoImage} alt="Logo" className="w-max" priority />
             <Image src={LogoTitle} alt="Title" className="w-max" priority />
           </Link>
         </div>
@@ -75,6 +75,7 @@ const Navbar: FC = () => {
               alt="Gold texture"
               fill={true}
               className="object-cover scale-150"
+              priority
             />
             <Image src={hamburger} alt="hamburger" fill={true} />
           </div>
@@ -181,7 +182,7 @@ const Navbar: FC = () => {
           className={`p-1 rounded-br-3xl pr-4 text-white ${styles.countDown}`}
         >
           <p className="font-jaoren font-white tracking-wider text-sm sm:text-base md:text-xl">
-            Real Time Countdown
+            Voted Closed
           </p>
         </span>
         <p className="font-light text-sm sm:text-base md:text-lg p-1 bottom-0">

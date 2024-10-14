@@ -20,6 +20,7 @@ const AboutUs: FC = () => {
             src={AboutUsImg}
             alt=""
             className="scale-100 sm:scale-80 md:scale-100"
+            priority
           />
           <div className="w-64 sm:w-96 md:w-auto">
             <p className="text-xs sm:text-base text-center mt-10 font-poppins">

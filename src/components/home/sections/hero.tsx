@@ -23,6 +23,7 @@ const Hero: FC = () => {
             className="w-1/2 scale-[.4] sm:right-16 sm:bottom-16 bottom-8 right-9 mb-10 brightness-75 opacity-50 absolute sm:block md:right-28"
             src={Trophy}
             alt="..."
+            priority={true}
           />
         </div>
       </div>

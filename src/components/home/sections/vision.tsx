@@ -15,14 +15,19 @@ const VisionMission: FC = () => {
       </div>
       <main className="w-4/6 mx-auto grid gap-9">
         <div className="flex flex-col md:flex-row-reverse gap-4 items-center md:items-end text-center w-full">
-          <Image src={visiText} alt="" className="w-6/12 md:w-3/12" />
+          <Image src={visiText} alt="" className="w-6/12 md:w-3/12" priority />
           <p className="text-xs sm:text-base">
             Bring The Great Story with Harmonization and Collaborative Simpul
             Brawijaya.
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-8 w-full items-center">
-          <Image src={misiText} alt="" className="w-7/12 md:w-4/12 md:-mt-10" />
+          <Image
+            src={misiText}
+            alt=""
+            className="w-7/12 md:w-4/12 md:-mt-10"
+            priority
+          />
           <ol className="list-none p-0 m-0 space-y-2 text-xs sm:text-base">
             <li className="flex">
               <span className="flex-none w-6">1.</span>
