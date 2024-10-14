@@ -19,7 +19,7 @@ const EventTheme: FC = () => {
         alt=""
         className="md:mt-[-5em] mt-[-2em] md:w-full w-[80%] max-w-[800px]"
       />
-      <p className="font-poppins font-light md:text-[18px] text-[9px] text-center w-[70%] max-w-[550px] md:mt-[-80px] mt-[-30px]">
+      <p className="font-poppins font-light md:text-[18px] text-xs text-center w-[70%] max-w-[550px] md:mt-[-80px] mt-[-30px]">
         Cita-cita untuk menjadikan Universitas Brawijaya sebagai tempat yang
         berharga dan bermanfaat bagi seluruh simpul Brawijaya.
       </p>

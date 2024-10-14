@@ -9,14 +9,14 @@ const Panduan: FC = () => {
   return (
     <section id="panduan" className={`h-screen relative ${style.panduan}`}>
       <BgPanduan />
-      <div className={`${style.content} pr-0 lg:pr-64 relative w-screen`}>
+      <div className={`${style.content} relative w-screen`}>
         <Image
           className={`${style.kiri} h-64 sm:h-72`}
           src={kiri}
           alt="samping"
         />
-        <div className="flex items-center flex-wrap gap-[40px] md:gap-20 text-content flex-col md:flex-row justify-center md:justify-between">
-          <div className="text-center title md:text-start leading-4">
+        <div className="flex items-center flex-wrap gap-[40px] md:gap-20 flex-col h-max md:flex-row w-max mx-10 justify-evenly px-2">
+          <div className="text-center title min-[863px]:text-start leading-4">
             <div className="relative">
               <h1
                 className={`${style.subtitle} text-7xl md:text-8xl font-jaoren bg-clip-text`}
@@ -33,11 +33,10 @@ const Panduan: FC = () => {
               Guide
             </h3>
           </div>
-          <div className="text-sm desc md:text-xl">
-            <p>1. ansjdajndjnwqndij</p>
-            <p>2. ansjdajndjnwqndij</p>
-            <p>3. ansjdajndjnwqndij</p>
-            <p>4. ansjdajndjnwqndij</p>
+          <div className="text-sm desc md:text-xl text-justify w-max">
+            <p>1. Login ke akun UB anda</p>
+            <p>2. Pilih kategori nominasi best favorite.</p>
+            <p>3. Pilih LKM atau UKM yang akan ada vote</p>
           </div>
         </div>
         <Image

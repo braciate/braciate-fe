@@ -184,7 +184,7 @@ const FilosofiLogo = () => {
               {slides.map((slide, index) => (
                 <div
                   key={index}
-                  className={`cursor-pointer transition-all duration-300 mx-2 ${
+                  className={`cursor-pointer transition-all flex items-center duration-300 mx-2 ${
                     index === activeIndex ? "opacity-100" : "opacity-50"
                   }`}
                   onClick={() => goToSlide(index)}

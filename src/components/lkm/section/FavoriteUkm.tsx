@@ -234,7 +234,7 @@ export function FavoriteUKM({ title, lkm, type }: Props) {
                       className="object-contain"
                     />
                   </div>
-                  <h4 className="text-3xl font-bold font-jaoren">
+                  <h4 className="text-3xl font-bold font-jaoren text-center">
                     {selectedItem.name}
                   </h4>
                 </div>

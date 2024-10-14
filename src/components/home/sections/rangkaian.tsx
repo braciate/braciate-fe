@@ -32,7 +32,7 @@ const Rangkaian: FC = () => {
             <Image
               src={ElemenAtasHp}
               alt="elemen"
-              className="w-[40%] h-7 md:hidden block"
+              className="w-24 h-7 mr-4 md:hidden block"
             />
             <Image
               src={elemenAtas}
@@ -49,7 +49,7 @@ const Rangkaian: FC = () => {
             <Image
               src={ElemenAtasKananHp}
               alt="elemen"
-              className="w-20 h-7 md:hidden block"
+              className="w-28 h-7 md:hidden block"
             />
             <Image
               src={elemenAtas}
@@ -145,9 +145,11 @@ const Rangkaian: FC = () => {
                       <Image src={awarding} alt="parade" className="w-10" />
                       <p
                         id={style.text_clip}
-                        className="font-jaoren text-base mt-2"
+                        className="font-jaoren text-base mt-2 text-center"
                       >
-                        awarding gala night
+                        awarding
+                        <br />
+                        gala night
                       </p>
                     </div>
                     <p className="text-[10px] w-40 text-center">
