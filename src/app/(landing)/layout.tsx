@@ -13,10 +13,10 @@ const LandingLayout: React.FC<ILandingLayoutProps> = ({ children }) => {
   return (
     <>
       <Navbar />
-      {/* {children} */}
-      <Bem/>
-      <Dpm/> 
-      <Ukm/>
+      {children}
+      {/* <Dpm/> 
+      <Bem/> */}
+      {/* <Ukm/> */}
       
       <Footer />
     </>

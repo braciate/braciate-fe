@@ -18,6 +18,9 @@ import Critical from '@/assets/svg/Modal_imgs/dpm_imgs/Critical.svg';
 import Thingking from '@/assets/svg/Modal_imgs/dpm_imgs/Thingking.svg';
 
 import Favorite from './partials/favorite';
+import Link from 'next/link';
+import bestfavorite from '@/assets/svg/Modal_imgs/bestfavorite.svg'
+import uploadHp from '@/assets/svg/Modal_imgs/dpm_imgs/uploadHp.svg'
 
 export default function Ukm(){ 
     const [isModalVisible, setIsModalVisible] = useState(true);
@@ -28,40 +31,51 @@ export default function Ukm(){
   
     if (!isModalVisible) return null;
 
-    return( 
-        <header className='flex items-center justify-center'>
-        <Favorite/>
-        <div className='relative rounded-lg p-4'>
-        <Image 
-        src={Close}
-        alt="Close button"
-        className=" absolute top-36 right-36 cursor-pointer"
-        onClick={closeModal}
-        />
-        <div className='flex gap-7  absolute bottom-32 left-36'>
-            <div className=" cursor-pointer  border-2 border-white rounded-3xl  flex flex-col items-center justify-center ">
-                <Image src={upload} alt="Upload DPM" className="w-full" />
-                <Image src={best} alt="Best DPM" className="w-full" />
-                <Image src={productive} alt="Productive DPM" className="w-[200px]"/>
-            </div>
+    return(
+        <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center px-12 tab:px-32 text-white-Normal font-Amiko 2xl:gap-10 gap-3">
+        <Link href="/ukm/favorite"><Image
+           src={bestfavorite}
+           alt="Favorite item"
+           className="rounded-md 2xl:w-64 w-[600px] cursor-pointer"
+         /></Link>
+       <div className="inset-0 rounded-3xl p-5"
+         style={{ backgroundImage: `url(${BgUkm?.src || BgUkm})`, 
+         backgroundPosition: 'center',
+         backgroundRepeat: 'no-repeat',
+         backgroundSize: 'auto'
+       }}
+       >
+       <Image 
+           src={Close}
+           alt="Close button"
+           className="cursor-pointer relative 2xl:left-[580px] bottom-2"
+           onClick={closeModal}
+       />
+       <div className="flex 2xl:gap-4 gap-3">
+       <Link href="/ukm/productive"><div className=" cursor-pointer  border-2 2xl:py-9 border-white py-6 px-2 rounded-3xl  flex flex-col items-center justify-center ">
+                 <Image src={upload} alt="Upload DPM" className="2xl:w-full md:block hidden" />
+                 <Image src={uploadHp} alt="UploadHp DPM" className="w-full block md:hidden" />
+                 <Image src={best} alt="Best DPM" className="2xl:w-full " />
+                 <Image src={productive} alt="Productive DPM" className="2xl:w-[200px]"/>
+             </div></Link>
 
-            <div className='cursor-pointer border-2 border-white rounded-3xl py-1 flex flex-col items-center justify-center '>
-                <Image src={upload} alt="Upload DPM" className="w-full" />
-                <Image src={best} alt="Best DPM" className="w-full" />
-                <Image src={achievement} alt="Productive DPM" className="w-full"/>
-                <Image src={Critical} alt="Critical DPM" className="w-full"/>
-                <Image src={Thingking} alt="Thingking DPM" className="w-full"/>
-                </div>
+        <Link href="/ukm/thingking_creativity"><div className='cursor-pointer border-2 border-white rounded-3xl py-4 flex flex-col items-center justify-center '>
+                 <Image src={upload} alt="Upload DPM" className="2xl:w-44" />
+                 <Image src={best} alt="Best DPM" className="2xl:w-44" />
+                 <Image src={achievement} alt="Productive DPM" className="2xl:w-44"/>
+                 <Image src={Critical} alt="Critical DPM" className="2xl:w-44"/>
+                 <Image src={Thingking} alt="Thingking DPM" className="2xl:w-44"/>
+        </div></Link>
 
-            <div className='cursor-pointer border-2 border-white rounded-3xl px-1 py-4  flex flex-col items-center justify-center'>
-                <Image src={upload} alt='Upload BEM' className='w-full'/>
-                <Image src={best} alt='Best BEM'  className="w-full"/>
-                <Image src={Art} alt='Art BEM'  className="w-full"/>
-                <Image src={Sport} alt='Sport BEM'  className="w-full"/>
-            </div>
-        </div>
-        <Image src={BgUkm} alt="Background BEM" className="w-full"/>
-        </div>
-    </header>
-    )
-}
+
+        <Link href="/ukm/art_sport"><div className='cursor-pointer border-2 border-white rounded-3xl px-1 py-3  flex flex-col items-center justify-center'>
+                 <Image src={upload} alt='Upload BEM' className='2xl:w-44'/>
+                 <Image src={best} alt='Best BEM'  className="2xl:w-44"/>
+                 <Image src={Art} alt='Art BEM'  className="2xl:w-44"/>
+                 <Image src={Sport} alt='Sport BEM'  className="2xl:w-44"/>
+             </div></Link>
+       </div>
+             </div>
+           </div>
+   );
+ }; 

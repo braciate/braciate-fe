@@ -13,7 +13,7 @@ import Link from 'next/link'
 import bestfavorite from '@/assets/svg/Modal_imgs/bestfavorite.svg'
 import uploadHp from '@/assets/svg/Modal_imgs/dpm_imgs/uploadHp.svg'
 
-export default function Bem() {
+export default function Hima() {
     const [isModalVisible, setIsModalVisible] = useState(true);
 
     const closeModal = () => {
@@ -26,7 +26,7 @@ export default function Bem() {
     return (
 
         <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center px-12 tab:px-32 text-white-Normal font-Amiko 2xl:gap-10 gap-4">
-         <Link href="/bem/favorite"><Image
+         <Link href="/hima/favorite"><Image
             src={bestfavorite}
             alt="Favorite item"
             className="rounded-md 2xl:w-64 cursor-pointer"
@@ -45,14 +45,14 @@ export default function Bem() {
             onClick={closeModal}
         />
         <div className="flex 2xl:gap-10 gap-2">
-        <Link href="/bem/productive"><div className=" cursor-pointer  border-2 2xl:p-5 border-white py-6 px-2 rounded-3xl  flex flex-col items-center justify-center ">
+        <Link href="/hima/productive"><div className=" cursor-pointer  border-2 2xl:p-5 border-white py-6 px-2 rounded-3xl  flex flex-col items-center justify-center ">
                  <Image src={upload} alt="Upload DPM" className="2xl:w-full md:block hidden" />
-                 <Image src={uploadHp} alt="UploadHp DPM" className=" w-full md:hidden block" />
+                 <Image src={uploadHp} alt="UploadHp DPM" className=" w-full md:hidden block"/>
                  <Image src={best} alt="Best DPM" className="2xl:w-full " />
                  <Image src={productive} alt="Productive DPM" className="2xl:w-[200px]"/>
              </div></Link>
 
-            <Link href="/bem/collaborative"><div className='cursor-pointer border-2 border-white py-4 px-2 rounded-3xl flex flex-col items-center justify-center '>
+            <Link href="/hima/collaborative"><div className='cursor-pointer border-2 border-white py-4 px-2 rounded-3xl flex flex-col items-center justify-center '>
                  <Image src={upload} alt="Upload DPM" className="2xl:w-full " />
                  <Image src={best} alt="Best DPM" className="2xl:w-full " />
                  <Image src={collab} alt="Productive DPM" className="2xl:w-52 "/>
