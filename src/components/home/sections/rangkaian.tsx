@@ -60,7 +60,7 @@ const Rangkaian: FC = () => {
 
           <div className="flex flex-col mt-14 mx-4 xl:mx-8 gap-8">
             <div className="hidden md:block">
-              <div className="flex justify-center xl:gap-60 lg:gap-48 md:gap-32 lg:scale-100 md:scale-95">
+              <div className="flex justify-center xl:gap-60 lg:gap-40 md:gap-28 lg:scale-100 md:scale-95">
                 <Image src={parade} alt="parade" />
                 <Image src={bazar} alt="bazar" />
                 <Image src={pameran} alt="seminar" />
@@ -69,7 +69,7 @@ const Rangkaian: FC = () => {
             </div>
 
             <div className="flex lg:justify-center 2xl:w-full xl:w-full xl:mx-0 lg:w-[85%] lg:mx-24 md:mx-20 md:w-10/12">
-              <div className="md:block hidden md:mr-12 lg:mr-14 mx-auto">
+              <div className="md:block hidden 2xl:ml-16 xl:ml-16 md:mr-12 lg:mr-14 mx-auto">
                 <Image src={line} alt="line" />
               </div>
             </div>
