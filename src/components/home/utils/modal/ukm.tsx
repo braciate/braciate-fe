@@ -41,7 +41,7 @@ export default function Ukm() {
         />
       </Link>
       <div
-        className="inset-0 rounded-3xl p-5"
+        className="inset-0 rounded-3xl p-5 md:h-max h-fit"
         style={{
           backgroundImage: `url(${BgUkm?.src || BgUkm})`,
           backgroundPosition: "center",
@@ -52,51 +52,51 @@ export default function Ukm() {
         <Image
           src={Close}
           alt="Close button"
-          className="cursor-pointer relative md:left-[580px] bottom-2"
+          className="cursor-pointer relative lg:left-[610px] md:left-[470px] bottom-2"
           onClick={closeModal}
         />
-        <div className="flex 2xl:gap-4 gap-3">
+        <div className="flex md:gap-4 gap-3">
           <Link href="/ukm/productive">
-            <div className=" cursor-pointer  border-2 2xl:py-9 border-white py-6 px-2 rounded-3xl  flex flex-col items-center justify-center ">
+            <div className=" cursor-pointer  border-2 2xl:py-9 border-white md:py-9 px-2 rounded-3xl  flex flex-col items-center justify-center ">
               <Image
                 src={upload}
                 alt="Upload DPM"
-                className="2xl:w-full md:block hidden"
+                className="md:w-full md:block hidden"
               />
               <Image
                 src={uploadHp}
                 alt="UploadHp DPM"
                 className="w-full block md:hidden"
               />
-              <Image src={best} alt="Best DPM" className="2xl:w-full " />
+              <Image src={best} alt="Best DPM" className="md:w-full " />
               <Image
                 src={productive}
                 alt="Productive DPM"
-                className="2xl:w-[200px]"
+                className="md:w-[200px]"
               />
             </div>
           </Link>
 
           <Link href="/ukm/thingking_creativity">
-            <div className="cursor-pointer border-2 border-white rounded-3xl py-4 flex flex-col items-center justify-center ">
-              <Image src={upload} alt="Upload DPM" className="2xl:w-44" />
-              <Image src={best} alt="Best DPM" className="2xl:w-44" />
+            <div className="cursor-pointer border-2 border-white rounded-3xl lg:py-4 md:py-5 flex flex-col items-center justify-center ">
+              <Image src={upload} alt="Upload DPM" className="md:w-44" />
+              <Image src={best} alt="Best DPM" className="md:w-44" />
               <Image
                 src={achievement}
                 alt="Productive DPM"
-                className="2xl:w-44"
+                className="md:w-44"
               />
-              <Image src={Critical} alt="Critical DPM" className="2xl:w-44" />
-              <Image src={Thingking} alt="Thingking DPM" className="2xl:w-44" />
+              <Image src={Critical} alt="Critical DPM" className="md:w-44" />
+              <Image src={Thingking} alt="Thingking DPM" className="md:w-44" />
             </div>
           </Link>
 
           <Link href="/ukm/art_sport">
-            <div className="cursor-pointer border-2 border-white rounded-3xl px-1 py-3  flex flex-col items-center justify-center">
-              <Image src={upload} alt="Upload BEM" className="2xl:w-44" />
-              <Image src={best} alt="Best BEM" className="2xl:w-44" />
-              <Image src={Art} alt="Art BEM" className="2xl:w-44" />
-              <Image src={Sport} alt="Sport BEM" className="2xl:w-44" />
+            <div className="cursor-pointer border-2 border-white rounded-3xl px-1 lg:py-3 md:py-5  flex flex-col items-center justify-center">
+              <Image src={upload} alt="Upload BEM" className="md:w-44" />
+              <Image src={best} alt="Best BEM" className="md:w-44" />
+              <Image src={Art} alt="Art BEM" className="md:w-44" />
+              <Image src={Sport} alt="Sport BEM" className="md:w-44" />
             </div>
           </Link>
         </div>

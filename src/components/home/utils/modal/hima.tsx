@@ -23,16 +23,16 @@ export default function Bem() {
   if (!isModalVisible) return null;
 
   return (
-    <div className="fixed inset-0  bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center px-12 tab:px-32 text-white-Normal font-Amiko z-40 2xl:gap-10 gap-4">
+    <div className="fixed inset-0  bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center px-12 tab:px-32 text-white-Normal font-Amiko z-40 2xl:gap-10 gap-2">
       <Link href="/hima/favorite">
         <Image
           src={bestfavorite}
           alt="Favorite item"
-          className="rounded-md 2xl:w-64 cursor-pointer"
+          className="rounded-md md:w-64 cursor-pointer w-96"
         />
       </Link>
       <div
-        className="inset-0 rounded-3xl 2xl:py-7 2xl:px-3 p-2"
+        className=" inset-0 rounded-3xl lg:py-6 md:px-3 md:py-5 md:h-max h-44 p-2"
         style={{
           backgroundImage: `url(${BgBem?.src || BgBem})`,
           backgroundPosition: "center",
@@ -43,40 +43,35 @@ export default function Bem() {
         <Image
           src={Close}
           alt="Close button"
-          className="cursor-pointer relative md:left-[470px] left-32 md:bottom-3"
+          className="cursor-pointer relative lg:left-[470px] md:left-[405px] left-[145px]  lg:bottom-3 md:bottom-2"
           onClick={closeModal}
         />
-        <div className="flex 2xl:gap-10 gap-2">
+        <div className="flex md:gap-10 gap-2 ">
           <Link href="/hima/productive">
-            <div className=" cursor-pointer  border-2 md:py-14 md:px-2 border-white rounded-3xl  flex flex-col items-center justify-center ">
+            <div className=" cursor-pointer border-2 border-white  md:py-14 md:px-2 py-8 rounded-3xl  flex flex-col items-center justify-center ">
               <Image
                 src={upload}
                 alt="Upload DPM"
-                className="2xl:w-full md:block hidden"
+                className="md:w-full w-[300px]"
               />
-              <Image
-                src={uploadHp}
-                alt="UploadHp DPM"
-                className=" w-full md:hidden block"
-              />
-              <Image src={best} alt="Best DPM" className="2xl:w-full " />
+              <Image src={best} alt="Best DPM" className="md:w-full w-[300px]" />
               <Image
                 src={productive}
                 alt="Productive DPM"
-                className="2xl:w-[200px]"
+                className="md:w-[200px] w-[300px]"
               />
             </div>
           </Link>
 
           <Link href="/hima/collaborative">
-            <div className="cursor-pointer border-2 border-white py-4 px-2 rounded-3xl flex flex-col items-center justify-center ">
-              <Image src={upload} alt="Upload DPM" className="2xl:w-full " />
-              <Image src={best} alt="Best DPM" className="2xl:w-full " />
-              <Image src={collab} alt="Productive DPM" className="2xl:w-52 " />
+            <div className="border-2 border-white   cursor-pointer  md:py-4 md:px-2 py-5 rounded-3xl flex flex-col items-center justify-center ">
+              <Image src={upload} alt="Upload DPM" className="md:w-full w-[300px]" />
+              <Image src={best} alt="Best DPM" className="md:w-full w-[300px]" />
+              <Image src={collab} alt="Productive DPM" className="md:w-52 w-[300px]" />
             </div>
           </Link>
         </div>
       </div>
-    </div>
+      </div>
   );
 }
