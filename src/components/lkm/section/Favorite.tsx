@@ -245,14 +245,6 @@ export function FavoritePage({ title, lkm, type }: props) {
                     Kamu Berhasil Nge-Vote!
                   </h4>
                 </div>
-                <div className="flex justify-center mt-6">
-                  <Button
-                    onClick={handleCloseModal}
-                    className="px-8 py-2 border font-jaoren text-xl border-white rounded-full text-white hover:bg-white hover:text-black transition-all"
-                  >
-                    Kembali
-                  </Button>
-                </div>
               </>
             )}
           </div>
