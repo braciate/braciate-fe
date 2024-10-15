@@ -1,24 +1,17 @@
 import elemenAtas from "../../../assets/svg/Rangkaian_imgs/rangkaian-atas.svg";
-import titleRangkaian from "../../../assets/svg/Rangkaian_imgs/rangkaian-title.svg";
 import parade from "../../../assets/svg/Rangkaian_imgs/1.svg";
 import bazar from "../../../assets/svg/Rangkaian_imgs/2.svg";
 import pameran from "../../../assets/svg/Rangkaian_imgs/3.svg";
 import awarding from "../../../assets/svg/Rangkaian_imgs/4.svg";
-import paradeText from "../../../assets/svg/Rangkaian_imgs/United Rhtyms UKM Parade.svg";
-import bazarText from "../../../assets/svg/Rangkaian_imgs/Market Showcase.svg";
-import pameranText from "../../../assets/svg/Rangkaian_imgs/Pameran.svg";
-import awardingText from "../../../assets/svg/Rangkaian_imgs/Awarding Gala Night.svg";
 import line from "../../../assets/svg/Rangkaian_imgs/line.svg";
 import style from "@/app/(lkm)/page.module.css";
-import ParadeHp from "../../../assets/svg/Rangkaian_imgs/ParadeHp.svg";
-import BazarHp from "../../../assets/svg/Rangkaian_imgs/BazarHp.svg";
-import PameranHp from "../../../assets/svg/Rangkaian_imgs/PameranHp.svg";
-import AwardingHp from "../../../assets/svg/Rangkaian_imgs/AwardingHp.svg";
 import ElemenAtasHp from "../../../assets/svg/Rangkaian_imgs/ElemenAtasHp.svg";
 import ElemenAtasKananHp from "../../../assets/svg/Rangkaian_imgs/ElemenAtasKananHp.svg";
 import type { FC } from "react";
 import React from "react";
 import Image from "next/image";
+import styleText from "../style/panduan.module.css";
+import bling from "@/assets/img/fragments/bling.png";
 
 const Rangkaian: FC = () => {
   return (
@@ -39,11 +32,19 @@ const Rangkaian: FC = () => {
               alt="elemen"
               className="w-80 lg:h-9 h-7 hidden md:block"
             />
-            <div className="md:ml-5 relative w-full max-w-xl lg:h-20">
+            <div className="flex gap-3 text-7xl mx-4 tracking-wider relative w-max h-auto scale-75 sm:scale-90 md:scale-100">
+              <h1 className={`font-jaoren ${styleText.subtitle}`}>Series</h1>
+              <h1 className="font-jaoren">of</h1>
+              <h1 className={`font-jaoren ${styleText.subtitle}`}>events</h1>
               <Image
-                src={titleRangkaian}
-                alt="title"
-                className=" w-full h-auto transform md:-translate-y-1/4 -translate-y-[20%] "
+                src={bling}
+                alt=""
+                className="absolute scale-50 md:scale-75 -bottom-14 -right-16 "
+              />
+              <Image
+                src={bling}
+                alt=""
+                className="absolute scale-50 md:scale-75 -top-16 -left-24"
               />
             </div>
             <Image

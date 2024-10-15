@@ -3,6 +3,7 @@ import Image from "next/image";
 import BgHeroSection from "@/assets/img/background/herobackground.png";
 import glitter from "@/assets/img/background/glitter.png";
 import ShadowBot from "@/assets/img/fragments/blackshadow-bottom.png";
+import kilau from "@/assets/img/background/kilau_hero.png";
 
 const BgHero: FC = () => {
   return (
@@ -18,8 +19,10 @@ const BgHero: FC = () => {
         src={BgHeroSection}
         alt="bg auth"
         className="object-cover"
+        priority
         fill={true}
       />
+      <Image src={kilau} alt="kilau" className="object-cover" fill />
       <Image
         src={ShadowBot}
         alt="bg auth"

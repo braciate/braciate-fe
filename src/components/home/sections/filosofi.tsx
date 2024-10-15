@@ -1,26 +1,22 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
+import styleText from "../style/panduan.module.css";
+import bling from "@/assets/img/fragments/bling.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import FilosofiLogoImg from "../../../assets/svg/fragments/filosofilogo-text.svg";
 import glitterImage from "../../../assets/img/fragments/glitter.png";
 import filosofiIcon3 from "../../../assets/img/fragments/filosofi_icon_1.png";
 import filosofiIcon4 from "../../../assets/img/fragments/filosofi_icon_2.png";
 import filosofiIcon2 from "../../../assets/img/fragments/filosofi_icon_3.png";
 import filosofiIcon5 from "../../../assets/img/fragments/filosofi_icon_4.png";
 import filosofiIcon1 from "../../../assets/img/fragments/filosofi_icon_5.png";
-import titleImage1 from "../../../assets/img/fragments/KILAU EMAS KEJAYAAN@2x.png";
-import titleImage2 from "../../../assets/img/fragments/mahkota perjuangan@2x.png";
-import titleImage3 from "../../../assets/img/fragments/BINTANG PRESTASI@2x.png";
-import titleImage4 from "../../../assets/img/fragments/gelombang ukiran abadi@3x.png";
-import titleImage5 from "../../../assets/img/fragments/lingkaran tekad tak terbatas@2x.png";
 import panahIcon from "../../../assets/svg/fragments/panahdot.svg";
 
 const FilosofiLogo = () => {
@@ -30,36 +26,31 @@ const FilosofiLogo = () => {
   const slides = [
     {
       logo: filosofiIcon1,
-      titleImage: titleImage1,
-      titleImageSize: { width: 400, height: 30 },
+      titleImage: "Kilau emas kejayaan",
       content:
         "Warna emas melambangkan prestasi, kemakmuran, dan keberhasilan yang diraih oleh seluruh Simpul Brawijaya, mencerminkan kekuatan dan pencapaian yang terus bersinar.",
     },
     {
       logo: filosofiIcon2,
-      titleImage: titleImage2,
-      titleImageSize: { width: 400, height: 70 },
+      titleImage: "Mahkota perjuangan",
       content:
         "Ikon maskot yang menuju mahkota menggambarkan perjalanan penuh dedikasi dan usaha dari lembaga dalam meraih puncak prestasi, menunjukkan tekad yang kuat untuk mencapai kemenangan.",
     },
     {
       logo: filosofiIcon3,
-      titleImage: titleImage3,
-      titleImageSize: { width: 350, height: 55 },
+      titleImage: "Bintang prestasi",
       content:
         "Bintang mewakili pencapaian yang gemilang dan menjadi simbol penghargaan yang diberikan kepada Simpul Brawijaya, menegaskan kualitas dan keunggulan yang diakui.",
     },
     {
       logo: filosofiIcon4,
-      titleImage: titleImage4,
-      titleImageSize: { width: 500, height: 75 },
+      titleImage: "Gelombang ukiran abadi",
       content:
         "Gelombang ukiran yang memutar menggambarkan perjalanan panjang dan penuh arti dari lembaga dalam merajut kisah sukses, setiap likuan adalah jejak dari dedikasi dalam mencapai tujuan besar.",
     },
     {
       logo: filosofiIcon5,
-      titleImage: titleImage5,
-      titleImageSize: { width: 500, height: 65 },
+      titleImage: "Lingkaran tekad tak terbatas",
       content:
         "Pecahan lingkaran yang mengelilingi logo mencerminkan tekad tak tergoyahkan lembaga untuk melampaui batas-batas dan mencapai keberhasilan, dengan semangat yang terus berputar tanpa henti.",
     },
@@ -89,7 +80,7 @@ const FilosofiLogo = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center text-center w-full -mt-24 md:-mt-48 overflow-hidden">
+    <div className="relative flex flex-col items-center text-center w-full -mt-24 md:-mt-48">
       {/* Full-width glitter background */}
       <div
         className="absolute inset-0 w-screen"
@@ -108,14 +99,16 @@ const FilosofiLogo = () => {
 
       <div className="flex flex-col items-center text-center z-10 w-full px-4 md:px-0 min-h-screen">
         {/* Filosofi Logo */}
-        <div className="mb-4 md:mb-6 w-full max-w-xs md:max-w-lg">
-          <Image
-            src={FilosofiLogoImg}
-            alt="Filosofi Logo"
-            width={500}
-            height={60}
-            className="w-full h-auto"
-          />
+        <div className="my-4 md:my-8 w-full max-w-xs md:max-w-lg">
+          <div className="font-jaoren flex gap-4 text-5xl sm:text-6xl md:text-7xl tracking-wider z-10 relative w-max h-auto">
+            <h1>filosofi</h1>
+            <h1 className={styleText.subtitle}>logo</h1>
+            <Image
+              src={bling}
+              alt=""
+              className="absolute -bottom-20 sm:-bottom-16 scale-50 sm:scale-75 -right-20"
+            />
+          </div>
         </div>
 
         <div className="w-full max-w-md md:max-w-3xl flex flex-col md:flex-row">
@@ -155,7 +148,7 @@ const FilosofiLogo = () => {
             >
               {slides.map((slide, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex flex-row items-start">
+                  <div className="flex flex-row items-start w-full sm:w-10/12">
                     <div className="flex-shrink-0 mr-4">
                       <Image
                         src={slide.logo}
@@ -164,13 +157,9 @@ const FilosofiLogo = () => {
                       />
                     </div>
                     <div className="flex flex-col items-center">
-                      <Image
-                        src={slide.titleImage}
-                        alt={`Title ${index + 1}`}
-                        width={slide.titleImageSize.width}
-                        height={slide.titleImageSize.height}
-                        className="mb-2 w-full h-auto max-w-[220px] md:max-w-sm"
-                      />
+                      <h1 className="font-jaoren text-2xl md:text-4xl md:w-max max-w-lg">
+                        {slide.titleImage}
+                      </h1>
                       <p className="text-xs md:text-base lg:text-base text-gray-300 mt-2 leading-relaxed text-center w-[90%]">
                         {slide.content}
                       </p>

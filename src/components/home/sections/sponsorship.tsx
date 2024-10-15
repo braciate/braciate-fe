@@ -78,14 +78,14 @@ const Sponsorship: FC = () => {
           {renderSlider("slider_top")}
           {/* {renderSlider("slider_bottom", true)} */}
         </div>
-        <>
+        {/* <>
           <h1 className="font-jaoren text-6xl sm:text-7xl tracking-wider my-10 text-center">
             Media partners
           </h1>
           <div className={style.sliders_wrapper}>
             {renderSlider("slider_bottom", true)}
           </div>
-        </>
+        </> */}
       </div>
     </main>
   );

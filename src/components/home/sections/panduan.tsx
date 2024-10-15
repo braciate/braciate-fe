@@ -33,11 +33,22 @@ const Panduan: FC = () => {
               Guide
             </h3>
           </div>
-          <div className="text-sm desc md:text-xl text-justify w-max">
-            <p>1. Login ke akun UB anda</p>
-            <p>2. Pilih kategori nominasi best favorite.</p>
-            <p>3. Pilih LKM atau UKM yang akan ada vote</p>
-          </div>
+          <ol className="text-sm desc md:text-xl text-justify w-max">
+            <li className="flex">
+              <p className="flex-none w-6">1.</p>
+              <p>Login menggunakan akun UB anda</p>
+            </li>
+            <li className="flex">
+              <p className="flex-none w-6">2.</p>
+              <p>
+                Pilih kategori nominasi <strong>BEST FAVORITE</strong>
+              </p>
+            </li>
+            <li className="flex">
+              <p className="flex-none w-6">3.</p>
+              <p>Pilih LKM atau UKM yang akan ada vote</p>
+            </li>
+          </ol>
         </div>
         <Image
           className={`h-64 sm:h-72 absolute right-0`}

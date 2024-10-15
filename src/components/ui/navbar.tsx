@@ -6,13 +6,13 @@ import Image from "next/image";
 import Link from "next/link";
 import type { FC } from "react";
 import LogoImage from "@/assets/svg/logo/logo.svg";
-import LogoTitle from "@/assets/svg/logo/braciate-title.svg";
 import hamburger from "@/assets/svg/fragments/hamburger.svg";
 import goldTexture from "@/assets/svg/fragments/gold-texture.svg";
 import close from "@/assets/svg/fragments/close-slide.svg";
 import React from "react";
 import { useSession } from "next-auth/react";
 import { usePathname } from "next/navigation";
+import style from "@/components/home/style/panduan.module.css";
 
 const Navbar: FC = () => {
   const { isOpen, toggleSlide, scrollToPanduan, handleLogout, timeLeft } =
@@ -60,9 +60,17 @@ const Navbar: FC = () => {
     <main className="sticky top-0 z-20 w-full">
       <nav className={`${styles.navbar}`}>
         <div className={styles.navbarLogo}>
-          <Link href="/" className="flex">
-            <Image src={LogoImage} alt="Logo" className="w-max" priority />
-            <Image src={LogoTitle} alt="Title" className="w-max" priority />
+          <Link href="/" className="flex items-center gap-1">
+            <Image
+              src={LogoImage}
+              alt="Logo"
+              className="w-max lg:scale-110"
+              priority
+            />
+            <div className="font-jaoren text-2xl lg:text-3xl tracking-wider -space-y-2">
+              <h1>Brawijaya</h1>
+              <h1 className={style.subtitle}>Appreciate</h1>
+            </div>
           </Link>
         </div>
         <span
@@ -142,8 +150,11 @@ const Navbar: FC = () => {
             <div
               className={`self-center justify-center mt-4 ${styles.navbarLogo}`}
             >
-              <Image src={LogoImage} alt="Logo" />
-              <Image src={LogoTitle} alt="Title" />
+              <Image src={LogoImage} alt="Logo" className="w-max" />
+              <div className="font-jaoren text-2xl lg:text-3xl tracking-wider text-start -space-y-2">
+                <h1>Brawijaya</h1>
+                <h1 className={style.subtitle}>Appreciate</h1>
+              </div>
             </div>
           </div>
         </div>
