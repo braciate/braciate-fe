@@ -39,7 +39,8 @@ const teamMembers: TeamMember[] = [
     id: 4,
     name: "Nickolas Quinn Budiyono | Teknik Informatika",
     role: "fe",
-    linkedin: "",
+    linkedin:
+      "https://www.linkedin.com/in/nickolasquinn?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     instagram:
       "https://www.instagram.com/nickolaswewee/profilecard/?igsh=MTlobmc4NHBueGVjeg==",
   },
