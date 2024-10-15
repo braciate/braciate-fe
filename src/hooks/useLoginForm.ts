@@ -53,7 +53,6 @@ const useLoginForm = (): ILoginFormProps => {
   useEffect(() => {
     if (status === "authenticated" && session?.user?.accessToken) {
       setAccessToken(session.user.accessToken);
-      session.user.user_id = session.user.accessToken;
     }
   }, [status, session]);
 
