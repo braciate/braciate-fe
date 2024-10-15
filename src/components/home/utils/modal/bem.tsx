@@ -43,12 +43,12 @@ export default function Bem() {
         <Image
           src={Close}
           alt="Close button"
-          className="cursor-pointer relative 2xl:left-[500px] left-32 2xl:bottom-3"
+          className="cursor-pointer relative md:left-[470px] left-32 md:bottom-3"
           onClick={closeModal}
         />
         <div className="flex 2xl:gap-10 gap-2">
           <Link href="/bem/productive">
-            <div className=" cursor-pointer  border-2 2xl:p-5 border-white py-6 px-2 rounded-3xl  flex flex-col items-center justify-center ">
+            <div className=" cursor-pointer  border-2 md:py-14 md:px-2 border-white rounded-3xl  flex flex-col items-center justify-center ">
               <Image
                 src={upload}
                 alt="Upload DPM"

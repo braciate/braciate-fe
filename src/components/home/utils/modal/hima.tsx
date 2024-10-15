@@ -13,7 +13,7 @@ import Link from "next/link";
 import bestfavorite from "@/assets/svg/Modal_imgs/bestfavorite.svg";
 import uploadHp from "@/assets/svg/Modal_imgs/dpm_imgs/uploadHp.svg";
 
-export default function Hima() {
+export default function Bem() {
   const [isModalVisible, setIsModalVisible] = useState(true);
 
   const closeModal = () => {
@@ -23,7 +23,7 @@ export default function Hima() {
   if (!isModalVisible) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center px-12 tab:px-32 text-white-Normal font-Amiko z-40 2xl:gap-10 gap-4">
+    <div className="fixed inset-0  bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center px-12 tab:px-32 text-white-Normal font-Amiko z-40 2xl:gap-10 gap-4">
       <Link href="/hima/favorite">
         <Image
           src={bestfavorite}
@@ -43,12 +43,12 @@ export default function Hima() {
         <Image
           src={Close}
           alt="Close button"
-          className="cursor-pointer relative 2xl:left-[500px] left-32 2xl:bottom-3"
+          className="cursor-pointer relative md:left-[470px] left-32 md:bottom-3"
           onClick={closeModal}
         />
         <div className="flex 2xl:gap-10 gap-2">
           <Link href="/hima/productive">
-            <div className=" cursor-pointer  border-2 2xl:p-5 border-white py-6 px-2 rounded-3xl  flex flex-col items-center justify-center ">
+            <div className=" cursor-pointer  border-2 md:py-14 md:px-2 border-white rounded-3xl  flex flex-col items-center justify-center ">
               <Image
                 src={upload}
                 alt="Upload DPM"

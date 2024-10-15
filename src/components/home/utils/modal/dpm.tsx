@@ -41,7 +41,7 @@ export default function Dpm() {
         <Image
           src={Close}
           alt="Close button"
-          className="cursor-pointer relative 2xl:left-[180px] left-20"
+          className="cursor-pointer relative md:left-[180px] left-28"
           onClick={closeModal}
         />
         <div className="">

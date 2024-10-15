@@ -37,7 +37,7 @@ export default function Ukm() {
         <Image
           src={bestfavorite}
           alt="Favorite item"
-          className="rounded-md 2xl:w-64 w-[600px] cursor-pointer"
+          className="rounded-md 2xl:w-64 xl:w-52 lg:w-48 md:w-48 w-[600px] cursor-pointer"
         />
       </Link>
       <div
@@ -52,7 +52,7 @@ export default function Ukm() {
         <Image
           src={Close}
           alt="Close button"
-          className="cursor-pointer relative 2xl:left-[580px] bottom-2"
+          className="cursor-pointer relative md:left-[580px] bottom-2"
           onClick={closeModal}
         />
         <div className="flex 2xl:gap-4 gap-3">
