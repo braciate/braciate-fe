@@ -5,7 +5,7 @@ import useFaq from "@/hooks/useFaq";
 import titleFaq from "../../../assets/svg/faq-assets/faq-title.svg";
 import Image from "next/image";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import goldTexture from "../../../assets/svg/fragments/gold-texture.svg";
+import goldTexture from "../../../assets/svg/fragments/gold-texture.png";
 import type { FC } from "react";
 import bling from "@/assets/img/fragments/bling.png";
 

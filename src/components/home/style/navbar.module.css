@@ -39,7 +39,7 @@
 }
 
 .links:hover {
-  background-image: url("../../../assets/svg/fragments/gold-texture.svg");
+  background-image: url("../../../assets/svg/fragments/gold-texture.png");
   background-position: center;
   color: transparent;
 }
@@ -61,14 +61,14 @@
 }
 
 #votenow:hover {
-  background-image: url("../../../assets/svg/fragments/gold-texture.svg");
+  background-image: url("../../../assets/svg/fragments/gold-texture.png");
   border: none;
   background-position: center;
 }
 
 .vote_slide {
   border: 1px solid white;
-  background-image: url("../../../assets/svg/fragments/gold-texture.svg");
+  background-image: url("../../../assets/svg/fragments/gold-texture.png");
   background-position: center;
   background-size: cover;
   border-radius: 50px;
@@ -92,7 +92,7 @@
 }
 
 .hamburger {
-  background-image: url(/public/svg/fragments/gold-texture.svg);
+  background-image: url(/public/svg/fragments/gold-texture.png);
   background-position: center;
   background-size: 130%;
   border-radius: 6px;
@@ -103,7 +103,7 @@
 }
 
 .countDown {
-  background-image: url("../../../assets/svg/fragments/countdown.svg");
+  background-image: url("../../../assets/svg/fragments/countdown.png");
   background-size: cover;
   background-position: center;
 }

@@ -17,7 +17,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import ListLkm from "@/utils/dropdown";
 import useLinkForm from "@/hooks/useLinkForm";
 import style from "@/app/(lkm)/page.module.css";
-import gold from "@/assets/svg/fragments/gold-texture.svg";
+import gold from "@/assets/svg/fragments/gold-texture.png";
 
 interface UploaderComponentProps {
   title: string;

@@ -13,8 +13,8 @@ import best from "@/assets/svg/Modal_imgs/dpm_imgs/best.svg";
 import upload from "@/assets/svg/Modal_imgs/dpm_imgs/upload.svg";
 import productive from "@/assets/svg/Modal_imgs/dpm_imgs/productive.svg";
 import collab from "@/assets/svg/Modal_imgs/dpm_imgs/collab.svg";
-import BgBem from "@/assets/svg/Modal_imgs/BgBem.svg";
-import bestfavorite from "@/assets/svg/Modal_imgs/bestfavorite.svg";
+import BgBem from "@/assets/svg/Modal_imgs/BgBem.png";
+import bestfavorite from "@/assets/svg/Modal_imgs/bestfavorite.png";
 
 const LoadingAnimation = () => (
   <div className="flex items-center justify-center h-full">
@@ -95,7 +95,7 @@ export default function Bem() {
                 <LoadingAnimation />
               ) : (
                 <div
-                  className="p-4 rounded-2xl bg-center"
+                  className="p-4 rounded-2xl bg-center saturate-150"
                   style={{
                     backgroundImage: `url(${BgBem?.src || BgBem})`,
                     borderRadius: "1rem",

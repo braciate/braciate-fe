@@ -1,5 +1,5 @@
 #text_clip {
-  background-image: url(../../assets/svg/fragments/gold-texture.svg);
+  background-image: url(../../assets/svg/fragments/gold-texture.png);
   background-position: center;
   background-clip: text;
   background-repeat: no-repeat;
@@ -8,13 +8,13 @@
 }
 
 .dot {
-  background-image: url(../../assets/svg/fragments/gold-texture.svg);
+  background-image: url(../../assets/svg/fragments/gold-texture.png);
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .inputBorder {
-  background-image: url(../../assets/svg/fragments/gold-texture.svg);
+  background-image: url(../../assets/svg/fragments/gold-texture.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 120%;
@@ -38,7 +38,7 @@
 }
 
 #votenow:hover {
-  background-image: url("../../../src/assets/svg/fragments/gold-texture.svg");
+  background-image: url("../../../src/assets/svg/fragments/gold-texture.png");
   border: none;
   background-position: center;
 }

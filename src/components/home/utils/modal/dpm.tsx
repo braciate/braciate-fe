@@ -12,8 +12,8 @@ import "swiper/css/pagination";
 import best from "@/assets/svg/Modal_imgs/dpm_imgs/best.svg";
 import upload from "@/assets/svg/Modal_imgs/dpm_imgs/upload.svg";
 import aspirative from "@/assets/svg/Modal_imgs/dpm_imgs/aspirative.svg";
-import BgDpm from "@/assets/svg/Modal_imgs/dpm_imgs/BgDpm.svg";
-import bestfavorite from "@/assets/svg/Modal_imgs/bestfavorite.svg";
+import BgDpm from "@/assets/svg/Modal_imgs/dpm_imgs/BgDpm.png";
+import bestfavorite from "@/assets/svg/Modal_imgs/bestfavorite.png";
 
 const LoadingAnimation = () => (
   <div className="flex items-center justify-center h-full">
@@ -98,7 +98,7 @@ export default function Dpm() {
                 <LoadingAnimation />
               ) : (
                 <div
-                  className="p-4 rounded-2xl bg-center"
+                  className="p-4 rounded-2xl bg-center saturate-150"
                   style={{
                     backgroundImage: `url(${BgDpm?.src || BgDpm})`,
                     borderRadius: "1rem",

@@ -1,12 +1,12 @@
 #title_auth {
-  background-image: url(../../../assets/svg/fragments/gold-texture.svg);
+  background-image: url(../../../assets/svg/fragments/gold-texture.png);
   background-position: center;
   background-repeat: no-repeat;
   background-clip: text;
 }
 
 #errorMessage {
-  background-image: url(../../../assets/svg/fragments/gold-texture.svg);
+  background-image: url(../../../assets/svg/fragments/gold-texture.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 110%;
@@ -15,7 +15,7 @@
 }
 
 .inputBorder {
-  background-image: url(../../../assets/svg/fragments/gold-texture.svg);
+  background-image: url(../../../assets/svg/fragments/gold-texture.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 120%;

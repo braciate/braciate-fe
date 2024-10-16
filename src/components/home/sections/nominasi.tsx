@@ -82,12 +82,12 @@ const Nominasi: FC = () => {
             <Image
               src={bling}
               alt="bling"
-              className="absolute h-auto w-auto -bottom-4 -left-10 xl:-bottom-0 size-14"
+              className="absolute h-auto w-auto -bottom-8 -left-10 xl:-bottom-0 size-14"
             />
             <Image
               src={bling}
               alt="bling"
-              className="absolute h-auto w-auto -top-4 -right-10 xl:-top-0 size-14 "
+              className="absolute h-auto w-auto -top-10 -right-10 xl:-top-0 size-14 "
             />
           </div>
         </div>

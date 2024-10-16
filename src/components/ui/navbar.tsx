@@ -7,7 +7,7 @@ import Link from "next/link";
 import type { FC } from "react";
 import LogoImage from "@/assets/svg/logo/logo.svg";
 import hamburger from "@/assets/svg/fragments/hamburger.svg";
-import goldTexture from "@/assets/svg/fragments/gold-texture.svg";
+import goldTexture from "@/assets/svg/fragments/gold-texture.png";
 import close from "@/assets/svg/fragments/close-slide.svg";
 import React from "react";
 import { useSession } from "next-auth/react";

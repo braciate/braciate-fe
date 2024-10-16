@@ -12,15 +12,13 @@ import "swiper/css/pagination";
 import best from "@/assets/svg/Modal_imgs/dpm_imgs/best.svg";
 import upload from "@/assets/svg/Modal_imgs/dpm_imgs/upload.svg";
 import productive from "@/assets/svg/Modal_imgs/dpm_imgs/productive.svg";
-import collab from "@/assets/svg/Modal_imgs/dpm_imgs/collab.svg";
-import Close from "@/assets/svg/Modal_imgs/Close.svg";
 import Art from "@/assets/svg/Modal_imgs/dpm_imgs/art.svg";
 import Sport from "@/assets/svg/Modal_imgs/dpm_imgs/sport.svg";
-import BgUkm from "@/assets/svg/Modal_imgs/BgUkm.svg";
+import BgUkm from "@/assets/svg/Modal_imgs/dpm_imgs/BgDpm.png";
 import achievement from "@/assets/svg/Modal_imgs/dpm_imgs/achievement.svg";
 import Critical from "@/assets/svg/Modal_imgs/dpm_imgs/Critical.svg";
 import Thingking from "@/assets/svg/Modal_imgs/dpm_imgs/Thingking.svg";
-import bestfavorite from "@/assets/svg/Modal_imgs/bestfavorite.svg";
+import bestfavorite from "@/assets/svg/Modal_imgs/bestfavorite.png";
 
 const LoadingAnimation = () => (
   <div className="flex items-center justify-center h-full">
@@ -105,7 +103,7 @@ export default function Ukm() {
                 <LoadingAnimation />
               ) : (
                 <div
-                  className="p-4 rounded-2xl bg-center"
+                  className="p-4 rounded-2xl bg-center saturate-150"
                   style={{
                     backgroundImage: `url(${BgUkm?.src || BgUkm})`,
                     borderRadius: "1rem",
@@ -147,7 +145,7 @@ export default function Ukm() {
                 <LoadingAnimation />
               ) : (
                 <div
-                  className="p-4 rounded-2xl bg-center"
+                  className="p-4 rounded-2xl bg-center saturate-150"
                   style={{
                     backgroundImage: `url(${BgUkm?.src || BgUkm})`,
                     borderRadius: "1rem",
@@ -201,7 +199,7 @@ export default function Ukm() {
                 <LoadingAnimation />
               ) : (
                 <div
-                  className="p-4 rounded-2xl bg-center"
+                  className="p-4 rounded-2xl bg-center saturate-150"
                   style={{
                     backgroundImage: `url(${BgUkm?.src || BgUkm})`,
                     borderRadius: "1rem",
