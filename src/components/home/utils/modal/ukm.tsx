@@ -38,7 +38,7 @@ export default function Ukm() {
           newLoading[index] = false;
           return newLoading;
         });
-      }, time),
+      }, time)
     );
 
     return () => {
@@ -68,8 +68,6 @@ export default function Ukm() {
           modules={[Navigation, Pagination]}
           navigation={{
             enabled: true,
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
           }}
           pagination={{ clickable: true }}
           spaceBetween={20}

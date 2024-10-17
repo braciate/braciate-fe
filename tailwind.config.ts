@@ -17,6 +17,5 @@ module.exports = {
       },
       backgroundImage: {},
     },
-    plugins: [require("daisyui")],
   },
 };

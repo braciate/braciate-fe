@@ -62,8 +62,6 @@ export default function Dpm() {
           modules={[Navigation, Pagination]}
           navigation={{
             enabled: true,
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
           }}
           pagination={{ clickable: true }}
           spaceBetween={20}
