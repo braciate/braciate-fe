@@ -17,8 +17,8 @@ import {
 } from "@/components/ui/form";
 import style from "@/components/login/style/auth.module.css";
 import Image from "next/image";
-import gold from "../../../assets/svg/fragments/gold-texture.png";
-import bling from "../../../assets/img/fragments/bling.png";
+import gold from "@/public/svg/fragments/gold-texture.png";
+import bling from "@/public/img/fragments/bling.png";
 
 const LoginPage: FC = () => {
   const { form, onSubmit, showPassword, setShowPassword, isLoading } =

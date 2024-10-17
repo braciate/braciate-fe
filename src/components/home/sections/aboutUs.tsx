@@ -1,10 +1,10 @@
-import TriangleLeft from "@/assets/svg/fragments/triangle-left.svg";
-import TriangleRight from "@/assets/svg/fragments/triangle-right.svg";
+import TriangleLeft from "@/public/svg/fragments/triangle-left.svg";
+import TriangleRight from "@/public/svg/fragments/triangle-right.svg";
 import Image from "next/image";
 import "../style/aboutUs.module.css";
 import style from "../style/panduan.module.css";
 import type { FC } from "react";
-import bling from "@/assets/img/fragments/bling.png";
+import bling from "@/public/img/fragments/bling.png";
 
 const AboutUs: FC = () => {
   return (

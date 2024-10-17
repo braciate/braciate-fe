@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import Image from "next/image";
-import BgAuSection from "@/assets/img/background/bg-au.png";
+import BgAuSection from "@/public/img/background/bg-au.png";
 
 const BgAu: FC = () => {
   return (

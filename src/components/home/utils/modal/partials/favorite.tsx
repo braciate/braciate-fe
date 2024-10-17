@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import bestfavorite from "@/assets/svg/Modal_imgs/bestfavorite.png";
+import bestfavorite from "@/public/svg/Modal_imgs/bestfavorite.png";
 
 export default function Favorite() {
   return (

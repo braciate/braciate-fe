@@ -2,12 +2,12 @@
 import React from "react";
 import BgFaq from "@/components/Faq/background/bg-faq";
 import useFaq from "@/hooks/useFaq";
-import titleFaq from "../../../assets/svg/faq-assets/faq-title.svg";
+import titleFaq from "@/public/svg/title/faq-title.svg";
 import Image from "next/image";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import goldTexture from "../../../assets/svg/fragments/gold-texture.png";
+import goldTexture from "@/public/svg/fragments/gold-texture.png";
 import type { FC } from "react";
-import bling from "@/assets/img/fragments/bling.png";
+import bling from "@/public/img/fragments/bling.png";
 
 interface FaqProps {
   question: string;

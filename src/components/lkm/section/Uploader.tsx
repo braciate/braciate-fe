@@ -17,7 +17,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import ListLkm from "@/utils/dropdown";
 import useLinkForm from "@/hooks/useLinkForm";
 import style from "@/app/(lkm)/page.module.css";
-import gold from "@/assets/svg/fragments/gold-texture.png";
+import gold from "@/public/svg/fragments/gold-texture.png";
 
 interface UploaderComponentProps {
   title: string;
@@ -152,7 +152,7 @@ export function UploaderComponent({
                 <Form {...keyValidationForm}>
                   <form
                     onSubmit={keyValidationForm.handleSubmit(
-                      handleKeyValidation,
+                      handleKeyValidation
                     )}
                     className="space-y-4"
                   >

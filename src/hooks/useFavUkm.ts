@@ -62,8 +62,8 @@ export default function usePage(id: string, initialType: string): Props {
       if (type === "6") {
         const requests = [1, 2, 3, 4, 5].map((type) =>
           axios.get(
-            `${process.env.NEXT_PUBLIC_API_URL_DEV}api/v1/lkms/get/${id}/${type}`,
-          ),
+            `${process.env.NEXT_PUBLIC_API_URL_DEV}api/v1/lkms/get/${id}/${type}`
+          )
         );
         const responses = await Promise.all(requests);
         const allData = responses.flatMap((response) => response.data);
@@ -71,7 +71,7 @@ export default function usePage(id: string, initialType: string): Props {
         setFilteredItems(allData);
       } else {
         const { data } = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_URL_DEV}api/v1/lkms/get/${id}/${type}`,
+          `${process.env.NEXT_PUBLIC_API_URL_DEV}api/v1/lkms/get/${id}/${type}`
         );
         setItems(data);
         setFilteredItems(data);
@@ -80,7 +80,7 @@ export default function usePage(id: string, initialType: string): Props {
       setError(
         err instanceof Error
           ? err.message
-          : "An error occurred while fetching items",
+          : "An error occurred while fetching items"
       );
     } finally {
       setIsLoading(false);
@@ -96,7 +96,7 @@ export default function usePage(id: string, initialType: string): Props {
 
     if (searchTerm) {
       filtered = filtered.filter((item) =>
-        item.name.toLowerCase().includes(searchTerm.toLowerCase()),
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 

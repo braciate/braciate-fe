@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Trophy from "@/assets/img/fragments/piala.png";
+import Trophy from "@/public/img/fragments/piala.png";
 import type { FC } from "react";
 import BgHero from "../backgrounds/bg-hero";
 import style from "../style/panduan.module.css";
-import bling from "@/assets/img/fragments/bling.png";
+import bling from "@/public/img/fragments/bling.png";
 const Hero: FC = () => {
   return (
     <section

@@ -1,10 +1,10 @@
 import React from "react";
-import iconLeft from "../../../assets/svg/fragments/visi-misi-left.svg";
-import iconRight from "../../../assets/svg/fragments/visi-misi-right.svg";
+import iconLeft from "@/public/svg/fragments/visi-misi-left.svg";
+import iconRight from "@/public/svg/fragments/visi-misi-right.svg";
 import type { FC } from "react";
 import Image from "next/image";
 import styleText from "../style/panduan.module.css";
-import bling from "@/assets/img/fragments/bling.png";
+import bling from "@/public/img/fragments/bling.png";
 const VisionMission: FC = () => {
   return (
     <section className="w-full h-screen relative flex flex-col justify-center">

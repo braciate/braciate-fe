@@ -1,14 +1,14 @@
 .aboutFilosofi {
-  background-image: url(../assets/svg/fragments/blackshadow-underneath.svg),
-    url(../assets/img/fragments/blackuppershadow.png),
-    url(../assets/img/background/bg-au.png);
+  background-image: url(../../public/svg/fragments/blackshadow-underneath.svg),
+    url(../../public/img/fragments/blackuppershadow.png),
+    url(../../public/img/background/bg-au.png);
   background-repeat: no-repeat, no-repeat, repeat;
   background-position: bottom, top, center;
   background-size: 110%;
 }
 .bgCredits {
-  background-image: url(../assets/svg/background/shader-credit.svg),
-    url(../assets/img/background/bg-panduan.png);
+  background-image: url(../../public/svg/background/shader-credit.svg),
+    url(../../public/img/background/bg-panduan.png);
   background-repeat: no-repeat, repeat;
   background-position: bottom, center;
   background-size: 100%;

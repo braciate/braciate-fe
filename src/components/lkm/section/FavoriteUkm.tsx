@@ -12,7 +12,7 @@ import Image from "next/image";
 import LoadingScreen from "@/components/loading/LoadingScreen";
 import { useState } from "react";
 import { Check } from "lucide-react";
-import bg from "@/assets/svg/background/bg-validFav.svg";
+import bg from "@/public/svg/background/bg-validFav.svg";
 import useVote from "@/hooks/useVote";
 
 interface Props {
@@ -170,7 +170,7 @@ export function FavoriteUKM({ title, lkm, type }: Props) {
             <Button
               onClick={() => {
                 setCurrentPage((prev: number) =>
-                  Math.min(prev + 1, totalPages),
+                  Math.min(prev + 1, totalPages)
                 );
               }}
               disabled={currentPage === totalPages}

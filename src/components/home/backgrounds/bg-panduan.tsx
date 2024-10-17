@@ -1,8 +1,8 @@
 import type { FC } from "react";
 import Image from "next/image";
-import Bg from "@/assets/svg/background/bg-panduan.svg";
-import ShadowTop from "@/assets/img/fragments/blackuppershadow.png";
-import ShadowBot from "@/assets/img/fragments/blackshadow-bottom.png";
+import Bg from "@/public/svg/background/bg-panduan.svg";
+import ShadowTop from "@/public/img/fragments/blackuppershadow.png";
+import ShadowBot from "@/public/img/fragments/blackshadow-bottom.png";
 const BgPanduan: FC = () => {
   return (
     <main className="absolute">

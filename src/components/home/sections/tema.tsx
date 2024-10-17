@@ -1,10 +1,10 @@
 import React from "react";
-import EventThemeImg from "../../../assets/svg/Theme_imgs/anargya-text.svg";
-import GlitterBg from "../../../assets/svg/Theme_imgs/glitter-eventtheme.png";
+import EventThemeImg from "@/public/svg/Theme_imgs/anargya-text.svg";
+import GlitterBg from "@/public/svg/Theme_imgs/glitter-eventtheme.png";
 import Image from "next/image";
 import type { FC } from "react";
 import styleText from "../style/panduan.module.css";
-import bling from "@/assets/img/fragments/bling.png";
+import bling from "@/public/img/fragments/bling.png";
 
 const EventTheme: FC = () => {
   return (

@@ -1,6 +1,6 @@
 "use client";
-import sponsorshipTitle from "@/assets/img/title/sponsorship_title.png";
-import sponsorshipBg from "@/assets/img/background/sponsorship_bg.png";
+import sponsorshipTitle from "@/public/img/title/sponsorship_title.png";
+import sponsorshipBg from "@/public/img/background/sponsorship_bg.png";
 import type { FC } from "react";
 import Image from "next/image";
 import style from "../style/sponsorship.module.css";
@@ -24,7 +24,7 @@ const renderSlider = (className: string, reverse = false): JSX.Element => (
               />
             </div>
           </div>
-        ),
+        )
       )}
     </div>
   </div>

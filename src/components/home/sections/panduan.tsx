@@ -1,6 +1,6 @@
-import kiri from "@/assets/svg/fragments/kiri.svg";
-import kanan from "@/assets/svg/fragments/kanan.svg";
-import bling from "@/assets/img/fragments/bling.png";
+import kiri from "@/public/svg/fragments/kiri.svg";
+import kanan from "@/public/svg/fragments/kanan.svg";
+import bling from "@/public/img/fragments/bling.png";
 import type { FC } from "react";
 import BgPanduan from "../backgrounds/bg-panduan";
 import style from "../style/panduan.module.css";

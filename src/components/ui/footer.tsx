@@ -1,10 +1,10 @@
 import React from "react";
-import braciateLogo from "../../assets/svg/logo/Logo_Braciate-Transparent.png";
-import brawijayaAppreciateLogo from "../../assets/svg/logo/BRAWIJAYA_APPRECIATE.png";
-import instagramIcon from "../../assets/img/icon/instagram.png";
-import youtubeIcon from "../../assets/img/icon/youtube.png";
-import lineIcon from "../../assets/img/icon/line.png";
-import tiktokIcon from "../../assets/img/icon/tiktok.png";
+import braciateLogo from "@/public/svg/logo/Logo_Braciate-Transparent.png";
+import brawijayaAppreciateLogo from "@/public/svg/logo/BRAWIJAYA_APPRECIATE.png";
+import instagramIcon from "@/public/img/icon/instagram.png";
+import youtubeIcon from "@/public/img/icon/youtube.png";
+import lineIcon from "@/public/img/icon/line.png";
+import tiktokIcon from "@/public/img/icon/tiktok.png";
 import type { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";

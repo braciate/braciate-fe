@@ -2,7 +2,7 @@
 
 import type { FC } from "react";
 import Image from "next/image";
-import bling from "@/assets/img/fragments/bling.png";
+import bling from "@/public/img/fragments/bling.png";
 import style from "../style/nominasi.module.css";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -63,7 +63,7 @@ const Nominasi: FC = () => {
       {isModalUkmOpen ? <ModalUkm onClose={handleModalUkm} /> : null}
       <div className="absolute -z-10 ">
         <video
-          src={require("../../../assets/videos/BRACIATE2024.mp4")}
+          src={require("../../../../public/video/BRACIATE2024.mp4")}
           autoPlay={true}
           muted={true}
           loop={true}

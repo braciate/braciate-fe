@@ -14,7 +14,7 @@ const poppins = Poppins({
 });
 
 const jaoren = localFont({
-  src: "../assets/fonts/Jaoren.woff",
+  src: "../../public/fonts/Jaoren.woff",
   variable: "--font-jaoren",
   display: "swap",
   weight: "400",

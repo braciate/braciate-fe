@@ -1,9 +1,8 @@
 import type { FC } from "react";
 import Link from "next/link";
-import Instagram from "@/assets/img/icon/instagram.png";
-import Linkedin from "@/assets/img/icon/linkedin.png";
+import Instagram from "@/public/img/icon/instagram.png";
+import Linkedin from "@/public/img/icon/linkedin.png";
 import Image from "next/image";
-import shader from "../../../assets/svg/background/shader-credit.svg";
 import style from "../../global.module.css";
 interface TeamMember {
   id: number;

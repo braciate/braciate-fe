@@ -6,18 +6,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import styleText from "../style/panduan.module.css";
-import bling from "@/assets/img/fragments/bling.png";
+import bling from "@/public/img/fragments/bling.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import glitterImage from "../../../assets/img/fragments/glitter.png";
-import filosofiIcon3 from "../../../assets/img/fragments/filosofi_icon_1.png";
-import filosofiIcon4 from "../../../assets/img/fragments/filosofi_icon_2.png";
-import filosofiIcon2 from "../../../assets/img/fragments/filosofi_icon_3.png";
-import filosofiIcon5 from "../../../assets/img/fragments/filosofi_icon_4.png";
-import filosofiIcon1 from "../../../assets/img/fragments/filosofi_icon_5.png";
-import panahIcon from "../../../assets/svg/fragments/panahdot.svg";
+import glitterImage from "@/public/img/fragments/glitter.png";
+import filosofiIcon3 from "@/public/img/fragments/filosofi_icon_1.png";
+import filosofiIcon4 from "@/public/img/fragments/filosofi_icon_2.png";
+import filosofiIcon2 from "@/public/img/fragments/filosofi_icon_3.png";
+import filosofiIcon5 from "@/public/img/fragments/filosofi_icon_4.png";
+import filosofiIcon1 from "@/public/img/fragments/filosofi_icon_5.png";
+import panahIcon from "@/public/svg/fragments/panahdot.svg";
 
 const FilosofiLogo = () => {
   const [activeIndex, setActiveIndex] = useState(0);

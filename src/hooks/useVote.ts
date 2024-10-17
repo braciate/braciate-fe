@@ -25,7 +25,7 @@ export default function useVote() {
           `${BaseURL}api/v1/userVotes/get/${nomination}`,
           {
             params: { user_id: session.user.user_id },
-          },
+          }
         );
 
         if (
@@ -34,7 +34,7 @@ export default function useVote() {
         ) {
           if (
             checkResponse.data.some(
-              (vote: any) => vote.user_id === session.user.user_id,
+              (vote: any) => vote.user_id === session.user.user_id
             )
           ) {
             setError("Anda telah melakukan vote pada nominasi LKM ini");
@@ -58,7 +58,7 @@ export default function useVote() {
           },
           {
             headers: { "Content-Type": "application/json" },
-          },
+          }
         );
         setError(null);
         router.push("/");
@@ -69,7 +69,7 @@ export default function useVote() {
         throw err;
       }
     },
-    [BaseURL, CREATE_URL, session],
+    [BaseURL, CREATE_URL, router, session?.user.user_id]
   );
 
   return { submitVote, error };

@@ -39,7 +39,7 @@
 }
 
 .links:hover {
-  background-image: url("../../../assets/svg/fragments/gold-texture.png");
+  background-image: url("../../../../public/svg/fragments/gold-texture.png");
   background-position: center;
   color: transparent;
 }
@@ -61,14 +61,14 @@
 }
 
 #votenow:hover {
-  background-image: url("../../../assets/svg/fragments/gold-texture.png");
+  background-image: url("../../../../public/svg/fragments/gold-texture.png");
   border: none;
   background-position: center;
 }
 
 .vote_slide {
   border: 1px solid white;
-  background-image: url("../../../assets/svg/fragments/gold-texture.png");
+  background-image: url("../../../../public/svg/fragments/gold-texture.png");
   background-position: center;
   background-size: cover;
   border-radius: 50px;
@@ -84,7 +84,7 @@
 
 .slideNav {
   color: white;
-  background-image: url("../../../assets/svg/background/bg-slide.svg");
+  background-image: url("../../../../public/svg/background/bg-slide.svg");
   background-position: center;
   background-size: cover;
   fill: cornsilk;
@@ -103,7 +103,7 @@
 }
 
 .countDown {
-  background-image: url("../../../assets/svg/fragments/countdown.png");
+  background-image: url("../../../../public/svg/fragments/countdown.png");
   background-size: cover;
   background-position: center;
 }

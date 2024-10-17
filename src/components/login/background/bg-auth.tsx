@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import Image from "next/image";
-import BgLogin from "@/assets/svg/background/bg-auth.svg";
-import glitter from "@/assets/img/background/glitter.png";
+import BgLogin from "@/public/svg/background/bg-auth.svg";
+import glitter from "@/public/img/background/glitter.png";
 
 const BgAuth: FC = () => {
   return (

@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import Image from "next/image";
-import Bg from "../../../assets/svg/background/bg-favorite.svg";
+import Bg from "@/public/svg/background/bg-favorite.svg";
 
 const BgFavorite: FC = () => {
   return (

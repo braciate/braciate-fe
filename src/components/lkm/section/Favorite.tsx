@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Check } from "lucide-react";
 import useVote from "@/hooks/useVote";
-import bg from "@/assets/svg/background/bg-validFav.svg";
+import bg from "@/public/svg/background/bg-validFav.svg";
 
 interface props {
   title: string;

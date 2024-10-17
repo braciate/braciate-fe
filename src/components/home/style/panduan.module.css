@@ -14,7 +14,7 @@
 }
 
 .subtitle {
-  background-image: url("../../../assets/svg/fragments/gold-texture.png");
+  background-image: url("../../../../public/svg/fragments/gold-texture.png");
   background-size: 110%;
   background-clip: text;
   color: transparent;

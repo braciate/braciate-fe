@@ -9,16 +9,16 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import best from "@/assets/svg/Modal_imgs/dpm_imgs/best.svg";
-import upload from "@/assets/svg/Modal_imgs/dpm_imgs/upload.svg";
-import productive from "@/assets/svg/Modal_imgs/dpm_imgs/productive.svg";
-import Art from "@/assets/svg/Modal_imgs/dpm_imgs/Art.svg";
-import Sport from "@/assets/svg/Modal_imgs/dpm_imgs/Sport.svg";
-import BgUkm from "@/assets/svg/Modal_imgs/dpm_imgs/BgDpm.png";
-import achievement from "@/assets/svg/Modal_imgs/dpm_imgs/Achievement.svg";
-import Critical from "@/assets/svg/Modal_imgs/dpm_imgs/Critical.svg";
-import Thingking from "@/assets/svg/Modal_imgs/dpm_imgs/Thingking.svg";
-import bestfavorite from "@/assets/svg/Modal_imgs/bestfavorite.png";
+import best from "@/public/svg/Modal_imgs/dpm_imgs/best.svg";
+import upload from "@/public/svg/Modal_imgs/dpm_imgs/upload.svg";
+import productive from "@/public/svg/Modal_imgs/dpm_imgs/productive.svg";
+import Art from "@/public/svg/Modal_imgs/dpm_imgs/Art.svg";
+import Sport from "@/public/svg/Modal_imgs/dpm_imgs/Sport.svg";
+import BgUkm from "@/public/svg/Modal_imgs/dpm_imgs/BgDpm.png";
+import achievement from "@/public/svg/Modal_imgs/dpm_imgs/Achievement.svg";
+import Critical from "@/public/svg/Modal_imgs/dpm_imgs/Critical.svg";
+import Thingking from "@/public/svg/Modal_imgs/dpm_imgs/Thingking.svg";
+import bestfavorite from "@/public/svg/Modal_imgs/bestfavorite.png";
 
 const LoadingAnimation = () => (
   <div className="flex items-center justify-center h-full">

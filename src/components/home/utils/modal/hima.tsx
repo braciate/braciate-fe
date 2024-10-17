@@ -9,12 +9,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import best from "@/assets/svg/Modal_imgs/dpm_imgs/best.svg";
-import upload from "@/assets/svg/Modal_imgs/dpm_imgs/upload.svg";
-import productive from "@/assets/svg/Modal_imgs/dpm_imgs/productive.svg";
-import collab from "@/assets/svg/Modal_imgs/dpm_imgs/collab.svg";
-import BgBem from "@/assets/svg/Modal_imgs/BgBem.png";
-import bestfavorite from "@/assets/svg/Modal_imgs/bestfavorite.png";
+import best from "@/public/svg/Modal_imgs/dpm_imgs/best.svg";
+import upload from "@/public/svg/Modal_imgs/dpm_imgs/upload.svg";
+import productive from "@/public/svg/Modal_imgs/dpm_imgs/productive.svg";
+import collab from "@/public/svg/Modal_imgs/dpm_imgs/collab.svg";
+import BgBem from "@/public/svg/Modal_imgs/BgBem.png";
+import bestfavorite from "@/public/svg/Modal_imgs/bestfavorite.png";
 
 const LoadingAnimation = () => (
   <div className="flex items-center justify-center h-full">

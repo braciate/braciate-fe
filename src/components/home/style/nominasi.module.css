@@ -9,7 +9,7 @@
 }
 
 .titlebawah {
-  background-image: url("../../../assets/svg/fragments/gold-texture.png");
+  background-image: url("../../../../public/svg/fragments/gold-texture.png");
   background-position: center;
   background-size: 110%;
   background-clip: text;
@@ -33,7 +33,7 @@
 }
 
 .nominasi:hover {
-  background-image: url("../../../assets/svg/fragments/gold-texture.png");
+  background-image: url("../../../../public/svg/fragments/gold-texture.png");
   background-size: 120%;
   background-position: center;
 }

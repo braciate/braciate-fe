@@ -1,17 +1,17 @@
-import elemenAtas from "../../../assets/svg/Rangkaian_imgs/rangkaian-atas.svg";
-import parade from "../../../assets/svg/Rangkaian_imgs/1.svg";
-import bazar from "../../../assets/svg/Rangkaian_imgs/2.svg";
-import pameran from "../../../assets/svg/Rangkaian_imgs/3.svg";
-import awarding from "../../../assets/svg/Rangkaian_imgs/4.svg";
-import line from "../../../assets/svg/Rangkaian_imgs/line.svg";
+import elemenAtas from "@/public/svg/Rangkaian_imgs/rangkaian-atas.svg";
+import parade from "@/public/svg/Rangkaian_imgs/1.svg";
+import bazar from "@/public/svg/Rangkaian_imgs/2.svg";
+import pameran from "@/public/svg/Rangkaian_imgs/3.svg";
+import awarding from "@/public/svg/Rangkaian_imgs/4.svg";
+import line from "@/public/svg/Rangkaian_imgs/line.svg";
 import style from "@/app/(lkm)/page.module.css";
-import ElemenAtasHp from "../../../assets/svg/Rangkaian_imgs/ElemenAtasHp.svg";
-import ElemenAtasKananHp from "../../../assets/svg/Rangkaian_imgs/ElemenAtasKananHp.svg";
+import ElemenAtasHp from "@/public/svg/Rangkaian_imgs/ElemenAtasHp.svg";
+import ElemenAtasKananHp from "@/public/svg/Rangkaian_imgs/ElemenAtasKananHp.svg";
 import type { FC } from "react";
 import React from "react";
 import Image from "next/image";
 import styleText from "../style/panduan.module.css";
-import bling from "@/assets/img/fragments/bling.png";
+import bling from "@/public/img/fragments/bling.png";
 
 const Rangkaian: FC = () => {
   return (

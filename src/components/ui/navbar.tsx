@@ -5,10 +5,10 @@ import { useNavbar } from "@/hooks/useNavbar";
 import Image from "next/image";
 import Link from "next/link";
 import type { FC } from "react";
-import LogoImage from "@/assets/svg/logo/logo.svg";
-import hamburger from "@/assets/svg/fragments/hamburger.svg";
-import goldTexture from "@/assets/svg/fragments/gold-texture.png";
-import close from "@/assets/svg/fragments/close-slide.svg";
+import LogoImage from "@/public/svg/logo/logo.svg";
+import hamburger from "@/public/svg/fragments/hamburger.svg";
+import goldTexture from "@/public/svg/fragments/gold-texture.png";
+import close from "@/public/svg/fragments/close-slide.svg";
 import React from "react";
 import { useSession } from "next-auth/react";
 import { usePathname } from "next/navigation";
@@ -22,7 +22,7 @@ const Navbar: FC = () => {
   const isHomePage = pathname === "/";
   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
-    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
   );
   const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
