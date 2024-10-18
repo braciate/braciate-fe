@@ -21,10 +21,10 @@ export const useNavbar = (): NavbarProps => {
     const endDate = new Date(
       new Date().getFullYear(),
       9,
-      26,
+      28,
       23,
       59,
-      59,
+      59
     ).getTime();
 
     const updateCountdown = () => {
