@@ -48,17 +48,13 @@ const ListLkm: FC<ListLkmProps> = ({
         setLoading(true);
         if (type === "6") {
           const requests = [1, 2, 3, 4, 5].map((type) =>
-            axios.get(
-              `${process.env.NEXT_PUBLIC_API_URL_DEV}api/v1/lkms/get/${id}/${type}`,
-            ),
+            axios.get(`/api/lkms/ukm/${type}`)
           );
           const responses = await Promise.all(requests);
           const allData = responses.flatMap((response) => response.data);
           setOrganisasiList(allData);
         } else {
-          const response = await axios.get(
-            `${process.env.NEXT_PUBLIC_API_URL_DEV}api/v1/lkms/get/${id}/${type}`,
-          );
+          const response = await axios.get(`/api/lkms/${id}`);
           console.log(response.data);
           setOrganisasiList(response.data);
         }

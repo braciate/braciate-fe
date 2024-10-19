@@ -34,7 +34,7 @@ export function FavoriteUKM({ title, lkm, type }: Props) {
     filterKategori,
     noDataFound,
     isLoading,
-  } = usePage("ukm", "6");
+  } = usePage("6");
   const placeholder = lkm.toUpperCase();
 
   const { submitVote, error: voteError } = useVote();
@@ -62,7 +62,7 @@ export function FavoriteUKM({ title, lkm, type }: Props) {
         }
       } catch (err) {
         console.error("Failed to submit vote:", err);
-        setError("Failed to submit vote. Please try again.");
+        setError("Failed to submit vote. Please try again or relog.");
       } finally {
         setIsVoting(false);
       }

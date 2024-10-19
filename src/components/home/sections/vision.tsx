@@ -14,7 +14,7 @@ const VisionMission: FC = () => {
       </div>
       <main className="w-4/6 mx-auto grid gap-9">
         <div className="flex flex-col md:flex-row-reverse gap-4 items-center text-center w-full justify-around">
-          <div className="relative w-max h-auto">
+          <div data-aos="fade-left" className="relative w-max h-auto">
             <h1
               className={`font-jaoren ${styleText.subtitle} text-5xl sm:text-6xl md:text-7xl`}
             >
@@ -26,13 +26,16 @@ const VisionMission: FC = () => {
               className="absolute -bottom-6 sm:-bottom-8 scale-50 sm:scale-75 left-0"
             />
           </div>
-          <p className="text-xs sm:text-base w-10/12 sm:w-7/12">
+          <p
+            className="text-xs sm:text-base w-10/12 sm:w-7/12"
+            data-aos="fade-right"
+          >
             Bring The Great Story with Harmonization and Collaborative Simpul
             Brawijaya.
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-8 w-full items-center">
-          <div className="relative w-max h-auto">
+          <div className="relative w-max h-auto" data-aos="fade-right">
             <h1
               className={`font-jaoren ${styleText.subtitle} text-5xl sm:text-6xl md:text-7xl`}
             >
@@ -44,7 +47,10 @@ const VisionMission: FC = () => {
               className="absolute -bottom-8 sm:-bottom-12 scale-50 sm:scale-75 left-10 sm:left-14"
             />
           </div>
-          <ol className="list-none p-0 m-0 space-y-2 text-xs sm:text-base z-10">
+          <ol
+            className="list-none p-0 m-0 space-y-2 text-xs sm:text-base z-10"
+            data-aos="fade-left"
+          >
             <li className="flex">
               <span className="flex-none w-6">1.</span>
               <span>

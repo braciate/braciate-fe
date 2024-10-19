@@ -97,7 +97,7 @@ const FilosofiLogo = () => {
         />
       </div>
 
-      <div className="flex flex-col items-center text-center z-10 w-full px-4 md:px-0 min-h-screen">
+      <div className="flex flex-col items-center text-center z-10 w-full px-4 md:px-0 sm:h-screen h-[85dvh]">
         {/* Filosofi Logo */}
         <div className="my-4 md:my-8 w-full max-w-xs md:max-w-lg">
           <div className="font-jaoren flex gap-4 text-5xl sm:text-6xl md:text-7xl tracking-wider z-10 relative w-max h-auto">

@@ -190,7 +190,7 @@ const Navbar: FC = () => {
       </nav>
       <div className="text-xl font-medium gap-2 flex w-max bg-white rounded-br-xl text-black absolute">
         <span
-          className={`p-1 rounded-br-3xl pr-4 text-white ${styles.countDown}`}
+          className={`p-1 rounded-br-2xl md:rounded-br-3xl pr-4 text-white ${styles.countDown}`}
         >
           <p className="font-jaoren font-white tracking-wider text-sm sm:text-base md:text-xl">
             Voted Closed

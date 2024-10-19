@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import { AuthProvider } from "@/app/context/Providers";
 import PageTransition from "@/components/loading/PageTransition";
+import { AOSInit } from "@/lib/aos";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -32,6 +33,7 @@ interface IRootLayoutProps {
 const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
+      <AOSInit />
       <body
         className={`${poppins.variable} ${jaoren.variable} font-poppins overflow-x-hidden`}
       >

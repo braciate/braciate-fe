@@ -66,6 +66,26 @@
   background-position: center;
 }
 
+.footer {
+  border-radius: 50px;
+  margin-left: 15px;
+  transition: all 0.1s ease-in-out;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+}
+
+.footer:hover {
+  background-image: url("../../../../public/svg/fragments/gold-texture.png");
+  border: none;
+  background-position: center;
+}
+
 .vote_slide {
   border: 1px solid white;
   background-image: url("../../../../public/svg/fragments/gold-texture.png");

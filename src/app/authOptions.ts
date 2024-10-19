@@ -25,7 +25,7 @@ export const authOptions: NextAuthOptions = {
             },
             {
               headers: { "Content-Type": "application/json" },
-            },
+            }
           );
 
           if (data) {
@@ -54,20 +54,16 @@ export const authOptions: NextAuthOptions = {
         try {
           const decodedToken = jwt.decode(token.accessToken as string) as {
             id: string;
+            exp: number;
           } | null;
           if (decodedToken && decodedToken.id) {
+            token.expired_at = decodedToken.exp;
             token.user_id = decodedToken.id;
           }
         } catch (error) {
           console.error("Failed to decode access token:", error);
         }
       }
-
-      const expiredAt = token.expired_at as number | undefined;
-      if (typeof expiredAt === "number" && Date.now() > expiredAt * 1000) {
-        return { ...token, error: "TokenExpired" };
-      }
-
       return token;
     },
     async session({ session, token }) {
@@ -87,4 +83,7 @@ export const authOptions: NextAuthOptions = {
     signIn: "/login",
   },
   secret: process.env.NEXTAUTH_SECRET,
+  session: {
+    maxAge: 3 * 60 * 60,
+  },
 };

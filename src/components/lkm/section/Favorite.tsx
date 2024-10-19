@@ -7,20 +7,18 @@ import { Input } from "@/components/ui/input";
 import usePage from "@/hooks/useFavPage";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { StepBack, StepForward, Search } from "lucide-react";
+import { StepBack, StepForward, Search, Check } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { Check } from "lucide-react";
 import useVote from "@/hooks/useVote";
 import bg from "@/public/svg/background/bg-validFav.svg";
 
 interface props {
   title: string;
   lkm: string;
-  type: string;
 }
 
-export function FavoritePage({ title, lkm, type }: props) {
+export function FavoritePage({ title, lkm }: props) {
   const router = useRouter();
   const {
     currentPage,
@@ -30,7 +28,7 @@ export function FavoritePage({ title, lkm, type }: props) {
     setSearchTerm,
     searchTerm,
     noDataFound,
-  } = usePage(lkm, type);
+  } = usePage(lkm);
   const placeholder = lkm.toUpperCase();
 
   const { submitVote, error: voteError } = useVote();
@@ -39,6 +37,7 @@ export function FavoritePage({ title, lkm, type }: props) {
   const [selectedItem, setSelectedItem] = useState<any>(null);
   const [voteSuccess, setVoteSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
   const handleVoteClick = (item: any) => {
     setSelectedItem(item);
     setIsModalOpen(true);
@@ -56,14 +55,19 @@ export function FavoritePage({ title, lkm, type }: props) {
         } else if (voteError) {
           setError(voteError);
         }
-      } catch (err) {
+      } catch (err: any) {
         console.error("Failed to submit vote:", err);
-        setError("Failed to submit vote. Please try again.");
+        if (err.response && err.response.data && err.response.data.error) {
+          setError(err.response.data.error);
+        } else {
+          setError("Failed to submit vote.");
+        }
       } finally {
         setIsVoting(false);
       }
     }
   };
+
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setVoteSuccess(false);
@@ -224,12 +228,7 @@ export function FavoritePage({ title, lkm, type }: props) {
                   </Button>
                 </div>
                 {error && (
-                  <div className="text-red-500 text-center">{error}</div>
-                )}
-                {voteSuccess && (
-                  <div className="text-green-500">
-                    Vote submitted successfully!
-                  </div>
+                  <div className="text-red-500 text-center mt-2">{error}</div>
                 )}
               </>
             ) : (

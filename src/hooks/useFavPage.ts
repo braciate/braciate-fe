@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -26,7 +28,7 @@ interface Props {
   error: string | null;
 }
 
-export default function usePage(id: string, type: string): Props {
+export default function usePage(id: string): Props {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredItems, setFilteredItems] = useState<Item[]>([]);
@@ -42,15 +44,11 @@ export default function usePage(id: string, type: string): Props {
       setIsLoading(true);
       setError(null);
       try {
-        const { data } = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_URL_DEV}api/v1/lkms/get/${id}/${type}`,
-        );
+        const { data } = await axios.get(`/api/lkms/${id}`);
         setItems(data);
-      } catch (err) {
+      } catch (err: any) {
         setError(
-          err instanceof Error
-            ? err.message
-            : "An error occurred while fetching items",
+          err.response?.data?.error || err.message || "Error fetching items"
         );
       } finally {
         setIsLoading(false);
@@ -58,11 +56,11 @@ export default function usePage(id: string, type: string): Props {
     };
 
     fetchItems();
-  }, [id, type]);
+  }, [id]);
 
   useEffect(() => {
     const filtered = items.filter((item) =>
-      item.name.toLowerCase().includes(searchTerm.toLowerCase()),
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     setFilteredItems(filtered);

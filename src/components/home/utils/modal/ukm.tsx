@@ -63,7 +63,7 @@ export default function Ukm() {
       className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center px-4 sm:px-12 text-white-Normal font-Amiko z-40"
       onClick={handleOutsideClick}
     >
-      <div className="bg-transparent rounded-3xl p-4 w-full max-w-2xl mx-auto">
+      <div className="bg-transparent rounded-3xl p-4 w-full max-w-4xl mx-auto">
         <Swiper
           modules={[Navigation, Pagination]}
           navigation={{
@@ -246,13 +246,6 @@ export default function Ukm() {
 
           .swiper-pagination-bullet-active {
             background-color: white !important;
-          }
-
-          @media (max-width: 768px) {
-            .swiper-button-next,
-            .swiper-button-prev {
-              display: none !important;
-            }
           }
         `}</style>
       </div>

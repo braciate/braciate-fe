@@ -5,7 +5,6 @@ import Image from "next/image";
 import bling from "@/public/img/fragments/bling.png";
 import style from "../style/nominasi.module.css";
 import { useState } from "react";
-import { useEffect } from "react";
 import Dpm from "../utils/modal/dpm";
 import Bem from "../utils/modal/bem";
 import Hima from "../utils/modal/hima";
@@ -67,7 +66,7 @@ const Nominasi: FC = () => {
           autoPlay={true}
           muted={true}
           loop={true}
-          className="w-screen h-auto scale-[3.5] lg:scale-100 brightness-50"
+          className="w-screen h-auto scale-[3.5] lg:scale-100"
         />
       </div>
       <div className="flex flex-col items-center space-y-4">
@@ -92,7 +91,7 @@ const Nominasi: FC = () => {
           </div>
         </div>
         <div>
-          <ul className="text-xs sm:text-xl cursor-pointer text-center space-y-6 flex flex-col justify-center items-center mt-8 text-black font-poppins font-medium">
+          <ul className="text-xs sm:text-xl cursor-pointer text-center space-y-6 flex flex-col justify-center items-center mt-8 text-black font-poppins font-medium z-20">
             <li
               className={`w-72 h-9 sm:w-[500px] sm:h-[50px] py-1 px-[1.7px] sm:py-6 sm:px-1 sm:hover:w-[555px] sm:hover:h-[72px] border-white transition-all ease-in-out duration-300 rounded-2xl flex items-center justify-center bg-white bg-center ${style.nominasi} bg-goldTexture`}
               onClick={handleModalDpm}

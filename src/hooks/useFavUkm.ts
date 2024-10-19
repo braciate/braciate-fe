@@ -1,5 +1,6 @@
+"use client";
+
 import { useState, useEffect } from "react";
-import axios from "axios";
 
 interface Item {
   id: string;
@@ -33,7 +34,7 @@ interface Props {
   error: string | null;
 }
 
-export default function usePage(id: string, initialType: string): Props {
+export default function usePage(initialType: string): Props {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeFilter, setActiveFilter] = useState("Semuanya");
@@ -59,29 +60,24 @@ export default function usePage(id: string, initialType: string): Props {
     setIsLoading(true);
     setError(null);
     try {
-      if (type === "6") {
-        const requests = [1, 2, 3, 4, 5].map((type) =>
-          axios.get(
-            `${process.env.NEXT_PUBLIC_API_URL_DEV}api/v1/lkms/get/${id}/${type}`
-          )
-        );
-        const responses = await Promise.all(requests);
-        const allData = responses.flatMap((response) => response.data);
-        setItems(allData);
-        setFilteredItems(allData);
-      } else {
-        const { data } = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_URL_DEV}api/v1/lkms/get/${id}/${type}`
-        );
-        setItems(data);
-        setFilteredItems(data);
+      const response = await fetch(`/api/lkms/ukm/${type}`);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
       }
+      const data = await response.json();
+      if (!Array.isArray(data)) {
+        throw new Error("Received data is not an array");
+      }
+      setItems(data);
+      setFilteredItems(data);
     } catch (err) {
       setError(
         err instanceof Error
           ? err.message
           : "An error occurred while fetching items"
       );
+      setItems([]);
+      setFilteredItems([]);
     } finally {
       setIsLoading(false);
     }
@@ -89,9 +85,16 @@ export default function usePage(id: string, initialType: string): Props {
 
   useEffect(() => {
     fetchItems(currentType);
-  }, [id, currentType]);
+  }, [currentType]);
 
   useEffect(() => {
+    if (!Array.isArray(items)) {
+      setError("Items data is not in the correct format");
+      setFilteredItems([]);
+      setNoDataFound(true);
+      return;
+    }
+
     let filtered = items;
 
     if (searchTerm) {
@@ -107,8 +110,10 @@ export default function usePage(id: string, initialType: string): Props {
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
-  const currentItems = filteredItems.slice(startIndex, endIndex);
+  const totalPages = Math.ceil((filteredItems?.length || 0) / itemsPerPage);
+  const currentItems = Array.isArray(filteredItems)
+    ? filteredItems.slice(startIndex, endIndex)
+    : [];
 
   const setActiveFilterAndFetch = (filter: string) => {
     setActiveFilter(filter);

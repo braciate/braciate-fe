@@ -73,10 +73,10 @@ const useLinkForm = (): LinkFormProps => {
     }
   };
   const handleKeyValidation = async (
-    values: KeyValidationValues,
+    values: KeyValidationValues
   ): Promise<void> => {
     const validKey = process.env.NEXT_PUBLIC_LKM_KEY;
-    const URL = process.env.NEXT_PUBLIC_API_URL_DEV + "api/v1/assets/create";
+    const URL = "/api/assets";
     if (validKey && values.key === validKey) {
       setSubmissionState("submitting");
       try {
@@ -89,8 +89,11 @@ const useLinkForm = (): LinkFormProps => {
             url: formValues?.url,
           },
           {
-            headers: { "Content-Type": "application/json" },
-          },
+            headers: {
+              "Content-Type": "application/json",
+              "x-api-key": validKey,
+            },
+          }
         );
       } catch (err) {
         console.error(err);

@@ -8,7 +8,7 @@ import bling from "@/public/img/fragments/bling.png";
 
 const AboutUs: FC = () => {
   return (
-    <div className="h-screen mb-4">
+    <div className="sm:h-screen h-[85dvh] mb-0 sm:mb-4">
       <main
         className="w-screen flex flex-col items-center p-24 relative"
         id="about"

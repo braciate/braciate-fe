@@ -31,14 +31,12 @@ function TokenExpirationHandler({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (status === "authenticated" && session?.user?.expired_at) {
-      localStorage.setItem("expire_at", session.user.expired_at.toString());
       !isManualLogout;
-    } else if (status === "unauthenticated") {
+    } else if (status === "unauthenticated" || session?.user.expired_at) {
       if (isManualLogout) {
-        localStorage.removeItem("expire_at");
         setIsExpired(false);
       } else {
-        const expireAt = localStorage.getItem("expire_at");
+        const expireAt = session?.user.expired_at?.toString();
         if (expireAt) {
           const expireTime = parseInt(expireAt, 10);
           setIsExpired(Date.now() > expireTime);
