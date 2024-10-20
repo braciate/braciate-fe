@@ -14,7 +14,11 @@ const Hero: FC = () => {
       <BgHero />
       <div className="hero-title h-fit w-full max-w-[1200px] flex justify-start self-center">
         <div className="relative h-fit w-full text-center">
-          <div className="relative w-max h-auto self-center mx-auto scale-75 sm:scale-90 md:scale-100">
+          <div
+            className="relative w-max h-auto self-center mx-auto scale-75 sm:scale-90 md:scale-100"
+            data-aos="fade-up"
+            data-aos-delay="6000"
+          >
             <h1 className="font-jaoren text-6xl md:text-7xl relative z-10">
               brawijaya
             </h1>
@@ -24,12 +28,12 @@ const Hero: FC = () => {
               appreciate
             </h1>
             <Image
-              className="w-1/2 scale-125 absolute -bottom-10 -right-20 opacity-60 z-20"
+              className="w-1/2 scale-125 absolute -bottom-10 -right-20 opacity-60 z-10"
               src={bling}
               alt=""
             />
             <Image
-              className="w-1/2 scale-125 absolute top-10 -left-10 opacity-60 z-20"
+              className="w-1/2 scale-125 absolute top-10 -left-10 opacity-60 z-10"
               src={bling}
               alt=""
             />

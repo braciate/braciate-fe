@@ -100,7 +100,10 @@ const FilosofiLogo = () => {
       <div className="flex flex-col items-center text-center z-10 w-full px-4 md:px-0 sm:h-screen h-[85dvh]">
         {/* Filosofi Logo */}
         <div className="my-4 md:my-8 w-full max-w-xs md:max-w-lg">
-          <div className="font-jaoren flex gap-4 text-5xl sm:text-6xl md:text-7xl tracking-wider z-10 relative w-max h-auto">
+          <div
+            className="font-jaoren flex gap-4 text-5xl sm:text-6xl md:text-7xl tracking-wider z-10 relative w-max h-auto"
+            data-aos="fade-up"
+          >
             <h1>filosofi</h1>
             <h1 className={styleText.subtitle}>logo</h1>
             <Image
@@ -116,6 +119,7 @@ const FilosofiLogo = () => {
           <div
             className="hidden md:flex md:flex-col md:mr-4 -mt-10 items-center justify-start"
             style={{ minWidth: "100px" }}
+            data-aos="fade-right"
           >
             {slides.map((slide, index) => (
               <div
@@ -149,7 +153,7 @@ const FilosofiLogo = () => {
               {slides.map((slide, index) => (
                 <SwiperSlide key={index}>
                   <div className="flex flex-row items-start w-full sm:w-10/12">
-                    <div className="flex-shrink-0 mr-4">
+                    <div className="flex-shrink-0 mr-4" data-aos="fade-right">
                       <Image
                         src={slide.logo}
                         alt={`Logo ${index + 1}`}
@@ -157,10 +161,16 @@ const FilosofiLogo = () => {
                       />
                     </div>
                     <div className="flex flex-col items-center">
-                      <h1 className="font-jaoren text-2xl md:text-4xl md:w-max max-w-lg">
+                      <h1
+                        className="font-jaoren text-2xl md:text-4xl md:w-max max-w-lg"
+                        data-aos="fade-left"
+                      >
                         {slide.titleImage}
                       </h1>
-                      <p className="text-xs md:text-base lg:text-base text-gray-300 mt-2 leading-relaxed text-center w-[90%]">
+                      <p
+                        className="text-xs md:text-base lg:text-base text-gray-300 mt-2 leading-relaxed text-center w-[90%]"
+                        data-aos="fade-left"
+                      >
                         {slide.content}
                       </p>
                     </div>
@@ -169,7 +179,10 @@ const FilosofiLogo = () => {
               ))}
             </Swiper>
             {/* Bottom slider for small screens */}
-            <div className="flex md:hidden justify-center mt-4 overflow-x-auto">
+            <div
+              className="flex md:hidden justify-center mt-4 overflow-x-auto"
+              data-aos="fade-right"
+            >
               {slides.map((slide, index) => (
                 <div
                   key={index}
@@ -189,7 +202,10 @@ const FilosofiLogo = () => {
             </div>
 
             {/* Navigation dots and arrows */}
-            <div className="flex justify-center md:-ml-50 md:-mr-40 items-center mt-4">
+            <div
+              className="flex justify-center md:-ml-50 md:-mr-40 items-center mt-4"
+              data-aos="fade-up"
+            >
               <button onClick={handlePrev} className="focus:outline-none p-2">
                 <Image
                   src={panahIcon}

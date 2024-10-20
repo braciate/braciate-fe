@@ -18,15 +18,20 @@ const AboutUs: FC = () => {
             src={TriangleLeft}
             alt=""
             className=" w-3/12 md:w-auto md:scale-100 sm:scale-75 scale-[.6] -mt-10 md:mt-0"
+            data-aos="fade-right"
           />
           <Image
             src={TriangleRight}
             alt=""
             className="w-3/12 md:w-auto md:scale-100 sm:scale-75 scale-[.6] -mt-10 md:mt-0"
+            data-aos="fade-left"
           />
         </div>
         <div className="w-3/4 flex flex-col items-center">
-          <div className="flex gap-4 font-jaoren text-7xl tracking-wider w-max h-auto relative scale-75 sm:scale-90 md:scale-100">
+          <div
+            className="flex gap-4 font-jaoren text-7xl tracking-wider w-max h-auto relative scale-75 sm:scale-90 md:scale-100"
+            data-aos="fade-up"
+          >
             <h1 className={style.subtitle}>About</h1>
             <h1>us</h1>
             <Image
@@ -35,7 +40,7 @@ const AboutUs: FC = () => {
               className="absolute -bottom-14 scale-50 -right-4"
             />
           </div>
-          <div className="w-64 sm:w-96 md:w-auto">
+          <div className="w-64 sm:w-96 md:w-auto" data-aos="zoom-in">
             <p className="text-xs sm:text-base text-center mt-4 md:mt-10 font-poppins">
               Brawijaya Appreciate merupakan program kerja yang diselenggarakan
               Kementerian Dalam Negeri EM UB 2024 yang bertujuan untuk

@@ -71,6 +71,7 @@ const Sponsorship: FC = () => {
               width: "auto",
               height: "200px",
             }}
+            data-aos="fade-up"
           />
         </div>
         {/* Sponsor logo sliders */}

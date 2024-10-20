@@ -62,7 +62,7 @@ export function FavoriteUKM({ title, lkm, type }: Props) {
         }
       } catch (err) {
         console.error("Failed to submit vote:", err);
-        setError("Failed to submit vote. Please try again or relog.");
+        setError("Failed to submit vote.");
       } finally {
         setIsVoting(false);
       }

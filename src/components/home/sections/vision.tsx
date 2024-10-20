@@ -9,12 +9,28 @@ const VisionMission: FC = () => {
   return (
     <section className="w-full h-screen relative flex flex-col justify-center">
       <div className="absolute w-full h-auto flex flex-row items-center justify-between">
-        <Image src={iconLeft} alt="" className="w-3/12 md:w-2/12 h-auto" />
-        <Image src={iconRight} alt="" className="w-3/12 md:w-2/12 h-auto" />
+        <Image
+          src={iconLeft}
+          alt=""
+          className="w-3/12 md:w-2/12 h-auto"
+          data-aos="fade-right"
+          data-aos-offset="300"
+        />
+        <Image
+          src={iconRight}
+          alt=""
+          className="w-3/12 md:w-2/12 h-auto"
+          data-aos="fade-left"
+          data-aos-offset="300"
+        />
       </div>
       <main className="w-4/6 mx-auto grid gap-9">
         <div className="flex flex-col md:flex-row-reverse gap-4 items-center text-center w-full justify-around">
-          <div data-aos="fade-left" className="relative w-max h-auto">
+          <div
+            data-aos="fade-left"
+            className="relative w-max h-auto"
+            data-aos-offset="300"
+          >
             <h1
               className={`font-jaoren ${styleText.subtitle} text-5xl sm:text-6xl md:text-7xl`}
             >
@@ -29,13 +45,18 @@ const VisionMission: FC = () => {
           <p
             className="text-xs sm:text-base w-10/12 sm:w-7/12"
             data-aos="fade-right"
+            data-aos-offset="300"
           >
             Bring The Great Story with Harmonization and Collaborative Simpul
             Brawijaya.
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-8 w-full items-center">
-          <div className="relative w-max h-auto" data-aos="fade-right">
+          <div
+            className="relative w-max h-auto"
+            data-aos="fade-right"
+            data-aos-offset="250"
+          >
             <h1
               className={`font-jaoren ${styleText.subtitle} text-5xl sm:text-6xl md:text-7xl`}
             >
@@ -50,6 +71,7 @@ const VisionMission: FC = () => {
           <ol
             className="list-none p-0 m-0 space-y-2 text-xs sm:text-base z-10"
             data-aos="fade-left"
+            data-aos-offset="250"
           >
             <li className="flex">
               <span className="flex-none w-6">1.</span>

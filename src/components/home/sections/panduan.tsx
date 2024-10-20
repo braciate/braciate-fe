@@ -14,9 +14,15 @@ const Panduan: FC = () => {
           className={`${style.kiri} h-64 sm:h-72`}
           src={kiri}
           alt="samping"
+          data-aos="fade-right"
+          data-aos-offset="300"
         />
         <div className="flex items-center flex-wrap gap-[40px] md:gap-20 flex-col h-max md:flex-row w-max mx-10 justify-evenly px-2">
-          <div className="text-center title min-[863px]:text-start leading-4">
+          <div
+            className="text-center title min-[863px]:text-start leading-4"
+            data-aos="fade-right"
+            data-aos-offset="250"
+          >
             <div className="relative">
               <h1
                 className={`${style.subtitle} text-7xl md:text-8xl font-jaoren bg-clip-text`}
@@ -33,7 +39,11 @@ const Panduan: FC = () => {
               Guide
             </h3>
           </div>
-          <ol className="text-sm desc md:text-xl text-justify w-max">
+          <ol
+            className="text-sm desc md:text-xl text-justify w-max"
+            data-aos="fade-left"
+            data-aos-offset="250"
+          >
             <li className="flex">
               <p className="flex-none w-6">1.</p>
               <p>Login menggunakan akun UB anda</p>
@@ -54,6 +64,8 @@ const Panduan: FC = () => {
           className={`h-64 sm:h-72 absolute right-0`}
           src={kanan}
           alt="samping"
+          data-aos="fade-left"
+          data-aos-offset="300"
         />
       </div>
     </section>

@@ -26,13 +26,18 @@ const Rangkaian: FC = () => {
               src={ElemenAtasHp}
               alt="elemen"
               className="w-24 h-7 mr-4 md:hidden block"
+              data-aos="fade-right"
             />
             <Image
               src={elemenAtas}
               alt="elemen"
               className="w-80 lg:h-9 h-7 hidden md:block"
+              data-aos="fade-right"
             />
-            <div className="flex gap-3 text-7xl mx-4 tracking-wider relative w-max h-auto scale-75 sm:scale-90 md:scale-100">
+            <div
+              className="flex gap-3 text-7xl mx-4 tracking-wider relative w-max h-auto scale-75 sm:scale-90 md:scale-100"
+              data-aos="fade-up"
+            >
               <h1 className={`font-jaoren ${styleText.subtitle}`}>Series</h1>
               <h1 className="font-jaoren">of</h1>
               <h1 className={`font-jaoren ${styleText.subtitle}`}>events</h1>
@@ -51,15 +56,20 @@ const Rangkaian: FC = () => {
               src={ElemenAtasKananHp}
               alt="elemen"
               className="w-28 h-7 md:hidden block"
+              data-aos="fade-left"
             />
             <Image
               src={elemenAtas}
               alt="elemen"
               className="w-80 lg:h-9 h-7 hidden md:block"
+              data-aos="fade-left"
             />
           </div>
 
-          <div className="flex flex-col mt-14 mx-4 xl:mx-8 gap-8">
+          <div
+            className="flex flex-col mt-14 mx-4 xl:mx-8 gap-8"
+            data-aos="zoom-in"
+          >
             <div className="hidden md:block">
               <div className="flex justify-center xl:gap-60 lg:gap-40 md:gap-28 lg:scale-100 md:scale-95">
                 <Image src={parade} alt="parade" />
@@ -73,20 +83,26 @@ const Rangkaian: FC = () => {
               </div>
             </div>
 
-            <div className="flex lg:justify-center 2xl:w-full xl:w-full xl:mx-0 lg:w-[85%] lg:mx-24 md:mx-20 md:w-10/12">
+            <div
+              className="flex lg:justify-center 2xl:w-full xl:w-full xl:mx-0 lg:w-[85%] lg:mx-24 md:mx-20 md:w-10/12"
+              data-aos="zoom-in"
+            >
               <div className="md:block hidden 2xl:ml-16 xl:ml-16 md:mr-12 lg:mr-14 mx-auto">
                 <Image src={line} alt="line" />
               </div>
             </div>
 
             {/* Mobile */}
-            <div className="block md:hidden">
-              <div className="">
+            <div className="block md:hidden" data-aos="zoom-in">
+              <div>
                 <div className="rotate-90 relative top-44 right-32 w-[450px] ">
-                  <Image src={line} alt="" className="" />
+                  <Image src={line} alt="" />
                 </div>
 
-                <div className="flex flex-col gap-10 -mt-16 ml-20">
+                <div
+                  className="flex flex-col gap-10 -mt-16 ml-20"
+                  data-aos="zoom-in"
+                >
                   <div className="flex items-center justify-center gap-6">
                     <div className="flex flex-col items-center justify-center gap-2 ">
                       <Image src={parade} alt="parade" className="w-10" />
@@ -167,7 +183,10 @@ const Rangkaian: FC = () => {
 
             {/* Desktop */}
             <div className="hidden md:block mx-4">
-              <div className="flex justify-center gap-9 text-center text-white text-xs font-poppins ">
+              <div
+                className="flex justify-center gap-9 text-center text-white text-xs font-poppins "
+                data-aos="zoom-in"
+              >
                 <div className="flex flex-wrap justify-center gap-2 w-full">
                   <p
                     id={style.text_clip}
