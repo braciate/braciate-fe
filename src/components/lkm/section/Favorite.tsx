@@ -119,7 +119,7 @@ export function FavoritePage({ title, lkm }: props) {
                 currentItems.map((item) => (
                   <Card
                     key={item.id}
-                    className="flex flex-col justify-between border-2 mx-auto items-center rounded-4xl max-h-40 md:max-h-44 lg:max-h-48 sm:h-40 md:h-44 lg:h-48 gap-4  w-36 sm:w-48 md:w-40 lg:w-44 "
+                    className="flex flex-col justify-between border-2 mx-auto items-center rounded-4xl max-h-40 md:max-h-44 lg:max-h-48 sm:h-40 md:h-44 lg:h-48 gap-4 w-36 scale-90 sm:scale-100 sm:w-48 md:w-40 lg:w-44 "
                   >
                     <CardContent className="px-3 py-2 flex items-center flex-col text-center w-full">
                       <span className="w-20 h-20 lg:w-24 lg:h-24 rounded-full mb-2 lg:mb-2 relative overflow-hidden border-2 border-gray-500 bg-black/60">
