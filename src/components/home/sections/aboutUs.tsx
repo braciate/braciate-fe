@@ -27,11 +27,8 @@ const AboutUs: FC = () => {
             data-aos="fade-left"
           />
         </div>
-        <div className="w-3/4 flex flex-col items-center">
-          <div
-            className="flex gap-4 font-jaoren text-7xl tracking-wider w-max h-auto relative scale-75 sm:scale-90 md:scale-100"
-            data-aos="fade-up"
-          >
+        <div className="w-3/4 flex flex-col items-center" data-aos="fade-up">
+          <div className="flex gap-4 font-jaoren text-7xl tracking-wider w-max h-auto relative scale-75 sm:scale-90 md:scale-100">
             <h1 className={style.subtitle}>About</h1>
             <h1>us</h1>
             <Image
