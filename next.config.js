@@ -3,7 +3,7 @@ const withVideos = require("next-videos");
 
 const nextConfig = {
   output: "standalone",
-  swcMinify: false,
+  swcMinify: true,
   images: {
     remotePatterns: [
       {

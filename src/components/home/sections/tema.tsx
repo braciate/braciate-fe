@@ -1,5 +1,5 @@
 import React from "react";
-import EventThemeImg from "@/public/svg/Theme_imgs/anargya-text.svg";
+import EventThemeImg from "@/public/img/fragments/anargya.png";
 import GlitterBg from "@/public/svg/Theme_imgs/glitter-eventtheme.png";
 import Image from "next/image";
 import type { FC } from "react";
