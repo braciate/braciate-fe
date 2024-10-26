@@ -21,8 +21,8 @@ export const useNavbar = (): NavbarProps => {
     const endDate = new Date(
       new Date().getFullYear(),
       9,
-      28,
-      23,
+      30,
+      22,
       59,
       59
     ).getTime();
