@@ -4,7 +4,7 @@ import bazar from "@/public/svg/Rangkaian_imgs/2.svg";
 import pameran from "@/public/svg/Rangkaian_imgs/3.svg";
 import awarding from "@/public/svg/Rangkaian_imgs/4.svg";
 import line from "@/public/svg/Rangkaian_imgs/line.svg";
-import style from "@/app/(lkm)/page.module.css";
+import style from "@/app/global.module.css";
 import ElemenAtasHp from "@/public/svg/Rangkaian_imgs/ElemenAtasHp.svg";
 import ElemenAtasKananHp from "@/public/svg/Rangkaian_imgs/ElemenAtasKananHp.svg";
 import type { FC } from "react";

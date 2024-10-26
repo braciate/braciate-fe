@@ -10,14 +10,12 @@ import hamburger from "@/public/svg/fragments/hamburger.svg";
 import goldTexture from "@/public/svg/fragments/gold-texture.png";
 import close from "@/public/svg/fragments/close-slide.svg";
 import React from "react";
-import { useSession } from "next-auth/react";
 import { usePathname } from "next/navigation";
 import style from "@/components/home/style/panduan.module.css";
 
 const Navbar: FC = () => {
   const { isOpen, toggleSlide, scrollToPanduan, handleLogout, timeLeft } =
     useNavbar();
-  const { data: session, status } = useSession();
   const pathname = usePathname();
   const isHomePage = pathname === "/";
   const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
@@ -128,23 +126,13 @@ const Navbar: FC = () => {
               <li
                 className={`self-center px-8 py-1 mt-4 ${styles.vote_slide} w-max`}
               >
-                {status === "authenticated" ? (
-                  <Link
-                    className="cursor-pointer"
-                    href="/"
-                    onClick={handleLogout}
-                  >
-                    LOGOUT
-                  </Link>
-                ) : (
-                  <Link
-                    className="cursor-pointer"
-                    href="/login"
-                    onClick={toggleSlide}
-                  >
-                    LOGIN
-                  </Link>
-                )}
+                <Link
+                  className="cursor-pointer"
+                  href="#vote"
+                  onClick={toggleSlide}
+                >
+                  Vote
+                </Link>
               </li>
             </ul>
             <div
@@ -176,15 +164,9 @@ const Navbar: FC = () => {
             </Link>
           </li>
           <li id={styles.votenow}>
-            {status === "authenticated" ? (
-              <Link className={styles.links} href="/" onClick={handleLogout}>
-                LOGOUT
-              </Link>
-            ) : (
-              <Link className={styles.links} href="/login">
-                Login
-              </Link>
-            )}
+            <Link className={styles.links} href="/" onClick={handleLogout}>
+              Vote
+            </Link>
           </li>
         </ul>
       </nav>

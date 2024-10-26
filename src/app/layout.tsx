@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import type React from "react";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
-import { AuthProvider } from "@/app/context/Providers";
 import PageTransition from "@/components/loading/PageTransition";
 import { AOSInit } from "@/lib/aos";
 import "./globals.css";
@@ -37,9 +36,7 @@ const RootLayout: React.FC<IRootLayoutProps> = ({ children }) => {
       <body
         className={`${poppins.variable} ${jaoren.variable} font-poppins overflow-x-hidden`}
       >
-        <AuthProvider>
-          <PageTransition>{children}</PageTransition>
-        </AuthProvider>
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );
