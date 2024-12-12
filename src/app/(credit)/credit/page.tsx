@@ -29,7 +29,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: 3,
-    name: "Vincentia Melody Viviane | Teknik Informatika",
+    name: "Vincentia Melody Vivianne | Teknik Informatika",
     role: "ui",
     linkedin: "https://www.linkedin.com/in/vincentia-melody-vivianne/",
     instagram: "https://www.instagram.com/vincentiavivianne/",
